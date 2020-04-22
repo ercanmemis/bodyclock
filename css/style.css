@@ -258,8 +258,8 @@ body {
 .group-image__box {
   position: relative;
   width: 34.2rem;
-  height: 33.2rem;
-  border: 1px dashed;
+  height: 33.5rem;
+  border: 1px dashed #e8fdff;
   border-radius: 50%;
   text-align: left;
   margin: 0 auto; }
