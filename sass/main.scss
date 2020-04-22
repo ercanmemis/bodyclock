@@ -152,6 +152,64 @@ body {
   transform: translateY(-50%);
 }
 
+//NAVIGATION
+
+.nav {
+  background-color: $color-white;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 0 auto;
+
+  z-index: 50;
+
+  &__wrapper {
+    width: 114rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    line-height: 8rem;
+  }
+
+  &__list {
+    width: auto;
+    height: 8rem;
+    list-style: none;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  &__link:last-child {
+  }
+
+  &__link:link,
+  &__link:visited {
+  }
+
+  &__link:hover {
+  }
+
+  &__link:active {
+  }
+}
+
 .header {
   height: 100vh;
   background-color: $color-primary-light;
@@ -160,6 +218,7 @@ body {
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   &__text-box {
+    padding-top: 8rem;
     position: absolute;
     top: 40%;
     left: 50%;

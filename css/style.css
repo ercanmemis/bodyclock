@@ -113,11 +113,43 @@ body {
   top: 50%;
   transform: translateY(-50%); }
 
+.nav {
+  background-color: #fff;
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 0 auto;
+  z-index: 50; }
+  .nav__wrapper {
+    width: 114rem;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto; }
+  .nav__logo {
+    line-height: 8rem; }
+  .nav__list {
+    width: auto;
+    height: 8rem;
+    list-style: none; }
+  .nav__item {
+    display: inline-block; }
+  .nav__link {
+    display: inline-block;
+    text-decoration: none; }
+
 .header {
   height: 100vh;
   background-color: #e8fdff;
   position: relative; }
   .header__text-box {
+    padding-top: 8rem;
     position: absolute;
     top: 40%;
     left: 50%;
