@@ -86,12 +86,12 @@
 @-webkit-keyframes moveInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
   }
   80% {
-    -webkit-transform: translateX(2rem);
-            transform: translateX(2rem);
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -103,12 +103,12 @@
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-10rem);
-            transform: translateX(-10rem);
+    -webkit-transform: translateX(-30rem);
+            transform: translateX(-30rem);
   }
   80% {
-    -webkit-transform: translateX(2rem);
-            transform: translateX(2rem);
+    -webkit-transform: translateX(1rem);
+            transform: translateX(1rem);
   }
   100% {
     opacity: 1;
@@ -205,12 +205,25 @@ body {
   clear: both;
 }
 
+.tcenter {
+  text-align: center;
+}
+
+.rmargin-bottom {
+  margin-bottom: 0 !important;
+}
+
 .hspace {
   height: 3.5rem;
 }
 
 .bold {
   font-weight: 700;
+}
+
+.iphone {
+  margin-top: -2rem;
+  padding-left: 25%;
 }
 
 .container {
@@ -288,8 +301,8 @@ body {
   margin-bottom: 1.5rem;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
@@ -302,8 +315,8 @@ body {
   margin-bottom: 1rem;
   -webkit-animation-name: moveInRight;
           animation-name: moveInRight;
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
 }
@@ -313,6 +326,7 @@ body {
   font-size: 2rem;
   line-height: 3.2rem;
   font-weight: 400;
+  margin-bottom: 3.5rem;
   -webkit-animation: moveInBottom .4s ease-out .75s;
           animation: moveInBottom .4s ease-out .75s;
   -webkit-animation-fill-mode: backwards;
@@ -330,10 +344,22 @@ body {
           animation-fill-mode: backwards;
 }
 
-.section-howitworks {
+.section-first {
   background-color: #fff;
-  padding: 20rem 0;
-  height: 100vh;
+  padding-top: 15vh;
+}
+
+.section-second {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8fdff), to(rgba(232, 253, 255, 0.21)));
+  background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
+}
+
+.section-second__text-box {
+  padding: 25% 0;
+}
+
+.section-third__text-box {
+  padding: 25% 0;
 }
 
 .heading-secondary--main {
@@ -371,13 +397,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-ordinal-group: 6;
       -ms-flex-order: 5;
           order: 5;
-  margin: auto;
+  padding: 25% 0;
 }
 
 .main__text-box--circle {
@@ -390,7 +416,6 @@ body {
 }
 
 .main__text-box--heading {
-  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -400,7 +425,6 @@ body {
 }
 
 .main__text-box--heading--sub {
-  margin-bottom: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -418,6 +442,24 @@ body {
           flex: 1 auto;
 }
 
+.main__text-box--heading--sub3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+}
+
+.main__text-box--heading--sub4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 auto;
+          flex: 1 auto;
+}
+
 .main__text-box--header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -425,6 +467,61 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+.group-image {
+  position: relative;
+  width: 35.5rem;
+  height: 35.5rem;
+  padding: 2.8rem;
+  /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+  margin: 1.75rem auto 0;
+}
+
+.group-image a {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4em;
+  height: 4em;
+  margin: -2em;
+}
+
+.deg0 {
+  -webkit-transform: translate(17.75rem);
+          transform: translate(17.75rem);
+}
+
+/* 12em = half the width of the wrapper */
+.deg45 {
+  -webkit-transform: rotate(45deg) translate(17.7rem) rotate(-45deg);
+          transform: rotate(45deg) translate(17.7rem) rotate(-45deg);
+}
+
+.deg135 {
+  -webkit-transform: rotate(135deg) translate(17.7rem) rotate(-135deg);
+          transform: rotate(135deg) translate(17.7rem) rotate(-135deg);
+}
+
+.deg180 {
+  -webkit-transform: translate(-17.7rem);
+          transform: translate(-17.7rem);
+}
+
+.deg225 {
+  -webkit-transform: rotate(225deg) translate(17.7rem) rotate(-225deg);
+          transform: rotate(225deg) translate(17.7rem) rotate(-225deg);
+}
+
+.deg315 {
+  -webkit-transform: rotate(315deg) translate(17.7rem) rotate(-315deg);
+          transform: rotate(315deg) translate(17.7rem) rotate(-315deg);
+}
+
+.deg360 {
+  -webkit-transform: rotate(360deg) translate(17.7rem) rotate(-360deg);
+          transform: rotate(360deg) translate(17.7rem) rotate(-360deg);
 }
 
 .paragraph {
@@ -445,10 +542,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.footer {
-  padding: 3.5rem 0;
 }
 
 .btn:link, .btn:visited {
@@ -531,5 +624,46 @@ body {
           animation: moveInBottom 1s ease-out 1.25s;
   -webkit-animation-fill-mode: backwards;
           animation-fill-mode: backwards;
+}
+
+.footer {
+  font-size: 1.6rem;
+  padding: 3rem 24rem;
+  background-color: #333333;
+  width: 100%;
+}
+
+.footer__footer-logo-box {
+  height: auto;
+}
+
+.footer__navigation {
+  float: right;
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__item {
+  display: inline-block;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.footer__link:link, .footer__link:visited {
+  color: #e8fdff;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: overline;
+}
+
+.footer__link:active {
+  -webkit-text-decoration: solid;
+          text-decoration: solid;
 }
 /*# sourceMappingURL=main.css.map */

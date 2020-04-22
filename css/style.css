@@ -246,7 +246,7 @@ body {
   margin: 1.75rem auto 0; }
 
 .group-image a {
-  display: block;
+  display: inline-block;
   position: absolute;
   top: 50%;
   left: 50%;
