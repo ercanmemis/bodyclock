@@ -129,6 +129,11 @@ body {
     font-weight: $text-bold;
 }
 
+.iphone {
+    margin-top: -2rem;
+    padding-left: 25%;
+}
+
 .container {
     position: relative;
     top: 50%;
@@ -237,16 +242,15 @@ body {
 
 .section-first {
     background-color: $color-white;
-    padding: 20rem 0;
-    height: 100vh;
+    padding: 15rem 0;
 }
 
 .section-second {
-    background-color: $color-primary-light;
+    background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
 }
 
 .section-third {
-
+    padding-top: 10rem;
 }
 
 .heading-secondary {
@@ -266,6 +270,11 @@ body {
 
     }
 }
+
+.heading-third {
+    padding: 25% 0;
+}
+
 
 .main__heading {
     display: flex;

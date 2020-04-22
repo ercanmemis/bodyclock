@@ -95,6 +95,10 @@ body {
 .bold {
   font-weight: 700; }
 
+.iphone {
+  margin-top: -2rem;
+  padding-left: 25%; }
+
 .container {
   position: relative;
   top: 50%;
@@ -169,11 +173,13 @@ body {
 
 .section-first {
   background-color: #fff;
-  padding: 20rem 0;
-  height: 100vh; }
+  padding: 15rem 0; }
 
 .section-second {
-  background-color: #e8fdff; }
+  background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21)); }
+
+.section-third {
+  padding-top: 10rem; }
 
 .heading-secondary--main {
   font-size: 5.6rem;
@@ -186,6 +192,9 @@ body {
   animation-name: moveInLeft;
   animation-duration: 0.8s;
   animation-timing-function: ease-out; }
+
+.heading-third {
+  padding: 25% 0; }
 
 .main__heading {
   display: flex;
