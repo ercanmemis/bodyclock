@@ -98,6 +98,12 @@ body {
 .bold {
   font-weight: 700; }
 
+.colorize {
+  color: #0bcdfc; }
+
+.underline {
+  text-decoration: underline; }
+
 .iphone {
   margin-top: -2rem;
   padding-left: 25%; }
@@ -240,43 +246,54 @@ body {
     font-size: 2rem; }
 
 .group-image {
-  position: relative;
-  width: 35.5rem;
-  height: 35.5rem;
-  padding: 2.8rem;
-  /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-  margin: 1.75rem auto 0; }
-
-.group-image a {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 4em;
-  height: 4em;
-  margin: -2em; }
+  width: 100%;
+  height: auto; }
+  .group-image__box {
+    position: relative;
+    width: 40.2rem;
+    height: 34.5rem;
+    border: dashed 1px 1px;
+    border-radius: 50%;
+    text-align: center; }
+  .group-image__box > a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    width: 14rem;
+    height: 4rem; }
+  .group-image__image {
+    position: absolute;
+    contain: content;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%); }
 
 .deg0 {
-  transform: translate(17.75rem); }
+  transform: translate(20rem); }
 
-/* 12em = half the width of the wrapper */
 .deg45 {
-  transform: rotate(45deg) translate(17.7rem) rotate(-45deg); }
+  transform: rotate(45deg) translate(17.75rem) rotate(-45deg); }
+
+.deg90 {
+  transform: rotate(105deg) translate(20rem) rotate(-105deg); }
 
 .deg135 {
-  transform: rotate(135deg) translate(17.7rem) rotate(-135deg); }
+  transform: rotate(150deg) translate(26rem) rotate(-150deg); }
 
 .deg180 {
-  transform: translate(-17.7rem); }
+  transform: rotate(180deg) translate(28rem) rotate(-180deg); }
 
 .deg225 {
-  transform: rotate(225deg) translate(17.7rem) rotate(-225deg); }
+  transform: rotate(215deg) translate(25rem) rotate(-215deg); }
+
+.deg270 {
+  transform: rotate(255deg) translate(20rem) rotate(-255deg); }
 
 .deg315 {
-  transform: rotate(315deg) translate(17.7rem) rotate(-315deg); }
-
-.deg360 {
-  transform: rotate(360deg) translate(17.7rem) rotate(-360deg); }
+  transform: rotate(315deg) translate(18rem) rotate(-315deg); }
 
 .paragraph {
   font-size: 1.6rem; }
