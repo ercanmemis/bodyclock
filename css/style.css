@@ -75,7 +75,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   /*font-size: 16px;*/
   color: #333333;
@@ -171,14 +171,14 @@ body {
     line-height: 3.2rem;
     font-weight: 400;
     margin-bottom: 3.5rem;
-    animation: moveInBottom .4s ease-out .75s;
+    animation: moveInBottom 0.4s ease-out 0.75s;
     animation-fill-mode: backwards; }
   .heading-primary--sub3 {
     display: block;
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 400;
-    animation: moveInBottom .8s ease-out 1s;
+    animation: moveInBottom 0.8s ease-out 1s;
     animation-fill-mode: backwards; }
 
 .section-first {
@@ -250,69 +250,63 @@ body {
 
 .heading-fourth__text-box {
   font-size: 2rem;
-  border: 0.1rem solid #0bcdfc;
   border-radius: 0.2rem;
-  margin-bottom: 1rem;
-  padding: 1.5rem; }
+  padding: 1rem; }
 
-.group-image__box {
-  position: relative;
-  width: 34.2rem;
-  height: 33.5rem;
-  border: 1px dashed #e8fdff;
-  border-radius: 50%;
-  text-align: left;
-  margin: 0 auto; }
-
-.group-image__box > a {
-  color: #333333;
-  font-size: 1.6rem;
-  text-decoration: none;
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 25rem;
-  height: 2rem;
-  border-bottom: 0.1rem solid #0bcdfc; }
-
-.group-image__image {
-  position: absolute;
-  left: 50%;
-  transform: translateY(-50%);
-  transform: translateX(-50%); }
+.group-image {
+  padding: 25% 0; }
+  .group-image__box {
+    position: relative;
+    width: 34.2rem;
+    height: 33.5rem;
+    border: 1px dashed #e8fdff;
+    border-radius: 50%;
+    text-align: left; }
+  .group-image__box > a {
+    color: #333333;
+    font-size: 1.4rem;
+    text-decoration: none;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 25rem;
+    height: 2rem; }
+  .group-image__image {
+    position: absolute;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%); }
 
 .deg0 {
-  margin-left: 2.5rem;
-  transform: translate(17.1rem); }
+  transform: translate(16.1rem); }
 
 .deg45 {
-  margin-left: 2.5rem;
-  transform: rotate(45deg) translate(17.1rem) rotate(-45deg); }
+  transform: rotate(45deg) translate(16.1rem) rotate(-45deg); }
 
 .deg90 {
-  transform: rotate(110deg) translate(19.1rem) rotate(-110deg); }
+  margin-left: -20%;
+  transform: rotate(90deg) translate(19.1rem) rotate(-90deg); }
 
 .deg135 {
-  margin-left: -60%;
-  transform: rotate(135deg) translate(17.1rem) rotate(-135deg); }
+  margin-left: -50%;
+  transform: rotate(135deg) translate(16.1rem) rotate(-135deg); }
 
 .deg180 {
   width: 15rem !important;
-  margin-left: -50%;
-  transform: rotate(180deg) translate(17.1rem) rotate(-180deg); }
+  margin-left: -25%;
+  transform: rotate(180deg) translate(16.1rem) rotate(-180deg); }
 
 .deg225 {
-  margin-left: -70%;
-  transform: rotate(225deg) translate(17.1rem) rotate(-225deg); }
+  margin-left: -55%;
+  transform: rotate(225deg) translate(16.1rem) rotate(-225deg); }
 
 .deg270 {
-  margin-left: -25%;
-  transform: rotate(270deg) translate(21.1rem) rotate(-270deg); }
+  margin-left: -22.5%;
+  transform: rotate(270deg) translate(19.1rem) rotate(-270deg); }
 
 .deg315 {
-  margin-left: 15%;
-  transform: rotate(315deg) translate(17.1rem) rotate(-315deg); }
+  transform: rotate(315deg) translate(16.1rem) rotate(-315deg); }
 
 .paragraph {
   font-size: 1.6rem; }
@@ -340,7 +334,7 @@ body {
   background-color: #0bcdfc;
   transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  transition: .2s; }
+  transition: 0.2s; }
   .btn:hover::after {
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0; }
@@ -348,7 +342,7 @@ body {
 .btn:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  transition: .2s; }
+  transition: 0.2s; }
 
 .btn::after {
   content: "";
@@ -360,7 +354,7 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all .3s; }
+  transition: all 0.3s; }
   .btn::after:not(:hover) {
     background-color: #e8fdff; }
 
