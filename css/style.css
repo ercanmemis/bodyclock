@@ -86,6 +86,9 @@ body {
   display: table;
   clear: both; }
 
+.rmargin-bottom {
+  margin-bottom: 0 !important; }
+
 .hspace {
   height: 3.5rem; }
 
@@ -164,10 +167,13 @@ body {
     animation: moveInBottom .8s ease-out 1s;
     animation-fill-mode: backwards; }
 
-.section-howitworks {
+.section-first {
   background-color: #fff;
   padding: 20rem 0;
   height: 100vh; }
+
+.section-second {
+  background-color: #e8fdff; }
 
 .heading-secondary--main {
   font-size: 5.6rem;
@@ -190,7 +196,7 @@ body {
   font-size: 2rem;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   order: 5;
   margin: auto; }
   .main__text-box--circle {
@@ -201,14 +207,18 @@ body {
     border-radius: 10rem;
     margin-right: 1.7rem; }
   .main__text-box--heading {
-    margin-bottom: 5rem;
     display: flex;
     flex: 1 auto; }
     .main__text-box--heading--sub {
-      margin-bottom: 5rem;
       display: flex;
       flex: 1 auto; }
     .main__text-box--heading--sub2 {
+      display: flex;
+      flex: 1 auto; }
+    .main__text-box--heading--sub3 {
+      display: flex;
+      flex: 1 auto; }
+    .main__text-box--heading--sub4 {
       display: flex;
       flex: 1 auto; }
   .main__text-box--header {
@@ -224,9 +234,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
-
-.footer {
-  padding: 3.5rem 0; }
 
 .btn:link, .btn:visited {
   font-size: 1.6rem;
@@ -291,6 +298,8 @@ body {
   padding: 3rem 24rem;
   background-color: #333333;
   width: 100%; }
+  .footer__footer-logo-box {
+    height: auto; }
   .footer__navigation {
     float: right; }
   .footer__list {
@@ -302,3 +311,7 @@ body {
   .footer__link:link, .footer__link:visited {
     color: #e8fdff;
     text-decoration: none; }
+  .footer__link:hover {
+    text-decoration: overline; }
+  .footer__link:active {
+    text-decoration: solid; }

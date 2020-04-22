@@ -14,6 +14,7 @@ $color-black: #000;
 $default-font-size : 1.6rem;
 $text-bold: 700;
 $hspace: 3.5rem;
+$rmargin-bottom: 0 !important;
 
 //MIXIN
 
@@ -114,6 +115,10 @@ body {
     content: "";
     display: table;
     clear: both;
+}
+
+.rmargin-bottom {
+    margin-bottom: $rmargin-bottom;
 }
 
 .hspace {
@@ -228,10 +233,20 @@ body {
     }
 }
 
-.section-howitworks {
+//SECTIONS
+
+.section-first {
     background-color: $color-white;
     padding: 20rem 0;
     height: 100vh;
+}
+
+.section-second {
+    background-color: $color-primary-light;
+}
+
+.section-third {
+
 }
 
 .heading-secondary {
@@ -264,7 +279,7 @@ body {
     font-size: 2rem;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     order: 5;
     margin: auto;
 
@@ -279,20 +294,28 @@ body {
     }
 
     &--heading {
-
-        margin-bottom: 5rem;
         display: flex;
         flex: 1 auto;
         
 
         &--sub {
-
-            margin-bottom: 5rem;
             display: flex;
             flex: 1 auto;
         }
 
         &--sub2 {
+
+            display: flex;
+            flex: 1 auto;
+        }
+
+        &--sub3 {
+
+            display: flex;
+            flex: 1 auto;
+        }
+
+        &--sub4 {
 
             display: flex;
             flex: 1 auto;
@@ -322,12 +345,6 @@ body {
     justify-content: center;
     align-items: center;
 
-}
-
-//FOOTER
-
-.footer {
-    padding: 3.5rem 0;
 }
 
 //BUTTONS
@@ -419,7 +436,7 @@ body {
     width: 100%;
 
     &__footer-logo-box {
-
+        height: auto;
 
     }
 
@@ -449,10 +466,11 @@ body {
         }
 
         &:hover {
-
+            text-decoration: overline;
         }
 
         &:active {
+            text-decoration: solid;
 
         }
     }
