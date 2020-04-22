@@ -247,7 +247,8 @@ body {
 
 .group-image {
   width: 100%;
-  height: auto; }
+  height: auto;
+  padding: 10% 0; }
   .group-image__box {
     position: relative;
     width: 40.2rem;
