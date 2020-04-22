@@ -372,23 +372,21 @@ body {
     width: 34.2rem;
     height: 33.5rem;
     //needed padding calc
-    //padding: 12.25rem;
     //2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))
-    border: 1px dashed $color-primary-light; //see the line
     border-radius: 50%;
-    text-align: left;
   }
 
   &__box > a {
     color: $color-primary-grey;
     font-size: 1.4rem;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 25rem;
-    height: 2rem;
+    height: auto;
   }
 
   &__image {
@@ -401,31 +399,31 @@ body {
 
 .deg0 {
   //margin-left: 2.5rem;
-  transform: translate(16.1rem);
+  transform: translate(12.25rem);
 } // = half the width of the wrapper
 .deg45 {
   //margin-left: 2.5rem;
   transform: rotate(45deg) translate(16.1rem) rotate(-45deg);
 }
 .deg90 {
-  margin-left: -20%;
+  //margin-left: -20%;
   transform: rotate(90deg) translate(19.1rem) rotate(-90deg);
 }
 .deg135 {
-  margin-left: -50%;
+  //margin-left: -50%;
   transform: rotate(135deg) translate(16.1rem) rotate(-135deg);
 }
 .deg180 {
   width: 15rem !important;
-  margin-left: -25%;
+  //margin-left: -20%;
   transform: rotate(180deg) translate(16.1rem) rotate(-180deg);
 }
 .deg225 {
-  margin-left: -55%;
+  //margin-left: -55%;
   transform: rotate(225deg) translate(16.1rem) rotate(-225deg);
 }
 .deg270 {
-  margin-left: -22.5%;
+  //margin-left: -22.5%;
   transform: rotate(270deg) translate(19.1rem) rotate(-270deg);
 }
 .deg315 {
