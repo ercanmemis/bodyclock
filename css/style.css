@@ -236,6 +236,8 @@ body {
   .main__text-box--header {
     display: flex;
     align-items: flex-start; }
+  .main__text-box--main {
+    font-size: 2rem; }
 
 .group-image {
   position: relative;

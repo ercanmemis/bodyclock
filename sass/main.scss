@@ -344,6 +344,10 @@ body {
         display: flex;
         align-items: flex-start;
     }
+
+    &--main {
+        font-size: 2rem;
+    }
 }
 
 .group-image {

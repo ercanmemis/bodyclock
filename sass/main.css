@@ -469,6 +469,10 @@ body {
           align-items: flex-start;
 }
 
+.main__text-box--main {
+  font-size: 2rem;
+}
+
 .group-image {
   position: relative;
   width: 35.5rem;
