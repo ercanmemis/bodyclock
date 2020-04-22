@@ -285,3 +285,20 @@ body {
 .btn--animated {
   animation: moveInBottom 1s ease-out 1.25s;
   animation-fill-mode: backwards; }
+
+.footer {
+  font-size: 1.6rem;
+  padding: 3rem 24rem;
+  background-color: #333333;
+  width: 100%; }
+  .footer__navigation {
+    float: right; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #e8fdff;
+    text-decoration: none; }

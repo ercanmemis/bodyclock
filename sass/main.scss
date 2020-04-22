@@ -409,3 +409,51 @@ body {
         animation-fill-mode: backwards;
     }
 }
+
+//FOOTER
+
+.footer {
+    font-size: $default-font-size;
+    padding: 3rem 24rem;
+    background-color: $color-primary-grey;
+    width: 100%;
+
+    &__footer-logo-box {
+
+
+    }
+
+    &__navigation {
+        float: right;
+        }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $color-primary-light;
+            text-decoration: none;
+        }
+
+        &:hover {
+
+        }
+
+        &:active {
+
+        }
+    }
+}
