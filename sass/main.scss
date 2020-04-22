@@ -220,6 +220,7 @@ body {
         font-size: 2rem;
         line-height: 3.2rem;
         font-weight: 400;
+        margin-bottom: 3.5rem;
 
         animation: moveInBottom .4s ease-out .75s;
         animation-fill-mode: backwards;
@@ -247,10 +248,17 @@ body {
 
 .section-second {
     background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
+
+    &__text-box {
+        padding: 25% 0;
+    }
 }
 
 .section-third {
-    padding-top: 10rem;
+
+    &__text-box {
+        padding: 25% 0;
+    }
 }
 
 .heading-secondary {
@@ -271,10 +279,6 @@ body {
     }
 }
 
-.heading-third {
-    padding: 25% 0;
-}
-
 
 .main__heading {
     display: flex;
@@ -290,7 +294,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     order: 5;
-    margin: auto;
+    padding: 25% 0;
 
     &--circle {
         display: inline-block;

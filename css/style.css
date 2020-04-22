@@ -161,6 +161,7 @@ body {
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 400;
+    margin-bottom: 3.5rem;
     animation: moveInBottom .4s ease-out .75s;
     animation-fill-mode: backwards; }
   .heading-primary--sub3 {
@@ -177,9 +178,11 @@ body {
 
 .section-second {
   background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21)); }
+  .section-second__text-box {
+    padding: 25% 0; }
 
-.section-third {
-  padding-top: 10rem; }
+.section-third__text-box {
+  padding: 25% 0; }
 
 .heading-secondary--main {
   font-size: 5.6rem;
@@ -193,9 +196,6 @@ body {
   animation-duration: 0.8s;
   animation-timing-function: ease-out; }
 
-.heading-third {
-  padding: 25% 0; }
-
 .main__heading {
   display: flex;
   width: 100%; }
@@ -207,7 +207,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   order: 5;
-  margin: auto; }
+  padding: 25% 0; }
   .main__text-box--circle {
     display: inline-block;
     min-width: 8rem;
