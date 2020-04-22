@@ -273,6 +273,17 @@ body {
     }
 }
 
+.section-fourth {
+
+    &__text--box {
+
+        &--header {
+            border: 0.1rem solid $color-primary
+        }
+    }
+    
+}
+
 .heading-secondary {
 
     &--main {
@@ -355,6 +366,23 @@ body {
 
     &--main {
         font-size: 2rem;
+    }
+}
+
+.heading-fourth {
+
+
+    &__text-box {
+
+
+        &--main {
+            font-size: 2rem;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+        }
     }
 }
 

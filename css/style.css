@@ -193,6 +193,9 @@ body {
 .section-third__text-box {
   padding: 25% 0; }
 
+.section-fourth__text--box--header {
+  border: 0.1rem solid #0bcdfc; }
+
 .heading-secondary--main {
   font-size: 5.6rem;
   max-width: 435rem;
@@ -244,6 +247,11 @@ body {
     align-items: flex-start; }
   .main__text-box--main {
     font-size: 2rem; }
+
+.heading-fourth__text-box--main {
+  font-size: 2rem; }
+  .heading-fourth__text-box--main:not(:last-child) {
+    margin-bottom: 1rem; }
 
 .group-image {
   width: 100%;
