@@ -373,50 +373,46 @@ body {
 
 
     &__text-box {
-
-
-        &--main {
-            font-size: 2rem;
-
-            &:not(:last-child) {
-                margin-bottom: 1rem;
-            }
-
-        }
+        font-size: 2rem;
+        //background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
+        border: 0.1rem solid $color-primary;
+        border-radius: 0.2rem;
+        margin-bottom: 1rem;
+        padding: 1.5rem;
     }
 }
 
 //CIRCLE IMAGE
 
 .group-image {
-    width: 100%;
-    height: auto;
-    padding: 10% 0;
 
 
     &__box {
         position: relative;
-        width: 40.2rem;
-        height: 34.5rem;
+        width: 34.2rem;
+        height: 33.2rem;
         //needed padding calc
+        //padding: 12.25rem;
         //2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))
-        border: dashed 1px 1px; //see the line
+        border: 1px dashed; //see the line
         border-radius: 50%;
-        text-align: center;
+        text-align: left;
+        margin: 0 auto;
     }
 
     &__box > a {
-        font-size: 1.4rem;
+        color: $color-primary-grey;
+        font-size: $default-font-size;
         text-decoration: none;
         display: inline-block;
     	position: absolute;
-        top: 45%; left: 45%;
-        width: 14rem; height: 4rem;
+        top: 50%; left: 50%;
+        width: 25rem; height: 2rem;
+        border-bottom: .1rem solid $color-primary;
     }
 
     &__image {
         position: absolute;
-        contain: content;
         left: 50%;
         transform: translateY(-50%);
         transform: translateX(-50%);
@@ -424,14 +420,29 @@ body {
     }
   }
 
-  .deg0 { transform:  translate(20rem);} // 17.5rem = half the width of the wrapper
-  .deg45 { transform: rotate(45deg) translate(17.75rem) rotate(-45deg); }
-  .deg90 { transform: rotate(105deg) translate(20rem) rotate(-105deg); }
-  .deg135 { transform: rotate(150deg) translate(26rem) rotate(-150deg) }
-  .deg180 { transform: rotate(180deg) translate(28rem) rotate(-180deg); }
-  .deg225 { transform: rotate(215deg) translate(25rem) rotate(-215deg); }
-  .deg270 { transform: rotate(255deg) translate(20rem) rotate(-255deg); }
-  .deg315 { transform: rotate(315deg) translate(18rem) rotate(-315deg); }
+  .deg0 {
+        margin-left: 2.5rem;
+        transform:  translate(17.1rem);} // 17.5rem = half the width of the wrapper
+  .deg45 {
+        margin-left: 2.5rem;
+        transform: rotate(45deg) translate(17.1rem) rotate(-45deg); }
+  .deg90 { transform: rotate(110deg) translate(19.1rem) rotate(-110deg); }
+  .deg135 { 
+        margin-left: -60%;
+        transform: rotate(135deg) translate(17.1rem) rotate(-135deg) }
+  .deg180 {
+        width: 15rem !important;
+        margin-left: -50%;  
+        transform: rotate(180deg) translate(17.1rem) rotate(-180deg); }
+  .deg225 {
+        margin-left: -70%;  
+        transform: rotate(225deg) translate(17.1rem) rotate(-225deg); }
+  .deg270 {
+        margin-left: -25%;
+        transform: rotate(270deg) translate(21.1rem) rotate(-270deg); }
+  .deg315 {
+        margin-left: 15%;
+        transform: rotate(315deg) translate(17.1rem) rotate(-315deg); }
 
 
 
