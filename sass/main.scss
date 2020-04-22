@@ -46,11 +46,11 @@ $hspace: 3.5rem;
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-10rem);
+        transform: translateX(-30rem);
     }
 
     80% {
-        transform: translateX(2rem);
+        transform: translateX(1rem);
     }
 
     100% {
@@ -189,7 +189,7 @@ body {
         margin-bottom: 1.5rem;
     
         animation-name: moveInLeft;
-        animation-duration: 0.7s;
+        animation-duration: 1s;
         animation-timing-function: ease-out;
     }
     
@@ -201,7 +201,7 @@ body {
         margin-bottom: 1rem;
 
         animation-name: moveInRight;
-        animation-duration: 0.7s;
+        animation-duration: 1s;
         animation-timing-function: ease-out;
     }
 
