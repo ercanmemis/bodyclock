@@ -203,7 +203,7 @@ body {
   font-weight: 700;
   overflow: hidden;
   line-height: 1.11;
-  margin-bottom: 4.7rem;
+  margin-bottom: 3rem;
   animation-name: moveInLeft;
   animation-duration: 0.8s;
   animation-timing-function: ease-out; }
@@ -248,10 +248,18 @@ body {
   .main__text-box--main {
     font-size: 2rem; }
 
+.h1-fourth {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding-bottom: 5rem; }
+
 .heading-fourth__text-box {
   font-size: 2rem;
-  border-radius: 0.2rem;
-  padding: 1rem; }
+  max-width: 49.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #0bcdfc; }
+  .heading-fourth__text-box:not(:last-child) {
+    margin-bottom: 0.5rem; }
 
 .group-image {
   padding: 25% 0; }

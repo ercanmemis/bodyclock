@@ -288,7 +288,7 @@ body {
     font-weight: 700;
     overflow: hidden;
     line-height: 1.11;
-    margin-bottom: 4.7rem;
+    margin-bottom: 3rem;
 
     animation-name: moveInLeft;
     animation-duration: 0.8s;
@@ -354,12 +354,23 @@ body {
   }
 }
 
+.h1-fourth {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+}
+
 .heading-fourth {
   &__text-box {
     font-size: 2rem;
+    max-width: 49.5rem;
     //background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
-    border-radius: 0.2rem;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid $color-primary;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
