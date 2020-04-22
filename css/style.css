@@ -29,7 +29,9 @@
 @keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateX(10rem); }
+    transform: translateX(-5rem); }
+  80% {
+    transform: translateX(2rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -49,7 +51,7 @@
     opacity: 0;
     transform: translateX(1rem); }
   80% {
-    transform: translateX(-2rem); }
+    transform: translateX(-1rem); }
   100% {
     opacity: 1;
     transform: translateX(0); } }
@@ -136,7 +138,7 @@ body {
     line-height: 1.11;
     margin-bottom: 1.5rem;
     animation-name: moveInLeft;
-    animation-duration: 0.8s;
+    animation-duration: 0.7s;
     animation-timing-function: ease-out; }
   .heading-primary--sub {
     display: block;
@@ -145,22 +147,22 @@ body {
     line-height: 3.5rem;
     margin-bottom: 1rem;
     animation-name: moveInRight;
-    animation-duration: 0.8s;
+    animation-duration: 0.7s;
     animation-timing-function: ease-out; }
   .heading-primary--sub2 {
     display: block;
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 400;
-    animation-name: fadeIn;
-    animation-timing-function: ease-in; }
+    animation: moveInBottom .4s ease-out .75s;
+    animation-fill-mode: backwards; }
   .heading-primary--sub3 {
     display: block;
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 400;
-    animation-name: fadeIn;
-    animation-timing-function: ease-in; }
+    animation: moveInBottom .8s ease-out 1s;
+    animation-fill-mode: backwards; }
 
 .section-howitworks {
   background-color: #fff;
@@ -281,5 +283,5 @@ body {
   margin-bottom: 9rem; }
 
 .btn--animated {
-  animation: moveInBottom .4s ease-out .75s;
+  animation: moveInBottom 1s ease-out 1.25s;
   animation-fill-mode: backwards; }
