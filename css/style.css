@@ -239,8 +239,10 @@ body {
 .section-third__text-box {
   padding: 25% 0; }
 
-.section-fourth__text--box--header {
-  border: 0.1rem solid #0bcdfc; }
+.section-fourth {
+  margin-bottom: 8rem; }
+  .section-fourth__text--box--header {
+    border: 0.1rem solid #0bcdfc; }
 
 .heading-secondary--main {
   font-size: 5.6rem;
@@ -297,22 +299,56 @@ body {
 .h1-section {
   max-width: 114rem;
   margin: 0 auto;
-  padding-bottom: 2rem; }
+  padding-bottom: 3rem; }
 
 .quotebox {
+  position: relative;
   width: 369px;
   height: 423px;
   border-radius: 7px;
   background-color: #0bcdfc; }
   .quotebox__img--medium {
+    font-size: 2.4rem;
     max-width: 76rem; }
+  .quotebox__quote {
+    position: absolute;
+    color: #fff;
+    font-size: 10rem;
+    height: 18.6rem;
+    padding-left: 3rem;
+    font-weight: 700; }
+  .quotebox__text {
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    font-size: 2.4rem;
+    height: 100%; }
+    .quotebox__text--text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 3rem; }
+  .quotebox__bottom {
+    font-size: 1.6rem;
+    font-weight: 300;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    display: block;
+    padding: 3rem; }
+    .quotebox__bottom--institut {
+      font-size: 1.2rem; }
+    .quotebox__bottom > span {
+      display: block; }
 
 .heading-fourth__text-box {
   font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid #0bcdfc; }
+  padding: 0.5rem 1rem; }
   .heading-fourth__text-box:not(:last-child) {
-    margin-bottom: 0.5rem; }
+    margin-bottom: 1.9rem; }
 
 .group-image {
   padding: 25% 0; }
@@ -371,7 +407,8 @@ body {
   transform: rotate(315deg) translate(14rem) rotate(-315deg); }
 
 .paragraph {
-  font-size: 2rem; }
+  font-size: 2rem;
+  padding-bottom: 3rem; }
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
