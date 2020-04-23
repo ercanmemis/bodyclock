@@ -536,11 +536,11 @@ body {
 
 .deg0 {
   //margin-left: 2.5rem;
-  transform: translate(14rem);
+  transform: translate(13rem);
 } // = half the width of the wrapper
 .deg45 {
   //margin-left: 2.5rem;
-  transform: rotate(45deg) translate(14rem) rotate(-45deg);
+  transform: rotate(38deg) translate(13rem) rotate(-38deg);
 }
 .deg90 {
   margin-left: -37.5%;
@@ -548,12 +548,12 @@ body {
 }
 .deg135 {
   margin-left: -75%;
-  transform: rotate(135deg) translate(14rem) rotate(-135deg);
+  transform: rotate(135deg) translate(12rem) rotate(-135deg);
 }
 .deg180 {
   width: 15rem !important;
   margin-left: -45%;
-  transform: rotate(180deg) translate(14rem) rotate(-180deg);
+  transform: rotate(180deg) translate(12rem) rotate(-180deg);
 }
 .deg225 {
   margin-left: -75%;
