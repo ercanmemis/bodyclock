@@ -113,6 +113,10 @@ body {
   top: 50%;
   transform: translateY(-50%); }
 
+.nactive {
+  color: #0bcdfc !important;
+  font-weight: 500 !important; }
+
 .nav {
   background-color: #fff;
   height: 8rem;
@@ -123,32 +127,35 @@ body {
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
   margin: 0 auto;
-  display: none;
-  z-index: -1; }
+  z-index: 9999; }
   .nav__wrapper {
     width: 114rem;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    height: 8rem;
     margin: 0 auto; }
   .nav__logo {
-    line-height: 8rem; }
+    text-align: left;
+    padding: 2.5% 0;
+    max-height: 8rem;
+    float: left; }
   .nav__list {
-    width: auto;
-    height: 8rem;
-    list-style: none; }
+    list-style: none;
+    height: 100%;
+    text-align: right;
+    padding: 2rem 0; }
   .nav__item {
-    display: inline-block; }
+    display: inline-block;
+    margin-right: 2.5rem; }
   .nav__link {
+    font-size: 1.6rem;
+    color: #333333;
     display: inline-block;
     text-decoration: none; }
 
 .header {
   height: 100vh;
   background-color: #e8fdff;
-  position: relative; }
+  position: relative;
+  margin-top: 8rem; }
   .header__text-box {
     padding-top: 8rem;
     position: absolute;
@@ -410,9 +417,14 @@ body {
 .btn--bestellen {
   color: #fff;
   background-color: #0bcdfc;
-  width: 31.5rem;
+  width: auto;
   text-align: center;
   margin-bottom: 9rem; }
+
+.btn--nav {
+  color: #fff;
+  background-color: #0bcdfc;
+  width: auto; }
 
 .btn--animated {
   animation: moveInBottom 1s ease-out 1.25s;

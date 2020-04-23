@@ -153,6 +153,10 @@ body {
 }
 
 //NAVIGATION
+.nactive {
+  color: $color-primary !important;
+  font-weight: 500 !important;
+}
 
 .nav {
   background-color: $color-white;
@@ -164,35 +168,37 @@ body {
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
   margin: 0 auto;
-  display: none;
 
-  z-index: -1;
+  z-index: 9999;
 
   &__wrapper {
     width: 114rem;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    height: 8rem;
     margin: 0 auto;
   }
 
   &__logo {
-    line-height: 8rem;
+    text-align: left;
+    padding: 2.5% 0;
+    max-height: 8rem;
+    float: left;
   }
 
   &__list {
-    width: auto;
-    height: 8rem;
     list-style: none;
+    height: 100%;
+    text-align: right;
+    padding: 2rem 0;
   }
 
   &__item {
     display: inline-block;
+    margin-right: 2.5rem;
   }
 
   &__link {
+    font-size: $default-font-size;
+    color: $color-primary-grey;
     display: inline-block;
     text-decoration: none;
   }
@@ -215,6 +221,7 @@ body {
   height: 100vh;
   background-color: $color-primary-light;
   position: relative;
+  margin-top: 8rem;
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
@@ -585,9 +592,16 @@ body {
   &--bestellen {
     color: $color-white;
     background-color: $color-primary;
-    width: 31.5rem;
+    width: auto;
     text-align: center;
     margin-bottom: 9rem;
+  }
+
+  &--nav {
+    color: $color-white;
+    background-color: $color-primary;
+    width: auto;
+
   }
 
   &--animated {
