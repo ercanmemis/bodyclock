@@ -164,8 +164,9 @@ body {
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
   text-align: center;
   margin: 0 auto;
+  display: none;
 
-  z-index: 50;
+  z-index: -1;
 
   &__wrapper {
     width: 114rem;
