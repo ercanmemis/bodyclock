@@ -196,20 +196,24 @@ body {
     margin-right: 2.5rem;
   }
 
-    &__link {
-    font-size: $default-font-size;
+  &__link {
     color: $color-primary-grey;
     display: inline-block;
-    text-decoration: none;
   }
   &__link:link,
   &__link:visited {
+    font-size: $default-font-size;
+    text-decoration: none;
   }
-
-  &__link:hover {
+    &__link:hover {
+      color: $color-primary;
   }
 
   &__link:active {
+
+    transform: translateY(0.1rem);
+    transition: 0.2s;
+
   }
 }
 
@@ -220,6 +224,7 @@ body {
   margin-top: 8rem;
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
 
   &__text-box {
     padding-top: 8rem;
@@ -417,16 +422,30 @@ body {
   }
 }
 
-.h1-fourth {
+.h1-section {
   max-width: 114rem;
   margin: 0 auto;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
+}
+
+.quotebox {
+  width: 369px;
+  height: 423px;
+  border-radius: 7px;
+  background-color: #0bcdfc;
+
+  &__img {
+
+    &--medium {
+      max-width: 76rem;
+    }
+  }
 }
 
 .heading-fourth {
   &__text-box {
     font-size: 2rem;
-    max-width: 49.5rem;
+
     //background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
     padding: 0.5rem 1rem;
     border: 1px solid $color-primary;
@@ -509,7 +528,7 @@ body {
 }
 
 .paragraph {
-  font-size: $default-font-size;
+  font-size: 2rem;
 
   &:not(:last-child) {
     margin-bottom: 3rem;
@@ -613,6 +632,7 @@ body {
   padding: 3rem 24rem;
   background-color: $color-primary-grey;
   width: 100%;
+  margin-top: 5rem;
 
   &__footer-logo-box {
     height: auto;
