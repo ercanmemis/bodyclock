@@ -196,16 +196,12 @@ body {
     margin-right: 2.5rem;
   }
 
-  &__link {
+    &__link {
     font-size: $default-font-size;
     color: $color-primary-grey;
     display: inline-block;
     text-decoration: none;
   }
-
-  &__link:last-child {
-  }
-
   &__link:link,
   &__link:visited {
   }
