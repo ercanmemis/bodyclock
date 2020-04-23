@@ -169,11 +169,18 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
   .header__video-box {
+    position: relative;
     width: 71rem;
     height: 41.8rem;
     background-image: url(../img/macbook.png);
     background-size: cover;
     background-position: top; }
+    .header__video-box--video {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateY(-50%);
+      transform: translateX(-50%); }
   .header__reference-box {
     display: inline-block;
     position: absolute; }
@@ -497,9 +504,7 @@ body {
     .footer__item:not(:last-child) {
       margin-right: 1rem; }
   .footer__link:link, .footer__link:visited {
-    color: #e8fdff;
+    color: #fff;
     text-decoration: none; }
-  .footer__link:hover {
-    text-decoration: overline; }
   .footer__link:active {
     text-decoration: solid; }

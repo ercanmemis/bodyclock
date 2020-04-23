@@ -232,11 +232,21 @@ body {
   }
 
   &__video-box {
+    position: relative;
     width: 71rem;
     height: 41.8rem;
     background-image: url(../img/macbook.png);
     background-size: cover;
-    background-position: top;
+    background-position: center;
+
+    &--video {
+      max
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateY(-50%);
+      transform: translateX(-50%);
+    }
   }
 
   &__reference-box {
@@ -698,12 +708,8 @@ body {
   &__link {
     &:link,
     &:visited {
-      color: $color-primary-light;
+      color: $color-white;
       text-decoration: none;
-    }
-
-    &:hover {
-      text-decoration: overline;
     }
 
     &:active {
