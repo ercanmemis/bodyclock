@@ -675,10 +675,32 @@ body {
   align-items: center;
 }
 
-.section-impressum {
+.section__impressum {
+  padding-top: 15vh;
+  margin-top: 2.5%;
+  &--header {
+    font-size: 3.2rem;
+  }
+
+  &--sub {
+  }
+
+  &--paragraph {
+  }
 }
 
 //BUTTONS
+
+.inline-link:link,
+.inline-link:visited {
+  color: $color-primary;
+  text-decoration: underline;
+}
+.inline-link:hover {
+}
+
+.inline-link:active {
+}
 
 .btn {
   &:link,

@@ -495,6 +495,17 @@ body {
   justify-content: center;
   align-items: center; }
 
+.section__impressum {
+  padding-top: 15vh;
+  margin-top: 2.5%; }
+  .section__impressum--header {
+    font-size: 3.2rem; }
+
+.inline-link:link,
+.inline-link:visited {
+  color: #0bcdfc;
+  text-decoration: underline; }
+
 .btn:link, .btn:visited {
   font-size: 1.6rem;
   font-weight: 700;
