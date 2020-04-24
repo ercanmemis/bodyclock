@@ -500,6 +500,10 @@ body {
   margin-top: 2.5%; }
   .section__impressum--header {
     font-size: 3.2rem; }
+  .section__impressum--sub {
+    font-size: 1.6rem; }
+  .section__impressum--paragraph {
+    font-size: 1.6rem; }
 
 .inline-link:link,
 .inline-link:visited {
