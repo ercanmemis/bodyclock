@@ -181,9 +181,10 @@ body {
     background-size: cover;
     background-position: center; }
     .header__video-box--video {
+      /* override other styles to make responsive */
+      width: 47.6rem !important;
+      height: auto !important;
       overflow: auto;
-      width: 47.6rem;
-      height: 34.4rem;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -321,15 +322,16 @@ body {
     border: solid 0.1rem #0bcdfc;
     border-radius: 10rem;
     margin-right: 1.7rem; }
-    .main__text-box--circle > img {
-      display: inline; }
     .main__text-box--circle--img {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: auto;
       height: auto; }
+      .main__text-box--circle--img > img {
+        display: inline;
+        text-align: center;
+        vertical-align: middle; }
     .main__text-box--circle--number {
       position: absolute;
       width: 3.6rem;

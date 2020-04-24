@@ -247,9 +247,10 @@ body {
     background-position: center;
 
     &--video {
+      /* override other styles to make responsive */
+      width: 47.6rem !important;
+      height: auto !important;
       overflow: auto;
-      width: 47.6rem;
-      height: 34.4rem;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -440,17 +441,18 @@ body {
     border-radius: 10rem;
     margin-right: 1.7rem;
 
-    & > img {
-      display: inline;
-    }
-
     &--img {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: auto;
       height: auto;
+
+      & > img {
+        display: inline;
+        text-align: center;
+        vertical-align: middle;
+      }
     }
 
     &--number {
