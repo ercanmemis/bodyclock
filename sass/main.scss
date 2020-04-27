@@ -16,13 +16,61 @@ $text-bold: 700;
 $hspace: 3.5rem;
 $rmargin-bottom: 0 !important;
 
-//MIXIN
+//MIXINS
 
 @mixin clearfix {
   &::after {
     content: "";
     display: table;
     clear: both;
+  }
+}
+
+//-- MEDIA QUERY MANAGER MIXIN
+/*
+0-600 px:    600px
+600-900p px:    Tablet portrait
+900-1200 px;    Tablet landscape
+1200 - 1800 px: Normal Styles
+1800px; Big Desktop
+*/
+
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+
+
+ORDER: Base + Typography > general layout + grid > page layout > components
+*/
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content; // 1200px
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content; //900px
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content; // 600px
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) {
+      @content; //1800+ px
+    }
   }
 }
 
@@ -100,16 +148,35 @@ $rmargin-bottom: 0 !important;
 
 html {
   // This defines what 1rem is - Definiert 1rem
-  font-size: 62.5%;
+  font-size: 62.5%; //1 rem = 10px; 10x/16ox = 62.5%
   scroll-behavior: smooth;
+
+  @include respond(tab-land) {
+    //width < 1200?
+    font-size: 56.25%; //1 rem = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(tab-port) {
+    //width > 900?
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(phone) {
+    //width < 600?
+    font-size: 30%; //1 rem = 4.8px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1 rem = 12px, 12/16 = 75%
+  }
 }
 
 body {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
-  /*font-size: 16px;*/
   color: $color-primary-grey;
   box-sizing: border-box;
+  width: 100%;
 }
 
 .clearfix {
@@ -153,6 +220,10 @@ body {
   transform: translateY(-50%);
 }
 
+.main {
+  margin-bottom: 15rem;
+}
+
 //NAVIGATION
 .nactive {
   color: $color-primary !important;
@@ -167,35 +238,36 @@ body {
   left: 0;
   right: 0;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
-  text-align: center;
   margin: 0 auto;
 
   z-index: 9999;
 
   &__wrapper {
     width: 114rem;
-    height: 8rem;
+    height: auto;
     margin: 0 auto;
   }
 
   &__logo {
-    text-align: left;
-    height: 8rem;
     float: left;
-    width: auto;
+
+    &--img {
+      vertical-align: middle;
+      padding: 18.75% 0;
+    }
 
     &--link {
       display: inline-block;
-      height: auto;
-      padding: 15% 0;
+      height: 8rem;
     }
   }
 
   &__list {
+    height: 8rem;
     list-style: none;
-    height: 100%;
     text-align: right;
-    padding: 2rem 0;
+    float: right;
+    padding: 1.75% 0;
   }
 
   &__item {
@@ -226,7 +298,7 @@ body {
   height: 100vh;
   background-color: $color-primary-light;
   position: relative;
-  margin-top: 8rem;
+  margin-top: 10rem;
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
@@ -682,14 +754,22 @@ body {
   margin-top: 2.5%;
   &--header {
     font-size: 3.2rem;
+    margin-bottom: 8rem;
   }
 
   &--sub {
     font-size: $default-font-size;
+    margin-bottom: 2.4rem;
   }
 
   &--paragraph {
     font-size: $default-font-size;
+    margin-bottom: 2rem;
+  }
+
+  &--list {
+    font-size: $default-font-size;
+    margin-bottom: 2rem;
   }
 }
 
@@ -698,12 +778,15 @@ body {
 .inline-link:link,
 .inline-link:visited {
   color: $color-primary;
+
   text-decoration: underline;
 }
 .inline-link:hover {
+  color: $color-primary;
 }
 
 .inline-link:active {
+  color: $color-primary;
 }
 
 .btn {
@@ -789,37 +872,51 @@ body {
   padding: 3rem 24rem;
   background-color: $color-primary-grey;
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 8rem;
 
-  &__footer-logo-box {
+  &__logo-box {
     height: auto;
-  }
 
-  &__navigation {
-    float: right;
-  }
-
-  &__list {
-    list-style: none;
-  }
-
-  &__item {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
-    }
-  }
-
-  &__link {
-    &:link,
-    &:visited {
-      color: $color-white;
+    &--link:link,
+    &--link:visited {
+      font-size: 3.2rem;
+      font-weight: 700;
+      color: #ffffff;
       text-decoration: none;
+      text-transform: uppercase;
     }
 
-    &:active {
-      text-decoration: solid;
+    &--logotext-left {
+      font-weight: 200;
     }
   }
 }
+
+.footer__navigation {
+  height: 4.3rem;
+  float: right;
+  padding: 0.7rem;
+}
+
+.footer__list {
+  list-style: none;
+  text-align: right;
+}
+
+.footer__item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: 1rem;
+  }
+}
+
+.footer__link {
+  &:link,
+  &:visited {
+    color: $color-white;
+    text-decoration: none;
+  }
+}
+
+// MEDIA QUERIES
