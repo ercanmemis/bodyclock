@@ -232,7 +232,6 @@ body {
 
 .nav {
   background-color: $color-white;
-  height: 8rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -244,6 +243,7 @@ body {
 
   &__wrapper {
     width: 114rem;
+    height: 8rem;
     height: auto;
     margin: 0 auto;
   }
@@ -253,7 +253,7 @@ body {
 
     &--img {
       vertical-align: middle;
-      padding: 18.75% 0;
+      padding: 16% 0;
     }
 
     &--link {
@@ -298,7 +298,7 @@ body {
   height: 100vh;
   background-color: $color-primary-light;
   position: relative;
-  margin-top: 10rem;
+  margin-top: 8rem;
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
@@ -317,6 +317,7 @@ body {
     background-image: url(../img/macbook.png);
     background-size: cover;
     background-position: center;
+    margin-left: -14%;
 
     &--video {
       /* override other styles to make responsive */
@@ -327,7 +328,6 @@ body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      overflow: auto;
     }
   }
 
@@ -337,9 +337,13 @@ body {
     align-items: center;
     margin-top: 7.5rem;
     width: 100%;
+
     &--img {
       display: flex;
       height: auto;
+
+      @include respond(tab-port) {
+      }
     }
 
     &--rectangle {
@@ -441,7 +445,7 @@ body {
 }
 
 .section-fourth {
-  padding-top: 15vh;
+  padding-top: 10vh;
   &__text--box {
     &--header {
       border: 0.1rem solid $color-primary;
@@ -450,7 +454,7 @@ body {
 }
 
 .section-fifth {
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 .heading-secondary {
