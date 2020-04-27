@@ -8,7 +8,7 @@
         margin-bottom: 0; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem; } }
+      max-width: 80rem; } }
   .row::after {
     content: "";
     display: table;
@@ -254,7 +254,7 @@ body {
         margin-right: 1rem; }
 
 .heading-primary {
-  max-width: 55.1rem;
+  width: 55.1rem;
   color: #333333;
   margin-bottom: 5.5rem;
   backface-visibility: hidden; }
