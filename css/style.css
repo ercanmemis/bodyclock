@@ -720,6 +720,10 @@ body {
   border-radius: 0.3rem;
   border: 0.1rem solid #0bcdfc;
   backface-visibility: hidden; }
+  @media only screen and (max-width: 23.5em) {
+    .btn:link, .btn:visited {
+      font-size: 2.5rem;
+      font-weight: 400; } }
 
 .btn:hover {
   color: #fff;

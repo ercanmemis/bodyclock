@@ -1010,6 +1010,11 @@ body {
     border: 0.1rem solid $color-primary;
 
     backface-visibility: hidden;
+
+    @include respond(xphone) {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
   }
 
   &:hover {
