@@ -145,7 +145,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 
 html {
   // This defines what 1rem is - Definiert 1rem
-  font-size: 62.5%; //1 rem = 10px; 10x/16ox = 62.5%
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
   scroll-behavior: smooth;
 
   @include respond(tab-land) {
@@ -158,10 +158,14 @@ html {
     font-size: 50%; // 1em = 8px, 8/16 = 50%
   }
 
-  /*@include respond(phone) {
+  @include respond(phone) {
     //width < 600?
-    font-size: 50%; //1 em = 4.8px
-  }*/
+    font-size: 50%; //1 em = 5px
+  }
+
+  @include respond(big-desktop) {
+    font-size: 62.5%;
+  }
 }
 
 body {
@@ -176,6 +180,10 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.push {
+  margin-left: auto;
 }
 
 .tcenter {
@@ -230,42 +238,37 @@ body {
   left: 0;
   right: 0;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
 
   z-index: 9999;
 
-  &__wrapper {
-    width: 114rem;
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 8rem;
-    height: auto;
-    margin: 0 auto;
+    padding: 0 3%;
   }
 
   &__logo {
-    float: left;
-
-    &--img {
-      vertical-align: middle;
-      padding: 16% 0;
-    }
-
     &--link {
-      display: inline-block;
-      height: 8rem;
+      width: auto;
+      vertical-align: middle;
     }
   }
 
   &__list {
-    height: 8rem;
     list-style: none;
-    text-align: right;
-    float: right;
-    padding: 1.75% 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &__item {
     display: inline-block;
-    margin-right: 2.5rem;
+
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
   }
 
   &__link {
@@ -288,68 +291,102 @@ body {
 }
 
 .header {
-  height: 100vh;
-  background-color: $color-primary-light;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
   position: relative;
   margin-top: 8rem;
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
+  @include respond(tab-land) {
+  }
+
+  &__header {
+    background-color: $color-primary-light;
+    height: 100vh;
+  }
+
+  &__primary {
+    width: 55.1rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    & > * {
+      margin-bottom: 3rem;
+    }
+
+    &--main {
+      font-size: 7.2rem;
+      font-weight: 700;
+    }
+
+    &--sub {
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 3.5rem;
+    }
+
+    &--sub2 {
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 3.5rem;
+    }
+
+    &--sub3 {
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 3.2rem;
+    }
+  }
+
   &__text-box {
     padding-top: 8rem;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   &__video-box {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-items: safe center;
+    align-items: center;
+    align-content: center;
     width: 71rem;
     height: 41.8rem;
     background-image: url(../img/macbook.png);
     background-size: cover;
     background-position: center;
-    margin-left: -14%;
 
     &--video {
       /* override other styles to make responsive */
       width: 47.6rem !important;
       height: auto !important;
-      overflow: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
     }
   }
 
   &__reference-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3.5rem;
     width: 100%;
+    margin-top: 3.5rem;
 
     &--img {
       display: flex;
-      height: auto;
-
+      flex-wrap: wrap;
+      justify-content: center;
+      justify-items: safe center;
+      align-content: center;
+      align-items: center;
       @include respond(tab-port) {
       }
     }
 
     &--rectangle {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      align-self: flex-start;
-      height: 7.3rem;
-      padding: 1rem;
-      //border: 0.1rem solid $color-primary;
-      border-radius: 0.2rem;
-
+      display: inline-block;
+      width: auto;
+      height: auto;
       &:not(:last-child) {
         margin-right: 1rem;
       }
@@ -832,10 +869,6 @@ body {
     left: 0;
     z-index: -1;
     transition: all 0.3s;
-
-    &:not(:hover) {
-      background-color: $color-primary-light;
-    }
   }
 
   &--default {

@@ -103,17 +103,19 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
-  /*@include respond(phone) {
-    //width < 600?
-    font-size: 50%; //1 em = 4.8px
-  }*/ }
+  scroll-behavior: smooth; }
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
   @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 62.5%; } }
 
 body {
   font-family: "Nunito Sans", sans-serif;
@@ -126,6 +128,9 @@ body {
   content: "";
   display: table;
   clear: both; }
+
+.push {
+  margin-left: auto; }
 
 .tcenter {
   text-align: center; }
@@ -168,30 +173,25 @@ body {
   left: 0;
   right: 0;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
-  margin: 0 auto;
   z-index: 9999; }
-  .nav__wrapper {
-    width: 114rem;
+  .nav__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 8rem;
-    height: auto;
-    margin: 0 auto; }
-  .nav__logo {
-    float: left; }
-    .nav__logo--img {
-      vertical-align: middle;
-      padding: 16% 0; }
-    .nav__logo--link {
-      display: inline-block;
-      height: 8rem; }
+    padding: 0 3%; }
+  .nav__logo--link {
+    width: auto;
+    vertical-align: middle; }
   .nav__list {
-    height: 8rem;
     list-style: none;
-    text-align: right;
-    float: right;
-    padding: 1.75% 0; }
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   .nav__item {
-    display: inline-block;
-    margin-right: 2.5rem; }
+    display: inline-block; }
+    .nav__item:not(:last-child) {
+      margin-right: 2.5rem; }
   .nav__link {
     color: #333333;
     display: inline-block; }
@@ -205,51 +205,71 @@ body {
     transition: 0.2s; }
 
 .header {
-  height: 100vh;
-  background-color: #e8fdff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
   position: relative;
   margin-top: 8rem; }
+  .header__header {
+    background-color: #e8fdff;
+    height: 100vh; }
+  .header__primary {
+    width: 55.1rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start; }
+    .header__primary > * {
+      margin-bottom: 3rem; }
+    .header__primary--main {
+      font-size: 7.2rem;
+      font-weight: 700; }
+    .header__primary--sub {
+      font-size: 3.2rem;
+      font-weight: 400;
+      line-height: 3.5rem; }
+    .header__primary--sub2 {
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 3.5rem; }
+    .header__primary--sub3 {
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 3.2rem; }
   .header__text-box {
-    padding-top: 8rem;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    padding-top: 8rem; }
   .header__video-box {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    justify-items: safe center;
+    align-items: center;
+    align-content: center;
     width: 71rem;
     height: 41.8rem;
     background-image: url(../img/macbook.png);
     background-size: cover;
-    background-position: center;
-    margin-left: -14%; }
+    background-position: center; }
     .header__video-box--video {
       /* override other styles to make responsive */
       width: 47.6rem !important;
-      height: auto !important;
-      overflow: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
+      height: auto !important; }
   .header__reference-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3.5rem;
-    width: 100%; }
+    width: 100%;
+    margin-top: 3.5rem; }
     .header__reference-box--img {
       display: flex;
-      height: auto; }
-    .header__reference-box--rectangle {
-      display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      align-self: flex-start;
-      height: 7.3rem;
-      padding: 1rem;
-      border-radius: 0.2rem; }
+      justify-items: safe center;
+      align-content: center;
+      align-items: center; }
+    .header__reference-box--rectangle {
+      display: inline-block;
+      width: auto;
+      height: auto; }
       .header__reference-box--rectangle:not(:last-child) {
         margin-right: 1rem; }
 
@@ -603,8 +623,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.3s; }
-  .btn::after:not(:hover) {
-    background-color: #e8fdff; }
 
 .btn--default {
   background-color: #e8fdff;
