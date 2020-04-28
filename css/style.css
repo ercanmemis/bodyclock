@@ -274,7 +274,7 @@ body {
     justify-content: flex-start; }
     @media only screen and (max-width: 56.25em) {
       .header__primary {
-        width: 100%; } }
+        width: 80%; } }
     .header__primary > * {
       margin-bottom: 3rem; }
     .header__primary--main {
@@ -655,7 +655,8 @@ body {
     border-radius: 50%; }
     @media only screen and (max-width: 56.25em) {
       .group-image__box {
-        width: auto; } }
+        width: auto;
+        height: auto; } }
   .group-image__box > a {
     color: #333333;
     font-size: 1.4rem;
@@ -667,6 +668,8 @@ body {
     left: 50%;
     width: 25rem;
     height: 2rem; }
+  .group-image__image {
+    max-width: 100%; }
 
 .deg0 {
   transform: translate(12rem); }

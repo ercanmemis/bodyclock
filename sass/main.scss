@@ -388,7 +388,7 @@ body {
     justify-content: flex-start;
 
     @include respond(tab-port) {
-      width: 100%;
+      width: 80%;
     }
 
     & > * {
@@ -918,6 +918,7 @@ body {
 
     @include respond(tab-port) {
       width: auto;
+      height: auto;
     }
   }
 
@@ -935,6 +936,7 @@ body {
   }
 
   &__image {
+    max-width: 100%;
   }
 }
 
