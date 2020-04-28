@@ -1,7 +1,8 @@
 //VARIABLES
 $grid-width: 114rem;
 $gutter-vertical: 3rem;
-$gutter-vertical-small: 0;
+$gutter-vertical-small: 3rem;
+$gutter-vertical-x-small: 0;
 $gutter-horizontal: 3rem;
 
 //MIXIN
@@ -70,6 +71,10 @@ $gutter-horizontal: 3rem;
 
       @include respond(tab-port) {
         margin-right: $gutter-vertical-small;
+      }
+
+      @include respond(phone) {
+        margin-right: $gutter-vertical-x-small;
       }
     }
 
