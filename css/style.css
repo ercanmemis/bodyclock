@@ -123,8 +123,7 @@ body {
   font-weight: 400;
   color: #333333;
   box-sizing: border-box;
-  width: 100%;
-  min-height: 100%; }
+  width: 100%; }
 
 .clearfix {
   content: "";
@@ -495,7 +494,7 @@ body {
   height: 100%; }
 
 .quotebox {
-  width: 369px;
+  max-width: 369px;
   height: 423px;
   position: relative;
   border-radius: 7px;

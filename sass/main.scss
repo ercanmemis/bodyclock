@@ -175,7 +175,6 @@ body {
   color: $color-primary-grey;
   box-sizing: border-box;
   width: 100%;
-  min-height: 100%;
 }
 
 .clearfix {
@@ -694,7 +693,7 @@ body {
 }
 
 .quotebox {
-  width: 369px;
+  max-width: 369px;
   height: 423px;
   position: relative;
   border-radius: 7px;
