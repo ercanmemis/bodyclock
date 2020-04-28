@@ -47,25 +47,29 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == xphone {
+    @media only screen and (max-width: 23.5em) {
+      @content; // 375px
+    }
+  }
   @if $breakpoint == phone {
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       @content; // 600px
     }
   }
-
   @if $breakpoint == tab-port {
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       @content; //900px
     }
   }
   @if $breakpoint == tab-land {
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content; // 1200px
     }
   }
 
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) {
+    @media only screen and (min-width: 112.5em) {
       @content; //1800+ px
     }
   }
@@ -163,6 +167,11 @@ html {
     font-size: 50%; //1 em = 5px
   }
 
+  @include respond(xphone) {
+    // width < 375?
+    font-size: 40%; //1 em = 4px, 4/16 = 25%
+  }
+
   @include respond(big-desktop) {
     font-size: 62.5%;
   }
@@ -213,11 +222,20 @@ body {
 .iphone {
   margin-top: -2rem;
   padding-left: 25%;
+
+  @include respond(phone) {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0 auto;
+  }
+
+  @include respond(xphone) {
+  }
 }
 
 .mockup-box {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   margin-top: 4rem;
 
@@ -324,12 +342,10 @@ body {
 
 .header {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
-  position: relative;
   margin-top: 8rem;
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -413,9 +429,6 @@ body {
     align-content: center;
     width: 71rem;
     height: 41.8rem;
-    background-image: url(../img/macbook.png);
-    background-size: cover;
-    background-position: center;
 
     @include respond(tab-port) {
       width: 100%;
@@ -427,9 +440,10 @@ body {
     }
 
     &--video {
+      position: absolute;
       /* override other styles to make responsive */
-      width: 47.6rem !important;
-      height: auto !important;
+      width: 51.6rem !important;
+      height: 34.4rem !important;
 
       @include respond(tab-port) {
         width: 100%;
@@ -457,7 +471,7 @@ body {
       width: auto;
       height: auto;
       &:not(:last-child) {
-        margin-right: 1rem;
+        margin-right: 2rem;
       }
     }
   }
@@ -506,6 +520,11 @@ body {
 
     @include respond(phone) {
     }
+
+    @include respond(xphone) {
+      font-size: 2.5rem;
+      padding: 5%;
+    }
   }
 
   &--sub3 {
@@ -532,11 +551,7 @@ body {
 }
 
 .section-second {
-  background-image: linear-gradient(
-    to bottom,
-    #e8fdff,
-    rgba(232, 253, 255, 0.21)
-  );
+  background-color: $color-primary-light;
 
   &__text-box {
     padding: 25% 0;
@@ -631,8 +646,10 @@ body {
   align-items: flex-start;
   align-content: flex-start;
 
-  @include respond(phone) {
+  @include respond(xphone) {
     padding: 5%;
+    margin-top: 10%;
+    font-size: 2.5rem;
   }
 
   &--circle {
@@ -646,6 +663,11 @@ body {
     @include respond(phone) {
       min-width: 10rem;
       height: 10rem;
+    }
+
+    @include respond(xphone) {
+      width: 11rem;
+      height: 11rem;
     }
 
     &--img {
@@ -699,7 +721,7 @@ body {
     &--sub {
       display: flex;
       align-items: center;
-      margin-bottom: 3.7rem;
+      margin-bottom: 3rem;
 
       @include respond(phone) {
         width: 100%;
@@ -769,7 +791,6 @@ body {
 .quotebox {
   max-width: 100%;
   height: 43.5rem;
-  position: relative;
   border-radius: 0.7rem;
   background-color: #0bcdfc;
 
@@ -857,7 +878,6 @@ body {
 .group-image {
   height: 58.3rem;
   display: flex;
-  justify-content: center;
   align-items: center;
   &__box {
     position: relative;
