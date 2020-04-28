@@ -1,5 +1,5 @@
 .row {
-  max-width: 114rem;
+  max-width: 120rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 3rem; }
@@ -190,7 +190,7 @@ body {
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
   z-index: 9999; }
   .nav__navbar {
-    width: 114rem;
+    width: 120rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -378,11 +378,13 @@ body {
       .section-second__text-box {
         padding: 0; } }
 
-.section-third__text-box {
-  padding: 25% 0; }
-  @media (max-width: 37.5em) {
-    .section-third__text-box {
-      padding: 5%; } }
+.section-third {
+  margin-top: 3.5rem; }
+  .section-third__text-box {
+    padding: 25% 0; }
+    @media (max-width: 37.5em) {
+      .section-third__text-box {
+        padding: 5%; } }
 
 .section-fourth {
   padding-top: 10vh; }
@@ -536,7 +538,7 @@ body {
         margin-top: 3rem; } }
 
 .h1-section {
-  max-width: 114rem;
+  max-width: 120rem;
   margin: 0 auto;
   padding-bottom: 3rem; }
 
@@ -546,7 +548,7 @@ body {
 
 .quotebox {
   max-width: 100%;
-  height: 42.3rem;
+  height: 43.5rem;
   position: relative;
   border-radius: 0.7rem;
   background-color: #0bcdfc; }
@@ -554,8 +556,8 @@ body {
     width: 100%;
     height: auto; }
     .quotebox__img--medium {
-      width: auto;
-      height: 100%;
+      width: 100%;
+      height: auto;
       overflow: hidden; }
       @media (max-width: 56.25em) {
         .quotebox__img--medium {
@@ -605,8 +607,10 @@ body {
     margin-bottom: 1.9rem; }
 
 .group-image {
+  height: 58.3rem;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
   .group-image__box {
     position: relative;
     width: 34.2rem;
@@ -627,10 +631,10 @@ body {
     height: 2rem; }
 
 .deg0 {
-  transform: translate(13rem); }
+  transform: translate(11rem); }
 
 .deg45 {
-  transform: rotate(38deg) translate(13rem) rotate(-38deg); }
+  transform: rotate(38deg) translate(11rem) rotate(-38deg); }
 
 .deg90 {
   margin-left: -37.5%;
@@ -638,23 +642,23 @@ body {
 
 .deg135 {
   margin-left: -75%;
-  transform: rotate(135deg) translate(12rem) rotate(-135deg); }
+  transform: rotate(135deg) translate(11rem) rotate(-135deg); }
 
 .deg180 {
   width: 15rem !important;
   margin-left: -45%;
-  transform: rotate(180deg) translate(12rem) rotate(-180deg); }
+  transform: rotate(180deg) translate(11rem) rotate(-180deg); }
 
 .deg225 {
   margin-left: -75%;
-  transform: rotate(225deg) translate(14rem) rotate(-225deg); }
+  transform: rotate(225deg) translate(12rem) rotate(-225deg); }
 
 .deg270 {
   margin-left: -35%;
-  transform: rotate(270deg) translate(21rem) rotate(-270deg); }
+  transform: rotate(270deg) translate(20.5rem) rotate(-270deg); }
 
 .deg315 {
-  transform: rotate(315deg) translate(14rem) rotate(-315deg); }
+  transform: rotate(315deg) translate(13rem) rotate(-315deg); }
 
 .paragraph {
   font-size: 2rem;
