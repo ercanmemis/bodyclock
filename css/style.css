@@ -154,6 +154,9 @@ body {
   margin-top: -2rem;
   padding-left: 25%; }
 
+.mockup-box {
+  display: block; }
+
 .container {
   position: relative;
   top: 50%;
@@ -196,8 +199,14 @@ body {
     align-items: center; }
   .nav__item {
     display: inline-block; }
+    @media (max-width: 37.5em) {
+      .nav__item {
+        margin-bottom: 5rem; } }
     .nav__item:not(:last-child) {
       margin-right: 2.5rem; }
+      @media (max-width: 37.5em) {
+        .nav__item:not(:last-child) {
+          display: none; } }
   .nav__link {
     color: #333333;
     display: inline-block; }
@@ -666,7 +675,7 @@ body {
   margin-bottom: 9rem; }
   @media (max-width: 37.5em) {
     .btn--bestellen {
-      display: block; } }
+      width: 100%; } }
 
 .btn--nav {
   color: #fff;

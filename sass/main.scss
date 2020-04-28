@@ -215,6 +215,10 @@ body {
   padding-left: 25%;
 }
 
+.mockup-box {
+  display: block;
+}
+
 .container {
   position: relative;
   top: 50%;
@@ -272,9 +276,15 @@ body {
 
   &__item {
     display: inline-block;
+    @include respond(phone) {
+      margin-bottom: 5rem;
+    }
 
     &:not(:last-child) {
       margin-right: 2.5rem;
+      @include respond(phone) {
+        display: none;
+      }
     }
   }
 
@@ -925,7 +935,7 @@ body {
     margin-bottom: 9rem;
 
     @include respond(phone) {
-      display: block;
+      width: 100%;
     }
   }
 
