@@ -162,6 +162,11 @@ body {
   width: 100%;
   height: auto;
   margin-top: 4rem; }
+  @media (max-width: 37.5em) {
+    .mockup-box {
+      margin-top: 8rem;
+      width: 82.5%;
+      height: auto; } }
 
 .container {
   position: relative;
@@ -349,9 +354,6 @@ body {
     margin-bottom: 3.5rem;
     animation: moveInBottom 0.4s ease-out 0.75s;
     animation-fill-mode: backwards; }
-    @media (max-width: 37.5em) {
-      .heading-primary--sub2 {
-        padding: 0 5%; } }
   .heading-primary--sub3 {
     display: block;
     font-size: 2rem;
@@ -366,7 +368,7 @@ body {
   margin-bottom: 15rem; }
   @media (max-width: 37.5em) {
     .section-first {
-      margin-bottom: 7.5rem; } }
+      margin-bottom: 2.5rem; } }
 
 .section-second {
   background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21)); }
@@ -374,10 +376,13 @@ body {
     padding: 25% 0; }
     @media (max-width: 37.5em) {
       .section-second__text-box {
-        padding: 5% 0; } }
+        padding: 0; } }
 
 .section-third__text-box {
   padding: 25% 0; }
+  @media (max-width: 37.5em) {
+    .section-third__text-box {
+      padding: 5%; } }
 
 .section-fourth {
   padding-top: 10vh; }
@@ -399,11 +404,14 @@ body {
   animation-timing-function: ease-out; }
   @media (max-width: 37.5em) {
     .heading-secondary--main {
-      padding: 0 5%; } }
+      margin-bottom: 0;
+      padding: 5%; } }
 
 .main__heading {
   display: flex;
   width: 100%; }
+  .main__heading-secondary {
+    padding: 0 5%; }
 
 .number {
   position: absolute;
@@ -429,8 +437,9 @@ body {
   display: flex;
   font-size: 2rem;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start; }
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start; }
   @media (max-width: 37.5em) {
     .main__text-box {
       padding: 5%; } }
@@ -441,6 +450,10 @@ body {
     border: solid 0.1rem #0bcdfc;
     border-radius: 10rem;
     margin-right: 1.7rem; }
+    @media (max-width: 37.5em) {
+      .main__text-box--circle {
+        min-width: 10rem;
+        height: 10rem; } }
     .main__text-box--circle--img {
       position: absolute;
       top: 50%;
@@ -473,27 +486,54 @@ body {
     margin-bottom: 3rem; }
     @media (max-width: 37.5em) {
       .main__text-box--heading {
-        flex-direction: row;
+        align-items: flex-start; } }
+    @media (max-width: 37.5em) {
+      .main__text-box--heading {
+        width: 100%;
+        flex-direction: column;
         flex-wrap: wrap; } }
     .main__text-box--heading--sub {
       display: flex;
       align-items: center;
       margin-bottom: 3.7rem; }
+      @media (max-width: 37.5em) {
+        .main__text-box--heading--sub {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start; } }
     .main__text-box--heading--sub2 {
       display: flex;
       align-items: center;
       margin-bottom: 3.7rem; }
+      @media (max-width: 37.5em) {
+        .main__text-box--heading--sub2 {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start; } }
     .main__text-box--heading--sub3 {
       display: flex;
       align-items: center;
       margin-bottom: 3.7rem; }
+      @media (max-width: 37.5em) {
+        .main__text-box--heading--sub3 {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start; } }
     .main__text-box--heading--sub4 {
       display: flex;
       flex: 1 auto;
       align-items: center; }
+      @media (max-width: 37.5em) {
+        .main__text-box--heading--sub4 {
+          width: 100%;
+          flex-direction: column;
+          align-items: flex-start; } }
   .main__text-box--header {
     display: flex;
     align-items: flex-start; }
+    @media (max-width: 37.5em) {
+      .main__text-box--header {
+        margin-top: 3rem; } }
 
 .h1-section {
   max-width: 114rem;
@@ -554,6 +594,9 @@ body {
       font-size: 1.2rem; }
     .quotebox__bottom > span {
       display: block; }
+
+.heading-third:not(:last-child) {
+  padding: 0; }
 
 .heading-fourth__text-box {
   font-size: 2rem;

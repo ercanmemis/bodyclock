@@ -220,6 +220,12 @@ body {
   width: 100%;
   height: auto;
   margin-top: 4rem;
+
+  @include respond(phone) {
+    margin-top: 8rem;
+    width: 82.5%;
+    height: auto;
+  }
 }
 
 .container {
@@ -499,7 +505,6 @@ body {
     animation-fill-mode: backwards;
 
     @include respond(phone) {
-      padding: 0 5%;
     }
   }
 
@@ -522,7 +527,7 @@ body {
   margin-bottom: 15rem;
 
   @include respond(phone) {
-    margin-bottom: 7.5rem;
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -537,7 +542,7 @@ body {
     padding: 25% 0;
 
     @include respond(phone) {
-      padding: 5% 0;
+      padding: 0;
     }
   }
 }
@@ -545,6 +550,10 @@ body {
 .section-third {
   &__text-box {
     padding: 25% 0;
+
+    @include respond(phone) {
+      padding: 5%;
+    }
   }
 }
 
@@ -575,7 +584,8 @@ body {
     animation-timing-function: ease-out;
 
     @include respond(phone) {
-      padding: 0 5%;
+      margin-bottom: 0;
+      padding: 5%;
     }
   }
 }
@@ -583,6 +593,10 @@ body {
 .main__heading {
   display: flex;
   width: 100%;
+
+  &-secondary {
+    padding: 0 5%;
+  }
 }
 
 .number {
@@ -612,8 +626,9 @@ body {
   display: flex;
   font-size: 2rem;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  align-content: flex-start;
 
   @include respond(phone) {
     padding: 5%;
@@ -626,6 +641,11 @@ body {
     border: solid 0.1rem $color-primary;
     border-radius: 10rem;
     margin-right: 1.7rem;
+
+    @include respond(phone) {
+      min-width: 10rem;
+      height: 10rem;
+    }
 
     &--img {
       position: absolute;
@@ -666,7 +686,12 @@ body {
     margin-bottom: 3rem;
 
     @include respond(phone) {
-      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      flex-direction: column;
       flex-wrap: wrap;
     }
 
@@ -674,30 +699,58 @@ body {
       display: flex;
       align-items: center;
       margin-bottom: 3.7rem;
+
+      @include respond(phone) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &--sub2 {
       display: flex;
       align-items: center;
       margin-bottom: 3.7rem;
+
+      @include respond(phone) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &--sub3 {
       display: flex;
       align-items: center;
       margin-bottom: 3.7rem;
+
+      @include respond(phone) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
 
     &--sub4 {
       display: flex;
       flex: 1 auto;
       align-items: center;
+
+      @include respond(phone) {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   }
 
   &--header {
     display: flex;
     align-items: flex-start;
+
+    @include respond(phone) {
+      margin-top: 3rem;
+    }
   }
 }
 
@@ -776,6 +829,12 @@ body {
     & > span {
       display: block;
     }
+  }
+}
+
+.heading-third {
+  &:not(:last-child) {
+    padding: 0;
   }
 }
 
