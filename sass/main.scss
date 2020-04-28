@@ -233,6 +233,13 @@ body {
   }
 }
 
+.macbook {
+  display: inline-block;
+  max-width: 100%;
+  width: 78rem;
+  height: 44.9rem;
+}
+
 .mockup-box {
   display: block;
   max-width: 100%;
@@ -347,6 +354,7 @@ body {
   width: 100%;
   height: auto;
   margin-top: 8rem;
+  padding-top: 5rem;
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
@@ -391,6 +399,10 @@ body {
       font-size: 7.2rem;
       font-weight: 700;
 
+      @include respond(tab-land) {
+        font-size: 6.2rem;
+      }
+
       @include respond(phone) {
       }
     }
@@ -399,12 +411,21 @@ body {
       font-size: 3.2rem;
       font-weight: 400;
       line-height: 3.5rem;
+
+      @include respond(tab-port) {
+        font-size: 2.9rem;
+      }
     }
 
     &--sub2 {
       font-size: 2rem;
       font-weight: 300;
       line-height: 3.5rem;
+
+      @include respond(xphone) {
+        font-size: 2.5rem;
+        font-weight: 400;
+      }
     }
 
     &--sub3 {
@@ -415,8 +436,6 @@ body {
   }
 
   &__text-box {
-    padding-top: 8rem;
-
     @include respond(tab-port) {
     }
   }
@@ -427,8 +446,6 @@ body {
     justify-items: safe center;
     align-items: center;
     align-content: center;
-    width: 71rem;
-    height: 41.8rem;
 
     @include respond(tab-port) {
       width: 100%;
@@ -519,6 +536,7 @@ body {
     animation-fill-mode: backwards;
 
     @include respond(phone) {
+      font-weight: 400;
     }
 
     @include respond(xphone) {
@@ -877,8 +895,17 @@ body {
 
 .group-image {
   height: 58.3rem;
+  width: auto;
   display: flex;
+  justify-content: center;
+  justify-items: safe center;
   align-items: center;
+
+  @include respond(tab-port) {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
   &__box {
     position: relative;
     width: 34.2rem;
@@ -888,7 +915,10 @@ body {
     //2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))
     border: 1px dashed $color-primary-light; //see the line
     border-radius: 50%;
-    text-align: left;
+
+    @include respond(tab-port) {
+      width: auto;
+    }
   }
 
   &__box > a {
@@ -910,11 +940,11 @@ body {
 
 .deg0 {
   //margin-left: 2.5rem;
-  transform: translate(11rem);
+  transform: translate(12rem);
 } // = half the width of the wrapper
 .deg45 {
   //margin-left: 2.5rem;
-  transform: rotate(38deg) translate(11rem) rotate(-38deg);
+  transform: rotate(38deg) translate(12rem) rotate(-38deg);
 }
 .deg90 {
   margin-left: -37.5%;
@@ -922,12 +952,12 @@ body {
 }
 .deg135 {
   margin-left: -75%;
-  transform: rotate(135deg) translate(11rem) rotate(-135deg);
+  transform: rotate(135deg) translate(12rem) rotate(-135deg);
 }
 .deg180 {
   width: 15rem !important;
   margin-left: -45%;
-  transform: rotate(180deg) translate(11rem) rotate(-180deg);
+  transform: rotate(180deg) translate(12rem) rotate(-180deg);
 }
 .deg225 {
   margin-left: -75%;
