@@ -160,7 +160,7 @@ html {
 
   @include respond(phone) {
     //width < 600?
-    font-size: 30%; //1 em = 5px
+    font-size: 50%; //1 em = 5px
   }
 
   @include respond(big-desktop) {
@@ -369,7 +369,6 @@ body {
       font-weight: 700;
 
       @include respond(phone) {
-        font-size: 6.2rem;
       }
     }
 

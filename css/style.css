@@ -112,7 +112,7 @@ html {
       font-size: 60%; } }
   @media (max-width: 37.5em) {
     html {
-      font-size: 30%; } }
+      font-size: 50%; } }
   @media (min-width: 112.5em) {
     html {
       font-size: 62.5%; } }
@@ -260,9 +260,6 @@ body {
     .header__primary--main {
       font-size: 7.2rem;
       font-weight: 700; }
-      @media (max-width: 37.5em) {
-        .header__primary--main {
-          font-size: 6.2rem; } }
     .header__primary--sub {
       font-size: 3.2rem;
       font-weight: 400;
