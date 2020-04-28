@@ -162,7 +162,8 @@ body {
 
 .container {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 11rem; }
 
 .main {
   width: 100%; }
@@ -227,7 +228,7 @@ body {
 
 .header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -275,9 +276,6 @@ body {
       line-height: 3.2rem; }
   .header__text-box {
     padding-top: 8rem; }
-    @media (max-width: 56.25em) {
-      .header__text-box {
-        flex: 1 1 auto; } }
   .header__video-box {
     display: flex;
     justify-content: center;
