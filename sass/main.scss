@@ -155,7 +155,7 @@ html {
 
   @include respond(tab-port) {
     //width < 900?
-    font-size: 50%; // 1em = 8px, 8/16 = 50%
+    font-size: 60%; // 1em = 9px, 9/16 = 60%
   }
 
   @include respond(phone) {
@@ -242,15 +242,22 @@ body {
   z-index: 9999;
 
   &__navbar {
+    width: 114rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 8rem;
-    padding: 0 3%;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+      padding: 0 2.5rem;
+      width: 100%;
+    }
   }
 
   &__logo {
     &--link {
+      display: inline-block;
       width: auto;
       vertical-align: middle;
     }
@@ -300,12 +307,24 @@ body {
 
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
-  @include respond(tab-land) {
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  &__text-box {
+    @include respond(tab-port) {
+    }
   }
 
   &__header {
     background-color: $color-primary-light;
     height: 100vh;
+
+    @include respond(tab-port) {
+      padding: 0 5%;
+      height: auto;
+    }
   }
 
   &__primary {
@@ -316,6 +335,10 @@ body {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     & > * {
       margin-bottom: 3rem;
@@ -347,6 +370,10 @@ body {
 
   &__text-box {
     padding-top: 8rem;
+
+    @include respond(tab-port) {
+      flex: 1 1 auto;
+    }
   }
 
   &__video-box {
@@ -500,6 +527,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
+
+    @include respond(phone) {
+      padding: 0 5%;
+    }
   }
 }
 
@@ -624,6 +655,11 @@ body {
   max-width: 114rem;
   margin: 0 auto;
   padding-bottom: 3rem;
+}
+
+.quotebox__wrap {
+  width: auto;
+  height: 100%;
 }
 
 .quotebox {
@@ -887,6 +923,10 @@ body {
     width: auto;
     text-align: center;
     margin-bottom: 9rem;
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 
   &--nav {
