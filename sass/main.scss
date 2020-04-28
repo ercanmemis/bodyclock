@@ -267,7 +267,7 @@ body {
     }
 
     @include respond(phone) {
-      padding: 0;
+      padding: 0 2rem;
     }
   }
 
@@ -318,6 +318,7 @@ body {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -411,10 +412,23 @@ body {
     background-size: cover;
     background-position: center;
 
+    @include respond(tab-port) {
+      width: 100%;
+      margin-top: 6rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+
     &--video {
       /* override other styles to make responsive */
       width: 47.6rem !important;
       height: auto !important;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
     }
   }
 

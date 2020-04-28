@@ -196,7 +196,7 @@ body {
         width: 100%; } }
     @media (max-width: 37.5em) {
       .nav__navbar {
-        padding: 0; } }
+        padding: 0 2rem; } }
   .nav__logo--link {
     display: inline-block;
     width: auto;
@@ -227,6 +227,7 @@ body {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -288,10 +289,20 @@ body {
     background-image: url(../img/macbook.png);
     background-size: cover;
     background-position: center; }
+    @media (max-width: 56.25em) {
+      .header__video-box {
+        width: 100%;
+        margin-top: 6rem; } }
+    @media (max-width: 37.5em) {
+      .header__video-box {
+        display: none; } }
     .header__video-box--video {
       /* override other styles to make responsive */
       width: 47.6rem !important;
       height: auto !important; }
+      @media (max-width: 56.25em) {
+        .header__video-box--video {
+          width: 100%; } }
   .header__reference-box {
     width: 100%;
     margin-top: 3.5rem; }
