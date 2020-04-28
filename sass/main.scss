@@ -160,7 +160,7 @@ html {
 
   @include respond(phone) {
     //width < 600?
-    font-size: 50%; //1 em = 5px
+    font-size: 30%; //1 em = 5px
   }
 
   @include respond(big-desktop) {
@@ -169,11 +169,13 @@ html {
 }
 
 body {
+  position: relative;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   color: $color-primary-grey;
   box-sizing: border-box;
   width: 100%;
+  min-height: 100%;
 }
 
 .clearfix {
@@ -217,6 +219,8 @@ body {
 
 .mockup-box {
   display: block;
+  width: 100%;
+  height: auto;
   margin-top: 4rem;
 }
 
@@ -227,10 +231,11 @@ body {
 }
 
 .main {
-  margin-bottom: 15rem;
-
+  width: 100%;
   &__heading-secondary {
-    text-align: center;
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 }
 
@@ -243,6 +248,7 @@ body {
 .nav {
   background-color: $color-white;
   position: fixed;
+  width: 100%;
   top: 0;
   left: 0;
   right: 0;
@@ -261,6 +267,10 @@ body {
     @include respond(tab-port) {
       padding: 0 2.5rem;
       width: 100%;
+    }
+
+    @include respond(phone) {
+      padding: 0;
     }
   }
 
@@ -313,6 +323,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
   height: auto;
   position: relative;
   margin-top: 8rem;
@@ -359,6 +370,10 @@ body {
     &--main {
       font-size: 7.2rem;
       font-weight: 700;
+
+      @include respond(phone) {
+        font-size: 6.2rem;
+      }
     }
 
     &--sub {
@@ -685,16 +700,14 @@ body {
   border-radius: 7px;
   background-color: #0bcdfc;
 
-  @include respond(tab-land) {
-  }
-
   &__img {
     width: 100%;
     height: auto;
 
     &--medium {
       max-width: 76rem;
-      @include respond(phone) {
+
+      @include respond(tab-port) {
         width: 100%;
         height: auto;
       }
@@ -962,15 +975,22 @@ body {
 //FOOTER
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   font-size: $default-font-size;
-  padding: 3rem 24rem;
   background-color: $color-primary-grey;
   width: 100%;
-  margin-top: 8rem;
+  padding: 2rem 0;
 
   &__logo-box {
-    height: auto;
+    @include respond(tab-port) {
+      text-align: center;
+    }
 
+    @include respond(phone) {
+      text-align: center;
+    }
     &--link:link,
     &--link:visited {
       font-size: 3.2rem;
@@ -978,6 +998,7 @@ body {
       color: #ffffff;
       text-decoration: none;
       text-transform: uppercase;
+      display: inline-block;
     }
 
     &--logotext-left {
@@ -988,13 +1009,19 @@ body {
 
 .footer__navigation {
   height: 4.3rem;
-  float: right;
   padding: 0.7rem;
 }
 
 .footer__list {
   list-style: none;
-  text-align: right;
+
+  @include respond(tab-port) {
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    text-align: center;
+  }
 }
 
 .footer__item {
