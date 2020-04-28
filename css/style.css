@@ -155,7 +155,8 @@ body {
   padding-left: 25%; }
 
 .mockup-box {
-  display: block; }
+  display: block;
+  margin-top: 4rem; }
 
 .container {
   position: relative;
@@ -164,6 +165,8 @@ body {
 
 .main {
   margin-bottom: 15rem; }
+  .main__heading-secondary {
+    text-align: center; }
 
 .nactive {
   color: #0bcdfc !important;
@@ -199,9 +202,6 @@ body {
     align-items: center; }
   .nav__item {
     display: inline-block; }
-    @media (max-width: 37.5em) {
-      .nav__item {
-        margin-bottom: 5rem; } }
     .nav__item:not(:last-child) {
       margin-right: 2.5rem; }
       @media (max-width: 37.5em) {
@@ -407,8 +407,10 @@ body {
   font-size: 2rem;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  order: 5; }
+  align-items: flex-start; }
+  @media (max-width: 37.5em) {
+    .main__text-box {
+      padding: 5%; } }
   .main__text-box--circle {
     position: relative;
     min-width: 8rem;
@@ -444,17 +446,17 @@ body {
       color: #ffffff; }
   .main__text-box--heading {
     display: flex;
-    flex: 1 auto;
     align-items: center;
     margin-bottom: 3rem; }
+    @media (max-width: 37.5em) {
+      .main__text-box--heading {
+        flex: 1fr; } }
     .main__text-box--heading--sub {
       display: flex;
-      flex: 1 auto;
       align-items: center;
       margin-bottom: 3.7rem; }
     .main__text-box--heading--sub2 {
       display: flex;
-      flex: 1 auto;
       align-items: center;
       margin-bottom: 3.7rem; }
     .main__text-box--heading--sub3 {
@@ -489,8 +491,11 @@ body {
     width: 100%;
     height: auto; }
     .quotebox__img--medium {
-      font-size: 2.4rem;
       max-width: 76rem; }
+      @media (max-width: 37.5em) {
+        .quotebox__img--medium {
+          width: 100%;
+          height: auto; } }
   .quotebox__quote {
     position: absolute;
     color: #fff;
@@ -663,19 +668,19 @@ body {
 .btn--default {
   background-color: #e8fdff;
   color: #0bcdfc; }
-  .btn--default::after {
-    opacity: 0;
-    background-color: #0bcdfc; }
+  @media (max-width: 37.5em) {
+    .btn--default {
+      display: none !important; } }
 
 .btn--bestellen {
   color: #fff;
   background-color: #0bcdfc;
   width: auto;
   text-align: center;
-  margin-bottom: 9rem; }
+  margin: 0 auto; }
   @media (max-width: 37.5em) {
     .btn--bestellen {
-      width: 100%; } }
+      width: 95%; } }
 
 .btn--nav {
   color: #fff;
