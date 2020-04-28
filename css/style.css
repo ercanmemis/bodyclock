@@ -118,7 +118,6 @@ html {
       font-size: 62.5%; } }
 
 body {
-  position: relative;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   color: #333333;
@@ -163,8 +162,7 @@ body {
 
 .container {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%); }
+  width: 100%; }
 
 .main {
   width: 100%; }
@@ -323,7 +321,6 @@ body {
     display: block;
     font-size: 7.2rem;
     font-weight: 700;
-    overflow: hidden;
     line-height: 1.11;
     margin-bottom: 1.5rem;
     animation-name: moveInLeft;
@@ -380,7 +377,6 @@ body {
   max-width: 435rem;
   display: block;
   font-weight: 700;
-  overflow: hidden;
   line-height: 1.11;
   margin-bottom: 3rem;
   animation-name: moveInLeft;

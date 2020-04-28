@@ -169,7 +169,6 @@ html {
 }
 
 body {
-  position: relative;
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   color: $color-primary-grey;
@@ -225,8 +224,7 @@ body {
 
 .container {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 100%;
 }
 
 .main {
@@ -458,7 +456,6 @@ body {
     display: block;
     font-size: 7.2rem;
     font-weight: 700;
-    overflow: hidden;
     line-height: 1.11;
     margin-bottom: 1.5rem;
 
@@ -546,7 +543,6 @@ body {
     max-width: 435rem;
     display: block;
     font-weight: 700;
-    overflow: hidden;
     line-height: 1.11;
     margin-bottom: 3rem;
 
