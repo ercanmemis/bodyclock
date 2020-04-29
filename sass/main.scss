@@ -164,7 +164,12 @@ html {
 
   @include respond(tab-land) {
     //width < 1200?
-    font-size: 49.25%; //1 em = 9px, 9/16 = 56.25%
+    font-size: 56.25%; //1 em = 9px, 9/16 = 56.25%
+  }
+
+  @include respond(laptop) {
+    // width < 1024?
+    font-size: 60%; //1 em = 4px, 4/16 = 25%
   }
 
   @include respond(tab-port) {
@@ -374,9 +379,10 @@ body {
   }
 
   @include respond(tab-land) {
-    flex: 1 1 90%;
+    flex: 1 1 100%;
     align-items: center;
     justify-content: center;
+    padding: 2.5% 0 2.5% 2.5%;
   }
 
   &__text-box {
@@ -424,6 +430,15 @@ body {
       font-weight: 700;
 
       @include respond(tab-land) {
+        font-size: 6.2rem;
+      }
+
+      @include respond(laptop) {
+        font-size: 5.2rem;
+      }
+
+      @include respond(tab-port) {
+        font-size: 4.2rem;
       }
 
       @include respond(phone) {
@@ -434,6 +449,10 @@ body {
       font-size: 3.2rem;
       font-weight: 400;
       line-height: 3.5rem;
+
+      @include respond(laptop) {
+        font-size: 2.5rem;
+      }
 
       @include respond(tab-port) {
       }
@@ -451,6 +470,10 @@ body {
 
       @include respond(tab-port) {
       }
+
+      @include respond(laptop) {
+        font-size: 2.2rem;
+      }
     }
 
     &--sub3 {
@@ -461,6 +484,10 @@ body {
       @include respond(tab-port) {
         font-size: 2.5rem;
       }
+
+      @include respond(laptop) {
+        font-size: 1.7rem;
+      }
     }
   }
 
@@ -470,6 +497,7 @@ body {
     align-items: center;
     flex: 1 1 60%;
     height: auto;
+    margin-top: -2.5rem;
 
     @include respond(phone) {
       display: none;
@@ -519,7 +547,7 @@ body {
 
   &__reference-box {
     width: 100%;
-    margin-top: 3.5rem;
+    margin: 3.5rem 0;
 
     @include respond(tab-port) {
       display: flex;
@@ -540,8 +568,11 @@ body {
 
     &--rectangle {
       display: inline-block;
-      width: auto;
+      max-width: 100%;
       height: auto;
+
+      @include respond(tab-port) {
+      }
 
       &:not(:last-child) {
         margin-right: 2rem;

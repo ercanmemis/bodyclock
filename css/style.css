@@ -115,7 +115,10 @@ html {
   overflow-y: scroll; }
   @media only screen and (max-width: 75em) {
     html {
-      font-size: 49.25%; } }
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 64em) {
+    html {
+      font-size: 60%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 60%; } }
@@ -256,9 +259,10 @@ body {
       padding: 0; } }
   @media only screen and (max-width: 75em) {
     .header {
-      flex: 1 1 90%;
+      flex: 1 1 100%;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      padding: 2.5% 0 2.5% 2.5%; } }
   .header__text-box {
     flex: 1 1 40%; }
     @media only screen and (max-width: 56.25em) {
@@ -289,10 +293,22 @@ body {
     .header__primary--main {
       font-size: 7.2rem;
       font-weight: 700; }
+      @media only screen and (max-width: 75em) {
+        .header__primary--main {
+          font-size: 6.2rem; } }
+      @media only screen and (max-width: 64em) {
+        .header__primary--main {
+          font-size: 5.2rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .header__primary--main {
+          font-size: 4.2rem; } }
     .header__primary--sub {
       font-size: 3.2rem;
       font-weight: 400;
       line-height: 3.5rem; }
+      @media only screen and (max-width: 64em) {
+        .header__primary--sub {
+          font-size: 2.5rem; } }
     .header__primary--sub2 {
       font-size: 2.5rem;
       font-weight: 300;
@@ -301,6 +317,9 @@ body {
         .header__primary--sub2 {
           font-size: 2.5rem;
           font-weight: 400; } }
+      @media only screen and (max-width: 64em) {
+        .header__primary--sub2 {
+          font-size: 2.2rem; } }
     .header__primary--sub3 {
       font-size: 2rem;
       font-weight: 300;
@@ -308,12 +327,16 @@ body {
       @media only screen and (max-width: 56.25em) {
         .header__primary--sub3 {
           font-size: 2.5rem; } }
+      @media only screen and (max-width: 64em) {
+        .header__primary--sub3 {
+          font-size: 1.7rem; } }
   .header__video-box {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1 1 60%;
-    height: auto; }
+    height: auto;
+    margin-top: -2.5rem; }
     @media only screen and (max-width: 37.5em) {
       .header__video-box {
         display: none; } }
@@ -342,7 +365,7 @@ body {
             height: auto; } }
   .header__reference-box {
     width: 100%;
-    margin-top: 3.5rem; }
+    margin: 3.5rem 0; }
     @media only screen and (max-width: 56.25em) {
       .header__reference-box {
         display: flex;
@@ -359,7 +382,7 @@ body {
           flex-direction: column; } }
     .header__reference-box--rectangle {
       display: inline-block;
-      width: auto;
+      max-width: 100%;
       height: auto; }
       .header__reference-box--rectangle:not(:last-child) {
         margin-right: 2rem; }
