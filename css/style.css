@@ -166,12 +166,6 @@ body {
       padding-left: 0;
       margin: 0 auto; } }
 
-.macbook {
-  display: inline-block;
-  max-width: 100%;
-  width: 78rem;
-  height: 44.9rem; }
-
 .mockup-box {
   display: block;
   max-width: 100%;
@@ -305,7 +299,6 @@ body {
     display: flex;
     width: 100%;
     justify-content: center;
-    justify-items: safe center;
     align-items: center;
     align-content: center; }
     @media only screen and (max-width: 56.25em) {
@@ -319,10 +312,7 @@ body {
       width: 100%;
       height: auto; }
     .header__video-box--video {
-      position: absolute;
-      /* override other styles to make responsive */
-      width: 51.6rem !important;
-      height: 34.4rem !important; }
+      /* override other styles to make responsive */ }
       @media only screen and (max-width: 56.25em) {
         .header__video-box--video {
           width: 100%; } }
