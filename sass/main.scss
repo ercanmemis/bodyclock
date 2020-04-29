@@ -380,6 +380,7 @@ body {
 
   &__header {
     display: flex;
+    align-items: center;
     flex-direction: column;
     background-color: $color-primary-light;
     height: 100%;
