@@ -17,6 +17,56 @@ $hspace: 3.5rem;
 $rmargin-bottom: 0 !important;
 
 //MIXINS
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin flex-wrap($value: nowrap) {
+  // No Webkit/FF Box fallback.
+  -webkit-flex-wrap: $value;
+  @if $value == nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
+}
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
 
 @mixin clearfix {
   &::after {
@@ -62,6 +112,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
       @content; //900px
     }
   }
+
   @if $breakpoint == tab-land {
     @media only screen and (max-width: 75em) {
       @content; // 1200px
@@ -175,6 +226,7 @@ html {
   @include respond(big-desktop) {
     font-size: 62.5%;
   }
+  overflow-y: scroll;
 }
 
 body {
@@ -346,10 +398,10 @@ body {
 }
 
 .header {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: auto;
   margin-top: 8rem;
   padding-top: 5rem;
 
@@ -365,11 +417,10 @@ body {
 
   &__header {
     background-color: $color-primary-light;
-    height: 100vh;
+    height: 100%;
 
     @include respond(tab-land) {
       height: auto;
-      height: 75vh;
     }
   }
 
@@ -458,6 +509,8 @@ body {
     }
 
     &--wrapper {
+      width: 100%;
+      height: auto;
     }
 
     &--video {
@@ -940,7 +993,7 @@ body {
   }
 
   &__image {
-    max-width: 100%;
+    width: 100%;
   }
 }
 

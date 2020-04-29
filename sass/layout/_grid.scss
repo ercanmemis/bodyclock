@@ -34,6 +34,13 @@ $gutter-horizontal: 3rem;
       @content; //900px
     }
   }
+
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 64em) {
+      @content; //1024px
+    }
+  }
+
   @if $breakpoint == tab-land {
     @media only screen and (max-width: 75em) {
       @content; // 1200px
