@@ -453,7 +453,6 @@ body {
   transform: translateY(-25%); }
 
 .main__text-box2 {
-  display: flex;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 1.33;
@@ -464,7 +463,6 @@ body {
   padding: 10% 0; }
 
 .main__text-box {
-  display: flex;
   font-size: 2rem;
   flex-direction: column;
   justify-content: flex-start;
@@ -564,12 +562,9 @@ body {
           width: 100%;
           flex-direction: column;
           align-items: flex-start; } }
-  .main__text-box--header {
-    display: flex;
-    align-items: flex-start; }
-    @media only screen and (max-width: 37.5em) {
-      .main__text-box--header {
-        margin-top: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .main__text-box--header {
+      margin-top: 3rem; } }
 
 .h1-section {
   max-width: 120rem;
