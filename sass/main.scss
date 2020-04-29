@@ -247,6 +247,10 @@ body {
 .macbook {
   max-width: 100%;
   height: auto;
+
+  @include respond(tab-land) {
+    //width: 68rem;
+  }
 }
 
 .mockup-box {
@@ -354,7 +358,7 @@ body {
 }
 
 .header {
-  width: 120rem;
+  max-width: 120rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -368,10 +372,9 @@ body {
   }
 
   @include respond(tab-land) {
-    flex: 1 1 100%;
+    flex: 1 1 90%;
     align-items: center;
     justify-content: center;
-    width: 100%;
   }
 
   &__text-box {
@@ -381,6 +384,13 @@ body {
       display: inline-block;
       width: 85%;
       margin: 0 auto;
+    }
+
+    @include respond(tab-land) {
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-left: 2.5%;
     }
   }
 
@@ -498,7 +508,7 @@ body {
         transform: translate(-50%, -50%);
 
         @include respond(tab-land) {
-          max-width: 100%;
+          max-width: 66.5%;
           height: auto;
         }
       }
