@@ -164,7 +164,7 @@ html {
 
   @include respond(tab-land) {
     //width < 1200?
-    font-size: 56.25%; //1 em = 9px, 9/16 = 56.25%
+    font-size: 49.25%; //1 em = 9px, 9/16 = 56.25%
   }
 
   @include respond(tab-port) {
@@ -370,6 +370,7 @@ body {
 
   @include respond(tab-port) {
     flex-direction: column;
+    padding: 0;
   }
 
   @include respond(tab-land) {
@@ -383,13 +384,13 @@ body {
 
     @include respond(tab-port) {
       display: inline-block;
+      padding: 5%;
     }
 
     @include respond(tab-land) {
       align-items: center;
       justify-content: center;
       width: 100%;
-      padding: 5%;
     }
   }
 
@@ -423,7 +424,6 @@ body {
       font-weight: 700;
 
       @include respond(tab-land) {
-        font-size: 6.2rem;
       }
 
       @include respond(phone) {
@@ -436,12 +436,11 @@ body {
       line-height: 3.5rem;
 
       @include respond(tab-port) {
-        font-size: 2.9rem;
       }
     }
 
     &--sub2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 300;
       line-height: 3.5rem;
 
@@ -451,7 +450,6 @@ body {
       }
 
       @include respond(tab-port) {
-        font-size: 2.5rem;
       }
     }
 
@@ -459,6 +457,10 @@ body {
       font-size: 2rem;
       font-weight: 300;
       line-height: 3.2rem;
+
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
     }
   }
 

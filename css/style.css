@@ -115,7 +115,7 @@ html {
   overflow-y: scroll; }
   @media only screen and (max-width: 75em) {
     html {
-      font-size: 56.25%; } }
+      font-size: 49.25%; } }
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 60%; } }
@@ -252,7 +252,8 @@ body {
   padding-top: 5rem; }
   @media only screen and (max-width: 56.25em) {
     .header {
-      flex-direction: column; } }
+      flex-direction: column;
+      padding: 0; } }
   @media only screen and (max-width: 75em) {
     .header {
       flex: 1 1 90%;
@@ -262,13 +263,13 @@ body {
     flex: 1 1 40%; }
     @media only screen and (max-width: 56.25em) {
       .header__text-box {
-        display: inline-block; } }
+        display: inline-block;
+        padding: 5%; } }
     @media only screen and (max-width: 75em) {
       .header__text-box {
         align-items: center;
         justify-content: center;
-        width: 100%;
-        padding: 5%; } }
+        width: 100%; } }
   .header__header {
     display: flex;
     align-items: center;
@@ -288,31 +289,25 @@ body {
     .header__primary--main {
       font-size: 7.2rem;
       font-weight: 700; }
-      @media only screen and (max-width: 75em) {
-        .header__primary--main {
-          font-size: 6.2rem; } }
     .header__primary--sub {
       font-size: 3.2rem;
       font-weight: 400;
       line-height: 3.5rem; }
-      @media only screen and (max-width: 56.25em) {
-        .header__primary--sub {
-          font-size: 2.9rem; } }
     .header__primary--sub2 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       font-weight: 300;
       line-height: 3.5rem; }
       @media only screen and (max-width: 23.5em) {
         .header__primary--sub2 {
           font-size: 2.5rem;
           font-weight: 400; } }
-      @media only screen and (max-width: 56.25em) {
-        .header__primary--sub2 {
-          font-size: 2.5rem; } }
     .header__primary--sub3 {
       font-size: 2rem;
       font-weight: 300;
       line-height: 3.2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .header__primary--sub3 {
+          font-size: 2.5rem; } }
   .header__video-box {
     display: flex;
     justify-content: center;
