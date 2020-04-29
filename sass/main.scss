@@ -288,7 +288,7 @@ body {
   z-index: 9999;
 
   &__navbar {
-    width: 120rem;
+    max-width: 120rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -296,14 +296,15 @@ body {
     margin: 0 auto;
 
     @include respond(phone) {
+      max-width: 95%;
     }
 
-    @include respond(tab-port) {
-      width: 100%;
+    @include respond(laptop) {
     }
 
     @include respond(tab-land) {
       max-width: 100%;
+      padding: 0 2rem;
     }
   }
 
@@ -317,9 +318,6 @@ body {
 
   &__list {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   &__item {
@@ -327,6 +325,7 @@ body {
 
     &:not(:last-child) {
       margin-right: 2.5rem;
+
       @include respond(phone) {
         display: none;
       }
@@ -435,13 +434,6 @@ body {
   }
 
   &__text-box {
-    @include respond(tab-land) {
-      width: 40%;
-    }
-
-    @include respond(tab-port) {
-      width: 90%;
-    }
   }
 
   &__video-box {
@@ -594,6 +586,10 @@ body {
 
   @include respond(phone) {
     margin-bottom: 2.5rem;
+  }
+
+  @include respond(tab-land) {
+    margin-bottom: 8rem;
   }
 }
 

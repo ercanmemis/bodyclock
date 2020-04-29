@@ -17,12 +17,15 @@
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 3rem; }
+      @media only screen and (max-width: 37.5em) {
+        .row [class^="col-"]:not(:last-child) {
+          margin-right: 1.5rem; } }
       @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 3rem; } }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 64em) {
         .row [class^="col-"]:not(:last-child) {
-          margin-right: 0; } }
+          margin-right: 3rem; } }
     @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
@@ -199,27 +202,25 @@ body {
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
   z-index: 9999; }
   .nav__navbar {
-    width: 120rem;
+    max-width: 120rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 8rem;
     margin: 0 auto; }
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 37.5em) {
       .nav__navbar {
-        width: 100%; } }
+        max-width: 95%; } }
     @media only screen and (max-width: 75em) {
       .nav__navbar {
-        max-width: 100%; } }
+        max-width: 100%;
+        padding: 0 2rem; } }
   .nav__logo--link {
     display: inline-block;
     width: auto;
     vertical-align: middle; }
   .nav__list {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
+    list-style: none; }
   .nav__item {
     display: inline-block; }
     .nav__item:not(:last-child) {
@@ -293,12 +294,6 @@ body {
       font-size: 2rem;
       font-weight: 300;
       line-height: 3.2rem; }
-  @media only screen and (max-width: 75em) {
-    .header__text-box {
-      width: 40%; } }
-  @media only screen and (max-width: 56.25em) {
-    .header__text-box {
-      width: 90%; } }
   .header__video-box {
     display: flex;
     justify-content: center;
@@ -401,6 +396,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .section-first {
       margin-bottom: 2.5rem; } }
+  @media only screen and (max-width: 75em) {
+    .section-first {
+      margin-bottom: 8rem; } }
 
 .section-second {
   background-color: #e8fdff; }

@@ -2,7 +2,7 @@
 $grid-width: 120rem;
 $gutter-vertical: 3rem;
 $gutter-vertical-small: 3rem;
-$gutter-vertical-x-small: 0;
+$gutter-vertical-x-small: 1.5rem;
 $gutter-horizontal: 3rem;
 
 //MIXIN
@@ -72,9 +72,6 @@ $gutter-horizontal: 3rem;
     max-width: 100%;
   }
 
-  @include respond(phone) {
-  }
-
   @include clearfix;
 
   [class^="col-"] {
@@ -83,12 +80,16 @@ $gutter-horizontal: 3rem;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
 
+      @include respond(phone) {
+        margin-right: $gutter-vertical-x-small;
+      }
+
       @include respond(tab-port) {
         margin-right: $gutter-vertical-small;
       }
 
-      @include respond(phone) {
-        margin-right: $gutter-vertical-x-small;
+      @include respond(laptop) {
+        margin-right: $gutter-vertical-small;
       }
     }
 
