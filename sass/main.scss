@@ -400,7 +400,6 @@ body {
 
 .header {
   height: 100%;
-  width: 120rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -517,6 +516,7 @@ body {
     }
 
     &--video {
+      position: absolute;
       /* override other styles to make responsive */
       //width: 51.6rem !important;
       //height: 34.4rem !important;
@@ -526,7 +526,6 @@ body {
       }
 
       &--inside {
-        position: absolute;
       }
     }
   }
