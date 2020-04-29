@@ -352,6 +352,7 @@ body {
 }
 
 .header {
+  width: 120rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -363,11 +364,18 @@ body {
 
   @include respond(tab-port) {
     flex-wrap: wrap;
-    height: auto;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &__text-box {
     width: 51.1rem;
+
+    @include respond(tab-port) {
+      display: inline-block;
+      width: 85%;
+      margin: 0 auto;
+    }
   }
 
   &__header {
@@ -377,7 +385,6 @@ body {
     height: 100%;
 
     @include respond(tab-land) {
-      height: auto;
     }
   }
 
@@ -426,6 +433,10 @@ body {
         font-size: 2.5rem;
         font-weight: 400;
       }
+
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
     }
 
     &--sub3 {
@@ -433,9 +444,6 @@ body {
       font-weight: 300;
       line-height: 3.2rem;
     }
-  }
-
-  &__text-box {
   }
 
   &__video-box {

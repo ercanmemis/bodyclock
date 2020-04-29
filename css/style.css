@@ -241,6 +241,7 @@ body {
     transition: 0.2s; }
 
 .header {
+  width: 120rem;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -250,17 +251,20 @@ body {
   @media only screen and (max-width: 56.25em) {
     .header {
       flex-wrap: wrap;
-      height: auto; } }
+      flex-direction: column;
+      justify-content: center; } }
   .header__text-box {
     width: 51.1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .header__text-box {
+        display: inline-block;
+        width: 85%;
+        margin: 0 auto; } }
   .header__header {
     display: flex;
     flex-direction: column;
     background-color: #e8fdff;
     height: 100%; }
-    @media only screen and (max-width: 75em) {
-      .header__header {
-        height: auto; } }
   .header__primary {
     display: flex;
     flex-wrap: wrap;
@@ -292,6 +296,9 @@ body {
         .header__primary--sub2 {
           font-size: 2.5rem;
           font-weight: 400; } }
+      @media only screen and (max-width: 56.25em) {
+        .header__primary--sub2 {
+          font-size: 2.5rem; } }
     .header__primary--sub3 {
       font-size: 2rem;
       font-weight: 300;
