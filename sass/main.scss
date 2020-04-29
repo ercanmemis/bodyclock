@@ -17,56 +17,6 @@ $hspace: 3.5rem;
 $rmargin-bottom: 0 !important;
 
 //MIXINS
-@mixin justify-content($value: flex-start) {
-  @if $value == flex-start {
-    -webkit-box-pack: start;
-    -moz-box-pack: start;
-    -ms-flex-pack: start;
-  } @else if $value == flex-end {
-    -webkit-box-pack: end;
-    -moz-box-pack: end;
-    -ms-flex-pack: end;
-  } @else if $value == space-between {
-    -webkit-box-pack: justify;
-    -moz-box-pack: justify;
-    -ms-flex-pack: justify;
-  } @else if $value == space-around {
-    -ms-flex-pack: distribute;
-  } @else {
-    -webkit-box-pack: $value;
-    -moz-box-pack: $value;
-    -ms-flex-pack: $value;
-  }
-  -webkit-justify-content: $value;
-  justify-content: $value;
-}
-
-@mixin flex-wrap($value: nowrap) {
-  // No Webkit/FF Box fallback.
-  -webkit-flex-wrap: $value;
-  @if $value == nowrap {
-    -ms-flex-wrap: none;
-  } @else {
-    -ms-flex-wrap: $value;
-  }
-  flex-wrap: $value;
-}
-
-@mixin flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@mixin inline-flex {
-  display: -webkit-inline-box;
-  display: -moz-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-}
 
 @mixin clearfix {
   &::after {
@@ -102,6 +52,7 @@ ORDER: Base + Typography > general layout + grid > page layout > components
       @content; // 375px
     }
   }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content; // 600px
@@ -110,6 +61,12 @@ ORDER: Base + Typography > general layout + grid > page layout > components
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {
       @content; //900px
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media only screen and (max-width: 64em) {
+      @content; //1024px
     }
   }
 
@@ -321,10 +278,6 @@ body {
 }
 
 //NAVIGATION
-.nactive {
-  color: $color-primary !important;
-  font-weight: 500 !important;
-}
 
 .nav {
   background-color: $color-white;
@@ -332,7 +285,6 @@ body {
   width: 100%;
   top: 0;
   left: 0;
-  right: 0;
   box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.2);
 
   z-index: 9999;
@@ -345,11 +297,15 @@ body {
     height: 8rem;
     margin: 0 auto;
 
+    @include respond(phone) {
+    }
+
     @include respond(tab-port) {
       width: 100%;
     }
 
-    @include respond(phone) {
+    @include respond(tab-land) {
+      max-width: 100%;
     }
   }
 
@@ -414,7 +370,7 @@ body {
   }
 
   &__text-box {
-    max-width: 51.1rem;
+    width: 51.1rem;
   }
 
   &__header {
@@ -494,24 +450,26 @@ body {
     width: auto;
     height: auto;
 
+    @include respond(phone) {
+      display: none;
+    }
+
     @include respond(tab-port) {
       width: 100%;
       margin-top: 6rem;
     }
 
-    @include respond(phone) {
-      display: none;
+    @include respond(laptop) {
+      width: 60%;
     }
 
     @include respond(tab-land) {
+      width: 60%;
     }
 
     &--wrapper {
       width: 100%;
       height: auto;
-    }
-
-    &--image {
     }
 
     &--video {
@@ -527,12 +485,25 @@ body {
       /* override other styles to make responsive */
 
       @include respond(tab-port) {
-        width: 100%;
+        min-width: 100%;
+      }
+
+      @include respond(tab-land) {
+        //width: 68rem;
       }
 
       &--inside {
-        width: 51.6rem !important;
-        height: 34.4rem !important;
+        width: 51.6rem;
+        height: 100%;
+
+        @include respond(tab-port) {
+          min-width: 100%;
+        }
+
+        @include respond(tab-land) {
+          width: 100%;
+          padding: 10%;
+        }
       }
     }
   }
@@ -868,11 +839,6 @@ body {
   padding-bottom: 3rem;
 }
 
-.quotebox__wrap {
-  width: auto;
-  height: 100%;
-}
-
 .quotebox {
   max-width: 100%;
   height: 43.5rem;
@@ -884,14 +850,8 @@ body {
     height: auto;
 
     &--medium {
-      width: 100%;
+      max-width: 100%;
       height: auto;
-      overflow: hidden;
-
-      @include respond(tab-port) {
-        width: 100%;
-        height: auto;
-      }
     }
   }
 
@@ -911,7 +871,7 @@ body {
     flex-direction: column;
     font-weight: 500;
     font-size: 2.4rem;
-    height: 100%;
+    height: 43.5rem;
 
     &--text {
       position: absolute;
@@ -956,6 +916,11 @@ body {
       margin-bottom: 1.9rem;
     }
   }
+}
+
+.heading-fifth {
+  height: 100%;
+  width: auto;
 }
 
 //INFOGRAPH CIRCLE IMAGE
