@@ -619,7 +619,7 @@ body {
 .section-first {
   height: 100%;
   background-color: $color-white;
-  padding-top: 15vh;
+  padding-top: 5%;
   margin-bottom: 15rem;
 
   @include respond(phone) {
