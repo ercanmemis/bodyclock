@@ -286,10 +286,10 @@ body {
 }
 
 .macbook {
-  display: inline-block;
+  //display: inline-block;
   max-width: 100%;
-  width: 78rem;
-  height: 44.9rem;
+  //width: 78rem;
+  //height: 44.9rem;
 }
 
 .mockup-box {
@@ -400,6 +400,7 @@ body {
 
 .header {
   height: 100%;
+  width: 120rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -414,6 +415,7 @@ body {
   }
 
   &__text-box {
+    width: 40%;
   }
 
   &__header {
@@ -490,10 +492,10 @@ body {
   }
 
   &__video-box {
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
-    justify-items: safe center;
     align-items: center;
     align-content: center;
 
@@ -515,13 +517,16 @@ body {
     }
 
     &--video {
-      position: absolute;
       /* override other styles to make responsive */
-      width: 51.6rem !important;
-      height: 34.4rem !important;
+      //width: 51.6rem !important;
+      //height: 34.4rem !important;
 
       @include respond(tab-port) {
         width: 100%;
+      }
+
+      &--inside {
+        position: absolute;
       }
     }
   }
@@ -704,7 +709,7 @@ body {
 }
 
 .main__text-box2 {
-  display: flex;
+  //display: flex;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 1.33;
@@ -716,7 +721,7 @@ body {
 }
 
 .main__text-box {
-  display: flex;
+  //display: flex;
   font-size: 2rem;
   flex-direction: column;
   justify-content: flex-start;
@@ -845,9 +850,6 @@ body {
   }
 
   &--header {
-    display: flex;
-    align-items: flex-start;
-
     @include respond(phone) {
       margin-top: 3rem;
     }

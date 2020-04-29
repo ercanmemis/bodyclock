@@ -166,12 +166,6 @@ body {
       padding-left: 0;
       margin: 0 auto; } }
 
-.macbook {
-  display: inline-block;
-  max-width: 100%;
-  width: 78rem;
-  height: 44.9rem; }
-
 .mockup-box {
   display: block;
   max-width: 100%;
@@ -305,7 +299,6 @@ body {
     display: flex;
     width: 100%;
     justify-content: center;
-    justify-items: safe center;
     align-items: center;
     align-content: center; }
     @media only screen and (max-width: 56.25em) {
@@ -319,10 +312,7 @@ body {
       width: 100%;
       height: auto; }
     .header__video-box--video {
-      position: absolute;
-      /* override other styles to make responsive */
-      width: 51.6rem !important;
-      height: 34.4rem !important; }
+      /* override other styles to make responsive */ }
       @media only screen and (max-width: 56.25em) {
         .header__video-box--video {
           width: 100%; } }
@@ -453,7 +443,6 @@ body {
   transform: translateY(-25%); }
 
 .main__text-box2 {
-  display: flex;
   font-weight: 700;
   font-size: 2.4rem;
   line-height: 1.33;
@@ -464,7 +453,6 @@ body {
   padding: 10% 0; }
 
 .main__text-box {
-  display: flex;
   font-size: 2rem;
   flex-direction: column;
   justify-content: flex-start;
@@ -564,12 +552,9 @@ body {
           width: 100%;
           flex-direction: column;
           align-items: flex-start; } }
-  .main__text-box--header {
-    display: flex;
-    align-items: flex-start; }
-    @media only screen and (max-width: 37.5em) {
-      .main__text-box--header {
-        margin-top: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .main__text-box--header {
+      margin-top: 3rem; } }
 
 .h1-section {
   max-width: 120rem;

@@ -8,7 +8,7 @@
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.css?version=1" />
 
     <title>BodyClock - Landing Page</title>
   </head>
@@ -42,36 +42,38 @@
       <header class="header__header">
         <div class="header">
           <div class="header__text-box">
-            <h1 class="header__primary">
-              <span class="header__primary--main"
-                >Sie haben Schlafprobleme?</span
-              >
-              <span class="header__primary--sub"
-                >Womöglich leben Sie entgegen Ihrer biologischen Uhr.</span
-              >
-              <span class="header__primary--sub2"
-                >Entdecken Sie jetzt Ihre persönliche biologische Uhr mit Hilfe
+            <div class="header__primary">
+              <h1 class="header__primary--main">Sie haben Schlafprobleme?</h1>
+              <h2 class="header__primary--sub">
+                Womöglich leben Sie entgegen Ihrer biologischen Uhr.
+              </h2>
+              <p class="header__primary--sub2">
+                Entdecken Sie jetzt Ihre persönliche biologische Uhr mit Hilfe
                 unseres Speichel- oder Haartests und finden heraus wann Sie
-                schlafen, essen und arbeiten sollten.</span
-              >
-              <span class="header__primary--sub3"
-                >Besser schlafen und aktiver Leben -
-                <span class="bold">ohne Tabletten!</span></span
-              >
-            </h1>
+                schlafen, essen und arbeiten sollten.
+              </p>
+              <p class="header__primary--sub3">
+                Besser schlafen und aktiver Leben -
+                <span class="bold">ohne Tabletten!</span>
+              </p>
+            </div>
             <a href="#" class="btn btn--default btn--animated">Mehr erfahren</a>
           </div>
           <div class="header__vide-box--wrapper">
             <div class="header__video-box">
-              <video
-                class="header__video-box--video"
-                src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/188/1884161/quarks_2019-03-26_sommeroderwinterzeitwarumunszeitumstellungensostressen_wdr.mp4"
-              ></video>
-              <img
-                src="img/macbook.png"
-                srcset="img/macbook@2x.png 2x, img/macbook@3x.png 3x"
-                class="macbook"
-              />
+              <div class="header__video-box--video">
+                <video
+                  class="header__video-box--video--inside"
+                  src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/188/1884161/quarks_2019-03-26_sommeroderwinterzeitwarumunszeitumstellungensostressen_wdr.mp4"
+                ></video>
+              </div>
+              <div class="header__video-box--image">
+                <img
+                  src="img/macbook.png"
+                  srcset="img/macbook@2x.png 2x, img/macbook@3x.png 3x"
+                  class="macbook"
+                />
+              </div>
             </div>
           </div>
         </div>
