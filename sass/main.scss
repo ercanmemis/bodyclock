@@ -365,13 +365,17 @@ body {
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   @include respond(tab-port) {
+  }
+
+  @include respond(tab-land) {
+    flex: 1 1 100%;
     flex-wrap: wrap;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 
   &__text-box {
-    width: 51.1rem;
+    flex: 1 1 40%;
 
     @include respond(tab-port) {
       display: inline-block;
@@ -453,7 +457,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 71rem;
+    flex: 1 1 60%;
     height: auto;
 
     @include respond(phone) {
