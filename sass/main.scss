@@ -520,6 +520,11 @@ body {
     width: 100%;
     margin-top: 3.5rem;
 
+    @include respond(tab-port) {
+      display: flex;
+      flex-direction: column;
+    }
+
     &--img {
       display: flex;
       flex-wrap: wrap;
@@ -528,6 +533,7 @@ body {
       align-content: center;
       align-items: center;
       @include respond(tab-port) {
+        flex-direction: column;
       }
     }
 
