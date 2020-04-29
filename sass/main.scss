@@ -541,8 +541,13 @@ body {
       display: inline-block;
       width: auto;
       height: auto;
+
       &:not(:last-child) {
         margin-right: 2rem;
+
+        @include respond(tab-port) {
+          margin-right: 0;
+        }
       }
     }
   }
