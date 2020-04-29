@@ -167,10 +167,7 @@ body {
       margin: 0 auto; } }
 
 .macbook {
-  display: inline-block;
-  min-width: 100%;
-  width: 78rem;
-  height: 44.9rem; }
+  max-width: 100%; }
 
 .mockup-box {
   display: block;
@@ -255,7 +252,7 @@ body {
       flex-wrap: wrap;
       height: auto; } }
   .header__text-box {
-    max-width: 51.1rem; }
+    width: 40%; }
   .header__header {
     background-color: #e8fdff;
     height: 100%; }
@@ -304,8 +301,12 @@ body {
     .header__text-box {
       width: 90%; } }
   .header__video-box {
-    width: auto;
-    height: auto; }
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
     @media only screen and (max-width: 56.25em) {
       .header__video-box {
         width: 100%;
@@ -317,22 +318,11 @@ body {
       width: 100%;
       height: auto; }
     .header__video-box--video {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 78rem;
-      height: 44.9rem;
-      background-image: url(../img/macbook.png);
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      position: absolute;
       /* override other styles to make responsive */ }
       @media only screen and (max-width: 56.25em) {
         .header__video-box--video {
           width: 100%; } }
-      .header__video-box--video--inside {
-        width: 51.6rem !important;
-        height: 34.4rem !important; }
   .header__reference-box {
     width: 100%;
     margin-top: 3.5rem; }
