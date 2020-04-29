@@ -286,10 +286,10 @@ body {
 }
 
 .macbook {
-  //display: inline-block;
-  max-width: 100%;
-  //width: 78rem;
-  //height: 44.9rem;
+  display: inline-block;
+  min-width: 100%;
+  width: 78rem;
+  height: 44.9rem;
 }
 
 .mockup-box {
@@ -414,7 +414,6 @@ body {
   }
 
   &__text-box {
-    width: 40%;
   }
 
   &__header {
@@ -491,12 +490,8 @@ body {
   }
 
   &__video-box {
-    position: relative;
-    display: flex;
     width: 100%;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    height: auto;
 
     @include respond(tab-port) {
       width: 100%;
@@ -515,17 +510,28 @@ body {
       height: auto;
     }
 
+    &--image {
+    }
+
     &--video {
-      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 78rem;
+      height: 44.9rem;
+      background-image: url(../img/macbook.png);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       /* override other styles to make responsive */
-      //width: 51.6rem !important;
-      //height: 34.4rem !important;
 
       @include respond(tab-port) {
         width: 100%;
       }
 
       &--inside {
+        width: 51.6rem !important;
+        height: 34.4rem !important;
       }
     }
   }
