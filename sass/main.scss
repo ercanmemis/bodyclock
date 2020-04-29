@@ -243,10 +243,8 @@ body {
 }
 
 .macbook {
-  display: inline-block;
-  min-width: 100%;
-  width: 78rem;
-  height: 44.9rem;
+  max-width: 100%;
+  height: auto;
 }
 
 .mockup-box {
@@ -450,7 +448,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 71rem;
     height: auto;
 
     @include respond(phone) {
@@ -469,10 +467,8 @@ body {
     }
 
     &--video {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 71rem;
+      position: relative;
+      max-width: 71rem;
       height: 41.8rem;
 
       @include respond(tab-port) {
@@ -484,8 +480,13 @@ body {
       }
 
       &--inside {
-        width: 51.6rem;
+        position: absolute;
+        width: 47.6rem;
         height: 34.4rem;
+        top: 50%;
+        left: 50%;
+
+        transform: translate(-50%, -50%);
 
         @include respond(tab-land) {
           max-width: 100%;
