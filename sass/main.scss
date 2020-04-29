@@ -293,12 +293,10 @@ body {
     margin: 0 auto;
 
     @include respond(tab-port) {
-      padding: 0 2.5rem;
       width: 100%;
     }
 
     @include respond(phone) {
-      padding: 0 2rem;
     }
   }
 
@@ -351,8 +349,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: auto;
+  width: auto;
   margin-top: 8rem;
   padding-top: 5rem;
 
@@ -364,31 +361,26 @@ body {
   }
 
   &__text-box {
-    @include respond(tab-port) {
-    }
   }
 
   &__header {
     background-color: $color-primary-light;
     height: 100vh;
 
-    @include respond(tab-port) {
-      padding: 0 5%;
+    @include respond(tab-land) {
       height: auto;
+      height: 75vh;
     }
   }
 
   &__primary {
+    display: flex;
+    flex-wrap: wrap;
     width: 55.1rem;
     height: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: flex-start;
 
-    @include respond(tab-port) {
-      width: 80%;
+    @include respond(tab-land) {
+      width: 100%;
     }
 
     & > * {
@@ -436,12 +428,18 @@ body {
   }
 
   &__text-box {
+    @include respond(tab-land) {
+      width: 40%;
+    }
+
     @include respond(tab-port) {
+      width: 90%;
     }
   }
 
   &__video-box {
     display: flex;
+    width: 100%;
     justify-content: center;
     justify-items: safe center;
     align-items: center;
@@ -454,6 +452,12 @@ body {
 
     @include respond(phone) {
       display: none;
+    }
+
+    @include respond(tab-land) {
+    }
+
+    &--wrapper {
     }
 
     &--video {
