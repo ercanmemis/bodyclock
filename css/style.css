@@ -253,9 +253,9 @@ body {
   @media only screen and (max-width: 75em) {
     .header {
       flex: 1 1 100%;
-      flex-wrap: wrap;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      width: 100%; } }
   .header__text-box {
     flex: 1 1 40%; }
     @media only screen and (max-width: 56.25em) {
