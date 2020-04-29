@@ -301,7 +301,7 @@ body {
           font-size: 5.2rem; } }
       @media only screen and (max-width: 56.25em) {
         .header__primary--main {
-          font-size: 4.2rem; } }
+          font-size: 7.2rem; } }
     .header__primary--sub {
       font-size: 3.2rem;
       font-weight: 400;
@@ -309,6 +309,9 @@ body {
       @media only screen and (max-width: 64em) {
         .header__primary--sub {
           font-size: 2.5rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .header__primary--sub {
+          font-size: 3.2rem; } }
     .header__primary--sub2 {
       font-size: 2.5rem;
       font-weight: 300;
@@ -317,6 +320,10 @@ body {
         .header__primary--sub2 {
           font-size: 2.5rem;
           font-weight: 400; } }
+      @media only screen and (max-width: 56.25em) {
+        .header__primary--sub2 {
+          font-size: 3rem;
+          line-height: 1.7; } }
       @media only screen and (max-width: 64em) {
         .header__primary--sub2 {
           font-size: 2.2rem; } }
@@ -324,12 +331,12 @@ body {
       font-size: 2rem;
       font-weight: 300;
       line-height: 3.2rem; }
-      @media only screen and (max-width: 56.25em) {
-        .header__primary--sub3 {
-          font-size: 2.5rem; } }
       @media only screen and (max-width: 64em) {
         .header__primary--sub3 {
           font-size: 1.7rem; } }
+      @media only screen and (max-width: 56.25em) {
+        .header__primary--sub3 {
+          font-size: 2.2rem; } }
   .header__video-box {
     display: flex;
     justify-content: center;
@@ -798,6 +805,9 @@ body {
     .btn:link, .btn:visited {
       font-size: 2.5rem;
       font-weight: 400; } }
+  @media only screen and (max-width: 56.25em) {
+    .btn:link, .btn:visited {
+      font-size: 2.2rem; } }
 
 .btn:hover {
   color: #fff;
