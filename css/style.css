@@ -262,15 +262,13 @@ body {
     flex: 1 1 40%; }
     @media only screen and (max-width: 56.25em) {
       .header__text-box {
-        display: inline-block;
-        width: 85%;
-        margin: 0 auto; } }
+        display: inline-block; } }
     @media only screen and (max-width: 75em) {
       .header__text-box {
         align-items: center;
         justify-content: center;
         width: 100%;
-        margin-left: 2.5%; } }
+        padding: 5%; } }
   .header__header {
     display: flex;
     align-items: center;

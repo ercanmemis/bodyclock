@@ -383,15 +383,13 @@ body {
 
     @include respond(tab-port) {
       display: inline-block;
-      width: 85%;
-      margin: 0 auto;
     }
 
     @include respond(tab-land) {
       align-items: center;
       justify-content: center;
       width: 100%;
-      margin-left: 2.5%;
+      padding: 5%;
     }
   }
 
