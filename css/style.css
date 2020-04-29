@@ -189,6 +189,7 @@ body {
   padding-bottom: 11rem; }
 
 .main {
+  height: 100%;
   width: 100%; }
 
 .nactive {
@@ -389,6 +390,7 @@ body {
     animation-fill-mode: backwards; }
 
 .section-first {
+  height: 100%;
   background-color: #fff;
   padding-top: 15vh;
   margin-bottom: 15rem; }
