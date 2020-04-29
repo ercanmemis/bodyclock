@@ -320,7 +320,8 @@ body {
     @media only screen and (max-width: 56.25em) {
       .header__video-box {
         width: 100%;
-        margin-top: 6rem; } }
+        margin-top: 6rem;
+        display: none; } }
     .header__video-box--video {
       position: relative;
       max-width: 71rem;
