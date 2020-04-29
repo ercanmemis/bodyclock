@@ -254,6 +254,8 @@ body {
     .header {
       flex-wrap: wrap;
       height: auto; } }
+  .header__text-box {
+    max-width: 51.1rem; }
   .header__header {
     background-color: #e8fdff;
     height: 100%; }
@@ -302,7 +304,7 @@ body {
     .header__text-box {
       width: 90%; } }
   .header__video-box {
-    width: 100%;
+    width: auto;
     height: auto; }
     @media only screen and (max-width: 56.25em) {
       .header__video-box {

@@ -414,6 +414,7 @@ body {
   }
 
   &__text-box {
+    max-width: 51.1rem;
   }
 
   &__header {
@@ -490,7 +491,7 @@ body {
   }
 
   &__video-box {
-    width: 100%;
+    width: auto;
     height: auto;
 
     @include respond(tab-port) {
