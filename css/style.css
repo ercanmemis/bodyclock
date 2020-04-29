@@ -48,6 +48,7 @@
 0-600 px:    600px
 600-900p px:    Tablet portrait
 900-1200 px;    Tablet landscape
+900-1024
 1200 - 1800 px: Normal Styles
 1800px; Big Desktop
 
@@ -56,6 +57,7 @@ $breakpoint argument choices:
 - tab-port
 - tab-land
 - big-desktop
+- laptop
 
 1em = 16px
 
@@ -269,7 +271,7 @@ body {
   .header__primary {
     display: flex;
     flex-wrap: wrap;
-    width: 55.1rem;
+    flex: 1 1 51rem;
     height: auto; }
     @media only screen and (max-width: 75em) {
       .header__primary {
@@ -308,7 +310,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 71rem;
+    flex: 1 1 71rem;
     height: auto; }
     @media only screen and (max-width: 37.5em) {
       .header__video-box {
