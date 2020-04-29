@@ -369,6 +369,7 @@ body {
   //clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 
   @include respond(tab-port) {
+    flex-direction: column;
   }
 
   @include respond(tab-land) {
