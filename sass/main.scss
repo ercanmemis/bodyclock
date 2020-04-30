@@ -282,6 +282,10 @@ body {
   height: auto;
   display: flex;
   align-items: center;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 
 .main {
@@ -292,8 +296,6 @@ body {
     margin-top: 2rem;
   }
   &__heading-secondary {
-    @include respond(phone) {
-    }
   }
 }
 
@@ -440,6 +442,10 @@ body {
       font-size: 6rem;
       font-weight: 700;
 
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+
       @include respond(tab-land) {
         font-size: 6.2rem;
       }
@@ -461,6 +467,10 @@ body {
       font-weight: 400;
       line-height: 3.5rem;
 
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+
       @include respond(laptop) {
         font-size: 2.5rem;
       }
@@ -474,6 +484,9 @@ body {
       font-size: 2.5rem;
       font-weight: 300;
       line-height: 3.5rem;
+
+      animation: moveInBottom 0.75s ease-out 1s;
+      animation-fill-mode: backwards;
 
       @include respond(xphone) {
         font-size: 2.5rem;
@@ -495,8 +508,10 @@ body {
       font-weight: 300;
       line-height: 3.2rem;
 
+      animation: moveInBottom 1s ease-out 1s;
+      animation-fill-mode: backwards;
+
       @include respond(laptop) {
-        font-size: 1.7rem;
       }
 
       @include respond(tab-port) {
@@ -534,7 +549,10 @@ body {
     }
 
     &--image {
-      width: 58.5rem;
+      width: 100%;
+
+      animation: moveInBottom 2s ease-out 1s;
+      animation-fill-mode: backwards;
       @include respond(tab-land) {
       }
     }
@@ -611,9 +629,8 @@ body {
     font-weight: 400;
     line-height: 3.5rem;
 
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
+    animation: moveInBottom 0.4s ease-out 0.75s;
+    animation-fill-mode: backwards;
   }
 
   &--sub2 {
@@ -676,10 +693,7 @@ body {
 }
 
 .section-third {
-  margin-top: 3.5rem;
   &__text-box {
-    padding: 25% 0;
-
     @include respond(phone) {
       padding: 5%;
     }
@@ -731,15 +745,10 @@ body {
 }
 
 .main__text-box2 {
-  //display: flex;
-  font-weight: 700;
-  font-size: 2.4rem;
-  line-height: 1.33;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  order: 5;
-  padding: 10% 0;
+  font-weight: 700;
+  line-height: 1.33;
 }
 
 .main__text-box {
@@ -766,6 +775,10 @@ body {
     margin-right: 1rem;
     border: solid 0.1rem $color-primary;
     border-radius: 10rem;
+
+    @include respond(tab-port) {
+      flex: 1 auto;
+    }
 
     @include respond(phone) {
       min-width: 10rem;
@@ -812,6 +825,22 @@ body {
 
   &--heading {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    &--first {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5rem;
+
+      @include respond(tab-port) {
+        flex-direction: column;
+        align-items: none;
+      }
+    }
+
     @include respond(phone) {
     }
 
@@ -862,6 +891,7 @@ body {
 
   &--header {
     font-size: 2rem;
+    flex: 1 0 85%;
 
     & > span {
     }

@@ -4,6 +4,7 @@ $gutter-vertical: 3rem;
 $gutter-vertical-small: 3rem;
 $gutter-vertical-x-small: 1.5rem;
 $gutter-horizontal: 3rem;
+$gutter-none: 0;
 
 //MIXIN
 
@@ -132,5 +133,25 @@ $gutter-horizontal: 3rem;
     width: calc(
       4 * ((100% - 3 * #{$gutter-horizontal}) / 4) + #{$gutter-horizontal}
     );
+  }
+}
+
+//FOR FLEX AS PARENT DIMENSION 2
+
+.flex-container > .row {
+  &:not(:last-child) {
+    margin-right: $gutter-none;
+
+    @include respond(phone) {
+      margin-right: $gutter-none;
+    }
+
+    @include respond(tab-port) {
+      margin-right: $gutter-none;
+    }
+
+    @include respond(laptop) {
+      margin-right: $gutter-none;
+    }
   }
 }
