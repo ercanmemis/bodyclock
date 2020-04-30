@@ -330,7 +330,7 @@ body {
           font-size: 2.5rem; } }
       @media only screen and (max-width: 56.25em) {
         .header__primary--sub {
-          font-size: 3.2rem; } }
+          font-size: 3.3rem; } }
     .header__primary--sub2 {
       font-size: 2.5rem;
       font-weight: 300;
@@ -399,11 +399,13 @@ body {
       align-items: center; }
       @media only screen and (max-width: 56.25em) {
         .header__reference-box--img {
-          flex-direction: column; } }
+          flex-direction: row; } }
     .header__reference-box--rectangle {
       display: inline-block;
       max-width: 100%;
       height: auto; }
+      .header__reference-box--rectangle:not(:first-child) {
+        margin-left: 3rem; }
       .header__reference-box--rectangle:not(:last-child) {
         margin-right: 2rem; }
         @media only screen and (max-width: 56.25em) {

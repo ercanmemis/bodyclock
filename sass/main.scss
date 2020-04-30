@@ -463,7 +463,7 @@ body {
       }
 
       @include respond(tab-port) {
-        font-size: 3.2rem;
+        font-size: 3.3rem;
       }
     }
 
@@ -569,7 +569,7 @@ body {
       align-items: center;
 
       @include respond(tab-port) {
-        flex-direction: column;
+        flex-direction: row;
       }
     }
 
@@ -578,7 +578,8 @@ body {
       max-width: 100%;
       height: auto;
 
-      @include respond(tab-port) {
+      &:not(:first-child) {
+        margin-left: 3rem;
       }
 
       &:not(:last-child) {
