@@ -164,12 +164,12 @@ html {
 
   @include respond(tab-land) {
     //width < 1200?
-    font-size: 56.25%; //1 em = 9px, 9/16 = 56.25%
+    font-size: 62.25%; //1 em = 9px, 9/16 = 56.25%
   }
 
   @include respond(laptop) {
     // width < 1024?
-    font-size: 60%; //1 em = 4px, 4/16 = 25%
+    font-size: 50%; //1 em = 4px, 4/16 = 25%
   }
 
   @include respond(tab-port) {
@@ -397,7 +397,7 @@ body {
   }
 
   &__text-box {
-    flex: 1 1 40%;
+    flex: 1 0 50%;
 
     @include respond(tab-port) {
       display: inline-block;
@@ -425,7 +425,7 @@ body {
   &__primary {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 51rem;
+    flex: 1 auto;
     height: auto;
 
     @include respond(tab-land) {
@@ -759,12 +759,13 @@ body {
   }
 
   &--circle {
+    display: inline-block;
     position: relative;
-    min-width: 8rem;
+    flex: 1 0 8rem;
     height: 8rem;
+    margin-right: 1rem;
     border: solid 0.1rem $color-primary;
     border-radius: 10rem;
-    margin-right: 1.7rem;
 
     @include respond(phone) {
       min-width: 10rem;
@@ -811,10 +812,7 @@ body {
 
   &--heading {
     display: flex;
-    align-items: center;
-
     @include respond(phone) {
-      align-items: flex-start;
     }
 
     @include respond(phone) {
@@ -824,9 +822,6 @@ body {
     }
 
     &--sub {
-      display: flex;
-      align-items: center;
-
       @include respond(phone) {
         width: 100%;
         flex-direction: column;
@@ -835,9 +830,6 @@ body {
     }
 
     &--sub2 {
-      display: flex;
-      align-items: center;
-
       @include respond(phone) {
         width: 100%;
         flex-direction: column;
@@ -846,8 +838,6 @@ body {
     }
 
     &--sub3 {
-      display: flex;
-      align-items: center;
       margin-bottom: 3.7rem;
 
       @include respond(phone) {
@@ -859,7 +849,7 @@ body {
 
     &--sub4 {
       display: flex;
-      flex: 1 auto;
+      flex: 1;
       align-items: center;
 
       @include respond(phone) {
@@ -871,6 +861,10 @@ body {
   }
 
   &--header {
+    font-size: 2rem;
+
+    & > span {
+    }
     @include respond(phone) {
       margin-top: 3rem;
     }
