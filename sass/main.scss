@@ -564,6 +564,7 @@ body {
       justify-items: safe center;
       align-content: center;
       align-items: center;
+
       @include respond(tab-port) {
         flex-direction: column;
       }
