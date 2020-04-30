@@ -44,17 +44,16 @@
   .row .col-4-of-4 {
     width: calc( 4 * ((100% - 3 * 3rem) / 4) + 3rem); }
 
-.flex-container > .row:not(:last-child) {
-  margin-right: 0; }
-  @media only screen and (max-width: 37.5em) {
-    .flex-container > .row:not(:last-child) {
-      margin-right: 0; } }
+.flex-container {
+  width: inherit;
+  height: auto;
+  display: flex;
+  align-items: center; }
   @media only screen and (max-width: 56.25em) {
-    .flex-container > .row:not(:last-child) {
-      margin-right: 0; } }
-  @media only screen and (max-width: 64em) {
-    .flex-container > .row:not(:last-child) {
-      margin-right: 0; } }
+    .flex-container {
+      flex-direction: column; } }
+  .flex-container > div:first-child {
+    margin-right: 0 !important; }
 
 /*
 0-600 px:    600px
@@ -205,15 +204,6 @@ body {
   position: relative;
   width: 100%;
   padding-bottom: 11rem; }
-
-.flex-container {
-  width: inherit;
-  height: auto;
-  display: flex;
-  align-items: center; }
-  @media only screen and (max-width: 56.25em) {
-    .flex-container {
-      flex-direction: column; } }
 
 .main {
   height: 100%;
@@ -523,6 +513,10 @@ body {
   flex-direction: column;
   font-weight: 700;
   line-height: 1.33; }
+  @media only screen and (max-width: 56.25em) {
+    .main__text-box2 {
+      flex-wrap: wrap;
+      flex-direction: row; } }
 
 .main__text-box {
   display: flex;
@@ -539,14 +533,18 @@ body {
   .main__text-box--circle {
     display: inline-block;
     position: relative;
-    flex: 1 0 8rem;
+    flex-basis: 8rem;
     height: 8rem;
     margin-right: 1rem;
     border: solid 0.1rem #0bcdfc;
     border-radius: 10rem; }
+    .main__text-box--circle > img {
+      display: inline-block;
+      height: auto; }
     @media only screen and (max-width: 56.25em) {
       .main__text-box--circle {
-        flex: 1 auto; } }
+        flex: 1;
+        padding: 2%; } }
     @media only screen and (max-width: 37.5em) {
       .main__text-box--circle {
         min-width: 10rem;
@@ -585,7 +583,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    flex-basis: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .main__text-box--heading {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap; } }
     .main__text-box--heading--first {
       display: flex;
       justify-content: space-between;

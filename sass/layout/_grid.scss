@@ -138,20 +138,19 @@ $gutter-none: 0;
 
 //FOR FLEX AS PARENT DIMENSION 2
 
-.flex-container > .row {
-  &:not(:last-child) {
-    margin-right: $gutter-none;
+.flex-container {
+  width: inherit;
+  height: auto;
+  display: flex;
+  align-items: center;
 
-    @include respond(phone) {
-      margin-right: $gutter-none;
-    }
+  //MEDIA QUERY
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 
-    @include respond(tab-port) {
-      margin-right: $gutter-none;
-    }
-
-    @include respond(laptop) {
-      margin-right: $gutter-none;
-    }
+  //If parent flex before row
+  & > div:first-child {
+    margin-right: 0 !important;
   }
 }

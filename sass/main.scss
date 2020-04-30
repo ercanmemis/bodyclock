@@ -277,25 +277,12 @@ body {
   padding-bottom: 11rem;
 }
 
-.flex-container {
-  width: inherit;
-  height: auto;
-  display: flex;
-  align-items: center;
-
-  @include respond(tab-port) {
-    flex-direction: column;
-  }
-}
-
 .main {
   height: 100%;
   width: 100%;
 
   &__heading-video {
     margin-top: 2rem;
-  }
-  &__heading-secondary {
   }
 }
 
@@ -749,6 +736,11 @@ body {
   flex-direction: column;
   font-weight: 700;
   line-height: 1.33;
+
+  @include respond(tab-port) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 .main__text-box {
@@ -770,14 +762,20 @@ body {
   &--circle {
     display: inline-block;
     position: relative;
-    flex: 1 0 8rem;
+    flex-basis: 8rem;
     height: 8rem;
     margin-right: 1rem;
     border: solid 0.1rem $color-primary;
     border-radius: 10rem;
 
+    & > img {
+      display: inline-block;
+      height: auto;
+    }
+
     @include respond(tab-port) {
-      flex: 1 auto;
+      flex: 1;
+      padding: 2%;
     }
 
     @include respond(phone) {
@@ -828,6 +826,14 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
+    flex-basis: 100%;
+
+    @include respond(tab-port) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-content: flex-start;
+      flex-wrap: wrap;
+    }
 
     &--first {
       display: flex;
