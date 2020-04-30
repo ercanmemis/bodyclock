@@ -277,9 +277,20 @@ body {
   padding-bottom: 11rem;
 }
 
+.flex-container {
+  width: inherit;
+  height: auto;
+  display: flex;
+  align-items: center;
+}
+
 .main {
   height: 100%;
   width: 100%;
+
+  &__heading-video {
+    margin-top: 2rem;
+  }
   &__heading-secondary {
     @include respond(phone) {
     }
@@ -382,7 +393,7 @@ body {
     flex: 1 1 100%;
     align-items: center;
     justify-content: center;
-    padding: 2.5% 0 2.5% 2.5%;
+    padding: 2.5%;
   }
 
   &__text-box {
@@ -498,7 +509,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 60%;
+    flex: 1 1 50%;
     height: auto;
     margin-top: -2.5rem;
 
@@ -519,31 +530,12 @@ body {
     }
 
     &--video {
-      position: relative;
-      max-width: 71rem;
-      height: 41.8rem;
+      min-width: 100%;
+    }
 
-      @include respond(tab-port) {
-        max-width: 100%;
-      }
-
+    &--image {
+      width: 58.5rem;
       @include respond(tab-land) {
-        //width: 68rem;
-      }
-
-      &--inside {
-        position: absolute;
-        width: 47.6rem;
-        height: 34.4rem;
-        top: 50%;
-        left: 50%;
-
-        transform: translate(-50%, -50%);
-
-        @include respond(tab-land) {
-          max-width: 66.5%;
-          height: auto;
-        }
       }
     }
   }
@@ -557,6 +549,12 @@ body {
       flex-direction: column;
     }
 
+    &--text {
+      display: inline-block;
+      color: $color-primary-grey;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
     &--img {
       display: flex;
       flex-wrap: wrap;
@@ -601,7 +599,6 @@ body {
     font-size: 7.2rem;
     font-weight: 700;
     line-height: 1.11;
-    margin-bottom: 1.5rem;
 
     animation-name: moveInLeft;
     animation-duration: 1s;
@@ -613,7 +610,6 @@ body {
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 3.5rem;
-    margin-bottom: 1rem;
 
     animation-name: moveInRight;
     animation-duration: 1s;
@@ -625,7 +621,6 @@ body {
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 400;
-    margin-bottom: 3.5rem;
 
     animation: moveInBottom 0.4s ease-out 0.75s;
     animation-fill-mode: backwards;
@@ -724,15 +719,6 @@ body {
   }
 }
 
-.main__heading {
-  display: flex;
-  width: 100%;
-
-  &-secondary {
-    padding: 0 5%;
-  }
-}
-
 .number {
   position: absolute;
   top: 50%;
@@ -757,12 +743,14 @@ body {
 }
 
 .main__text-box {
-  //display: flex;
+  display: flex;
   font-size: 2rem;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+  align-content: space-between;
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
+  }
 
   @include respond(xphone) {
     padding: 5%;
@@ -824,7 +812,6 @@ body {
   &--heading {
     display: flex;
     align-items: center;
-    margin-bottom: 3rem;
 
     @include respond(phone) {
       align-items: flex-start;
@@ -839,7 +826,6 @@ body {
     &--sub {
       display: flex;
       align-items: center;
-      margin-bottom: 3rem;
 
       @include respond(phone) {
         width: 100%;
@@ -851,7 +837,6 @@ body {
     &--sub2 {
       display: flex;
       align-items: center;
-      margin-bottom: 3.7rem;
 
       @include respond(phone) {
         width: 100%;

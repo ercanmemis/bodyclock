@@ -63,19 +63,22 @@
           <div class="header__video-box">
             <div class="header__video-box--video">
               <img
-                src="img/macbook.png"
-                srcset="img/macbook@2x.png 2x, img/macbook@3x.png 3x"
-                class="macbook"
+                class="header__video-box--image"
+                src="img/package-box-mockup-02@2x.png"
+                alt="spiegel-online-logo"
+                srcset="
+                  img/package-box-mockup-02@2x.png 2x,
+                  img/package-box-mockup-03@3x.png 3x
+                "
               />
-              <video
-                class="header__video-box--video--inside"
-                src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/188/1884161/quarks_2019-03-26_sommeroderwinterzeitwarumunszeitumstellungensostressen_wdr.mp4"
-              ></video>
             </div>
           </div>
         </div>
         <section class="header__reference-box">
           <div class="header__reference-box--img">
+            <div class="header__reference-box--rectangle">
+              <span class="header__reference-box--text">Bekannt aus:</span>
+            </div>
             <div class="header__reference-box--rectangle">
               <img
                 src="img/spiegel-online-logo.png"
@@ -137,88 +140,97 @@
       <main class="main">
         <section id="sofunktionierts" class="section-first">
           <div class="row">
-            <div class="col-2-of-4">
-              <div class="main__heading-secondary">
-                <h1 class="heading-secondary">
-                  <span class="heading-secondary--main">
-                    Wie tickt Ihre biologische Uhr?
-                  </span>
-                </h1>
-                <a href="#" class="btn btn--bestellen btn--animated"
-                  >Jetzt bestellen</a
-                >
+            <div class="flex-container">
+              <div class="col-2-of-4">
+                <div class="main__heading-secondary">
+                  <h1 class="heading-secondary">
+                    <span class="heading-secondary--main">
+                      Wie tickt Ihre biologische Uhr?
+                    </span>
+                  </h1>
+                  <a href="#" class="btn btn--bestellen btn--animated"
+                    >Jetzt bestellen</a
+                  >
+                </div>
+                <div class="main__heading-video">
+                  <video
+                    class="main__heading-video--inside"
+                    src="https://wdrmedien-a.akamaihd.net/medp/podcast/weltweit/fsk0/188/1884161/quarks_2019-03-26_sommeroderwinterzeitwarumunszeitumstellungensostressen_wdr.mp4"
+                  ></video>
+                </div>
               </div>
-              <img
-                class="mockup-box"
-                src="img/package-box-mockup-02.png"
-                alt="bodyclock"
-              />
-            </div>
-            <div class="col-2-of-4">
-              <div class="main__text-box">
-                <div class="main__text-box--heading">
-                  <div class="main__text-box--circle">
-                    <div class="main__text-box--circle--img">
-                      <img
-                        src="img/group-8.png"
-                        srcset="img/group-8@2x.png 2x, img/group-8@3x.png 3x"
-                        class="circleimg"
-                      />
+              <div class="col-2-of-4">
+                <div class="main__text-box">
+                  <div class="main__text-box--heading">
+                    <div class="main__text-box--circle">
+                      <div class="main__text-box--circle--img">
+                        <img
+                          src="img/group-8.png"
+                          srcset="img/group-8@2x.png 2x, img/group-8@3x.png 3x"
+                          class="circleimg"
+                        />
+                      </div>
+                      <div class="main__text-box--circle--number">
+                        <span class="number">1</span>
+                      </div>
                     </div>
-                    <div class="main__text-box--circle--number">
-                      <span class="number">1</span>
-                    </div>
-                  </div>
-                  <div class="main__text-box--header">
-                    <span class="main__text-box--main"
-                      >Test für Zuhause bestellen und Speichel oder Haarprobe
-                      selbst einschicken.</span
-                    >
-                  </div>
-                </div>
-                <div class="main__text-box--heading--sub">
-                  <div class="main__text-box--circle">
-                    <div class="main__text-box--circle--img">
-                      <img
-                        src="img/group-32.png"
-                        srcset="img/group-32@2x.png 2x, img/group-32@3x.png 3x"
-                        class="Group-32"
-                      />
-                    </div>
-                    <div class="main__text-box--circle--number">
-                      <span class="number">2</span>
+                    <div class="main__text-box--header">
+                      <span class="main__text-box--main"
+                        >Test für Zuhause bestellen und Speichel oder Haarprobe
+                        selbst einschicken.</span
+                      >
                     </div>
                   </div>
-                  <div class="main__text-box--header">
-                    <span class="main__text-box--main"
-                      >In unserem Labor an der Charité Universitätsklinik in
-                      Berlin untersuchen wir die Genaktivität in den Zellen
-                      Ihrer Speichel- oder Haarprobe. Unser Algorithmus
-                      berechnet dann Ihre individuelle biologische Uhr.
-                    </span>
-                  </div>
-                </div>
-                <div class="main__text-box--heading--sub2">
-                  <div class="main__text-box--circle">
-                    <div class="main__text-box--circle--img">
-                      <img
-                        src="img/group-15.png"
-                        srcset="img/group-15@2x.png 2x, img/group-15@3x.png 3x"
-                        class="Group-15"
-                      />
+                  <div class="main__text-box--heading--sub">
+                    <div class="main__text-box--circle">
+                      <div class="main__text-box--circle--img">
+                        <img
+                          src="img/group-32.png"
+                          srcset="
+                            img/group-32@2x.png 2x,
+                            img/group-32@3x.png 3x
+                          "
+                          class="Group-32"
+                        />
+                      </div>
+                      <div class="main__text-box--circle--number">
+                        <span class="number">2</span>
+                      </div>
                     </div>
-                    <div class="main__text-box--circle--number">
-                      <span class="number">3</span>
+                    <div class="main__text-box--header">
+                      <span class="main__text-box--main"
+                        >In unserem Labor an der Charité Universitätsklinik in
+                        Berlin untersuchen wir die Genaktivität in den Zellen
+                        Ihrer Speichel- oder Haarprobe. Unser Algorithmus
+                        berechnet dann Ihre individuelle biologische Uhr.
+                      </span>
                     </div>
                   </div>
-                  <div class="main__text-box--header">
-                    <span class="main__text-box--main"
-                      >Als Ergebnis erhalten Sie einen auf ihre persönliche
-                      biologische Uhr ausgerichteten Tagesplan mit der idealen
-                      Zeit für Schlaf, Arbeit, Ernährung, Sport und andere
-                      Aktivitäten. Damit können Sie Ihrem Körper und Geist die
-                      beste Regeneration und Leistungsfähigkeit ermöglichen.
-                    </span>
+                  <div class="main__text-box--heading--sub2">
+                    <div class="main__text-box--circle">
+                      <div class="main__text-box--circle--img">
+                        <img
+                          src="img/group-15.png"
+                          srcset="
+                            img/group-15@2x.png 2x,
+                            img/group-15@3x.png 3x
+                          "
+                          class="Group-15"
+                        />
+                      </div>
+                      <div class="main__text-box--circle--number">
+                        <span class="number">3</span>
+                      </div>
+                    </div>
+                    <div class="main__text-box--header">
+                      <span class="main__text-box--main"
+                        >Als Ergebnis erhalten Sie einen auf ihre persönliche
+                        biologische Uhr ausgerichteten Tagesplan mit der idealen
+                        Zeit für Schlaf, Arbeit, Ernährung, Sport und andere
+                        Aktivitäten. Damit können Sie Ihrem Körper und Geist die
+                        beste Regeneration und Leistungsfähigkeit ermöglichen.
+                      </span>
+                    </div>
                   </div>
                 </div>
               </div>

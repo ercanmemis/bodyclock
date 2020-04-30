@@ -194,9 +194,17 @@ body {
   width: 100%;
   padding-bottom: 11rem; }
 
+.flex-container {
+  width: inherit;
+  height: auto;
+  display: flex;
+  align-items: center; }
+
 .main {
   height: 100%;
   width: 100%; }
+  .main__heading-video {
+    margin-top: 2rem; }
 
 .nav {
   background-color: #fff;
@@ -262,7 +270,7 @@ body {
       flex: 1 1 100%;
       align-items: center;
       justify-content: center;
-      padding: 2.5% 0 2.5% 2.5%; } }
+      padding: 2.5%; } }
   .header__text-box {
     flex: 1 1 40%; }
     @media only screen and (max-width: 56.25em) {
@@ -341,7 +349,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 1 1 60%;
+    flex: 1 1 50%;
     height: auto;
     margin-top: -2.5rem; }
     @media only screen and (max-width: 37.5em) {
@@ -353,23 +361,9 @@ body {
         margin-top: 6rem;
         display: none; } }
     .header__video-box--video {
-      position: relative;
-      max-width: 71rem;
-      height: 41.8rem; }
-      @media only screen and (max-width: 56.25em) {
-        .header__video-box--video {
-          max-width: 100%; } }
-      .header__video-box--video--inside {
-        position: absolute;
-        width: 47.6rem;
-        height: 34.4rem;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); }
-        @media only screen and (max-width: 75em) {
-          .header__video-box--video--inside {
-            max-width: 66.5%;
-            height: auto; } }
+      min-width: 100%; }
+    .header__video-box--image {
+      width: 58.5rem; }
   .header__reference-box {
     width: 100%;
     margin: 3.5rem 0; }
@@ -377,6 +371,11 @@ body {
       .header__reference-box {
         display: flex;
         flex-direction: column; } }
+    .header__reference-box--text {
+      display: inline-block;
+      color: #333333;
+      font-size: 1.2rem;
+      font-weight: 700; }
     .header__reference-box--img {
       display: flex;
       flex-wrap: wrap;
@@ -407,7 +406,6 @@ body {
     font-size: 7.2rem;
     font-weight: 700;
     line-height: 1.11;
-    margin-bottom: 1.5rem;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
@@ -416,7 +414,6 @@ body {
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 3.5rem;
-    margin-bottom: 1rem;
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
@@ -425,7 +422,6 @@ body {
     font-size: 2rem;
     line-height: 3.2rem;
     font-weight: 400;
-    margin-bottom: 3.5rem;
     animation: moveInBottom 0.4s ease-out 0.75s;
     animation-fill-mode: backwards; }
     @media only screen and (max-width: 37.5em) {
@@ -494,12 +490,6 @@ body {
       margin-bottom: 0;
       padding: 5%; } }
 
-.main__heading {
-  display: flex;
-  width: 100%; }
-  .main__heading-secondary {
-    padding: 0 5%; }
-
 .number {
   position: absolute;
   top: 50%;
@@ -520,11 +510,12 @@ body {
   padding: 10% 0; }
 
 .main__text-box {
+  display: flex;
   font-size: 2rem;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start; }
+  align-content: space-between; }
+  .main__text-box:not(:last-child) {
+    margin-bottom: 4rem; }
   @media only screen and (max-width: 23.5em) {
     .main__text-box {
       padding: 5%;
@@ -573,8 +564,7 @@ body {
       color: #ffffff; }
   .main__text-box--heading {
     display: flex;
-    align-items: center;
-    margin-bottom: 3rem; }
+    align-items: center; }
     @media only screen and (max-width: 37.5em) {
       .main__text-box--heading {
         align-items: flex-start; } }
@@ -585,8 +575,7 @@ body {
         flex-wrap: wrap; } }
     .main__text-box--heading--sub {
       display: flex;
-      align-items: center;
-      margin-bottom: 3rem; }
+      align-items: center; }
       @media only screen and (max-width: 37.5em) {
         .main__text-box--heading--sub {
           width: 100%;
@@ -594,8 +583,7 @@ body {
           align-items: flex-start; } }
     .main__text-box--heading--sub2 {
       display: flex;
-      align-items: center;
-      margin-bottom: 3.7rem; }
+      align-items: center; }
       @media only screen and (max-width: 37.5em) {
         .main__text-box--heading--sub2 {
           width: 100%;
