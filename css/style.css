@@ -291,7 +291,7 @@ body {
     .header__primary > * {
       margin-bottom: 3rem; }
     .header__primary--main {
-      font-size: 7.2rem;
+      font-size: 6rem;
       font-weight: 700; }
       @media only screen and (max-width: 75em) {
         .header__primary--main {
