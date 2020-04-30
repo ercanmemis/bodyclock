@@ -69,6 +69,10 @@ $gutter-none: 0;
     }
   }
 
+  @include respond(laptop) {
+    max-width: 100%;
+  }
+
   @include respond(tab-port) {
     max-width: 100%;
   }

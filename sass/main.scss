@@ -559,6 +559,10 @@ body {
       color: $color-primary-grey;
       font-size: 1.2rem;
       font-weight: 700;
+
+      @include respond(tab-port) {
+        font-size: 1.5rem;
+      }
     }
     &--img {
       display: flex;
@@ -716,7 +720,6 @@ body {
 
     @include respond(phone) {
       margin-bottom: 0;
-      padding: 5%;
     }
   }
 }
@@ -769,6 +772,10 @@ body {
     border: solid 0.1rem $color-primary;
     border-radius: 10rem;
 
+    @include respond(tab-port) {
+      flex: 1 1 10%;
+    }
+
     & > img {
       display: inline-block;
       height: auto;
@@ -779,21 +786,6 @@ body {
       height: 100%;
       justify-content: center;
       align-items: center;
-    }
-
-    @include respond(tab-port) {
-      flex: 1;
-      padding: 2%;
-    }
-
-    @include respond(phone) {
-      min-width: 10rem;
-      height: 10rem;
-    }
-
-    @include respond(xphone) {
-      width: 11rem;
-      height: 11rem;
     }
 
     &--img {
@@ -843,6 +835,11 @@ body {
       flex-wrap: wrap;
     }
 
+    @include respond(phone) {
+      justify-content: center;
+      align-content: flex-start;
+    }
+
     &--first {
       display: flex;
       justify-content: space-between;
@@ -853,15 +850,6 @@ body {
         flex-direction: column;
         align-items: none;
       }
-    }
-
-    @include respond(phone) {
-    }
-
-    @include respond(phone) {
-      width: 100%;
-      flex-direction: column;
-      flex-wrap: wrap;
     }
 
     &--sub {
@@ -910,7 +898,6 @@ body {
     & > span {
     }
     @include respond(phone) {
-      margin-top: 3rem;
     }
   }
 }
