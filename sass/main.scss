@@ -1090,7 +1090,9 @@ body {
 
   &__item {
   }
+
   &__text {
+    max-width: 30rem;
     display: inline-block;
     color: $color-black;
     padding: 1rem;
@@ -1104,7 +1106,6 @@ body {
     //left: 50%;
 
     @include respond(xphone) {
-      text-align: unset;
       height: auto;
     }
   }
