@@ -181,7 +181,7 @@ body {
 
 .iphone {
   margin-top: -2rem;
-  padding-left: 25%; }
+  padding-left: 20%; }
   @media only screen and (max-width: 37.5em) {
     .iphone {
       display: inline-block;
@@ -216,6 +216,8 @@ body {
     @media only screen and (max-width: 56.25em) {
       .main__heading-video {
         display: none; } }
+    .main__heading-video--inside {
+      padding-bottom: 2.5rem; }
 
 .nav {
   background-color: #fff;
@@ -296,6 +298,9 @@ body {
     flex-direction: column;
     background-color: #e8fdff;
     height: 100%; }
+    @media only screen and (max-width: 75em) {
+      .header__header {
+        padding: 0 2.5%; } }
   .header__primary {
     height: auto; }
     @media only screen and (max-width: 75em) {
@@ -387,7 +392,6 @@ body {
           animation: moveInBottom 3s ease-out 1s;
           animation-fill-mode: backwards; } }
   .header__reference-box {
-    width: 100%;
     margin: 3.5rem 0; }
     @media only screen and (max-width: 56.25em) {
       .header__reference-box {
@@ -478,7 +482,7 @@ body {
   height: 100%;
   background-color: #fff;
   padding-top: 5%;
-  margin-bottom: 15rem; }
+  margin-bottom: 5%; }
   @media only screen and (max-width: 37.5em) {
     .section-first {
       margin-bottom: 2.5rem; } }
@@ -487,6 +491,7 @@ body {
       padding: 5% 2.5% 0 2.5%; } }
   @media only screen and (max-width: 75em) {
     .section-first {
+      padding: 10% 2.5%;
       margin-bottom: 8rem; } }
 
 .mobile-video__box {
@@ -509,9 +514,11 @@ body {
       .section-second__text-box {
         padding: 0; } }
 
-@media only screen and (max-width: 37.5em) {
-  .section-third__text-box {
-    padding: 5%; } }
+.section-third {
+  padding: 5% 0; }
+  @media only screen and (max-width: 37.5em) {
+    .section-third__text-box {
+      padding: 5%; } }
 
 .section-fourth {
   padding-top: 10vh; }
@@ -527,13 +534,14 @@ body {
   display: block;
   font-weight: 700;
   line-height: 1.11;
-  margin-bottom: 3rem;
   animation-name: moveInLeft;
   animation-duration: 0.8s;
   animation-timing-function: ease-out; }
   @media only screen and (max-width: 37.5em) {
     .heading-secondary--main {
       margin-bottom: 0; } }
+  .heading-secondary--main:not(:last-child) {
+    padding-bottom: 2rem; }
 
 .number {
   position: absolute;
@@ -630,8 +638,7 @@ body {
     .main__text-box--heading--first {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 5rem; }
+      padding-top: 7.5%; }
       @media only screen and (max-width: 56.25em) {
         .main__text-box--heading--first {
           flex-direction: column;
@@ -716,8 +723,8 @@ body {
     .quotebox__bottom > span {
       display: block; }
 
-.heading-third:not(:last-child) {
-  padding: 0; }
+.heading-third > span:not(:last-child) {
+  padding-bottom: 2rem; }
 
 .heading-fourth__text-box {
   font-size: 2rem;

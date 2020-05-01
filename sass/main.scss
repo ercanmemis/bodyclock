@@ -15,6 +15,7 @@ $default-font-size: 1.6rem;
 $text-bold: 700;
 $hspace: 3.5rem;
 $rmargin-bottom: 0 !important;
+$padding-section: 2.5%;
 
 //MIXINS
 
@@ -243,7 +244,7 @@ body {
 
 .iphone {
   margin-top: -2rem;
-  padding-left: 25%;
+  padding-left: 20%;
 
   @include respond(xphone) {
   }
@@ -292,6 +293,10 @@ body {
 
     @include respond(tab-port) {
       display: none;
+    }
+
+    &--inside {
+      padding-bottom: 2.5rem;
     }
   }
 }
@@ -418,6 +423,7 @@ body {
     height: 100%;
 
     @include respond(tab-land) {
+      padding: 0 $padding-section;
     }
   }
 
@@ -561,12 +567,14 @@ body {
   }
 
   &__reference-box {
-    width: 100%;
     margin: 3.5rem 0;
 
     @include respond(tab-port) {
       display: flex;
       flex-direction: column;
+    }
+
+    @include respond(tab-land) {
     }
 
     &--text {
@@ -689,7 +697,7 @@ body {
   height: 100%;
   background-color: $color-white;
   padding-top: 5%;
-  margin-bottom: 15rem;
+  margin-bottom: 5%;
 
   @include respond(phone) {
     margin-bottom: 2.5rem;
@@ -700,6 +708,7 @@ body {
   }
 
   @include respond(tab-land) {
+    padding: 10% 2.5%;
     margin-bottom: 8rem;
   }
 }
@@ -733,6 +742,7 @@ body {
 }
 
 .section-third {
+  padding: 5% 0;
   &__text-box {
     @include respond(phone) {
       padding: 5%;
@@ -760,7 +770,6 @@ body {
     display: block;
     font-weight: 700;
     line-height: 1.11;
-    margin-bottom: 3rem;
 
     animation-name: moveInLeft;
     animation-duration: 0.8s;
@@ -768,6 +777,10 @@ body {
 
     @include respond(phone) {
       margin-bottom: 0;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: 2rem;
     }
   }
 }
@@ -891,9 +904,7 @@ body {
     &--first {
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      margin-bottom: 5rem;
-
+      padding-top: 7.5%;
       @include respond(tab-port) {
         flex-direction: column;
         align-items: none;
@@ -1015,8 +1026,8 @@ body {
 }
 
 .heading-third {
-  &:not(:last-child) {
-    padding: 0;
+  & > span:not(:last-child) {
+    padding-bottom: 2rem;
   }
 }
 

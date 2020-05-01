@@ -358,7 +358,7 @@ body {
 
 .iphone {
   margin-top: -2rem;
-  padding-left: 25%;
+  padding-left: 20%;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -408,6 +408,10 @@ body {
   .main__heading-video {
     display: none;
   }
+}
+
+.main__heading-video--inside {
+  padding-bottom: 2.5rem;
 }
 
 .nav {
@@ -564,6 +568,12 @@ body {
           flex-direction: column;
   background-color: #e8fdff;
   height: 100%;
+}
+
+@media only screen and (max-width: 75em) {
+  .header__header {
+    padding: 0 2.5%;
+  }
 }
 
 .header__primary {
@@ -739,7 +749,6 @@ body {
 }
 
 .header__reference-box {
-  width: 100%;
   margin: 3.5rem 0;
 }
 
@@ -900,7 +909,7 @@ body {
   height: 100%;
   background-color: #fff;
   padding-top: 5%;
-  margin-bottom: 15rem;
+  margin-bottom: 5%;
 }
 
 @media only screen and (max-width: 37.5em) {
@@ -917,6 +926,7 @@ body {
 
 @media only screen and (max-width: 75em) {
   .section-first {
+    padding: 10% 2.5%;
     margin-bottom: 8rem;
   }
 }
@@ -958,6 +968,10 @@ body {
   }
 }
 
+.section-third {
+  padding: 5% 0;
+}
+
 @media only screen and (max-width: 37.5em) {
   .section-third__text-box {
     padding: 5%;
@@ -982,7 +996,6 @@ body {
   display: block;
   font-weight: 700;
   line-height: 1.11;
-  margin-bottom: 3rem;
   -webkit-animation-name: moveInLeft;
           animation-name: moveInLeft;
   -webkit-animation-duration: 0.8s;
@@ -995,6 +1008,10 @@ body {
   .heading-secondary--main {
     margin-bottom: 0;
   }
+}
+
+.heading-secondary--main:not(:last-child) {
+  padding-bottom: 2rem;
 }
 
 .number {
@@ -1176,10 +1193,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 5rem;
+  padding-top: 7.5%;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1342,8 +1356,8 @@ body {
   display: block;
 }
 
-.heading-third:not(:last-child) {
-  padding: 0;
+.heading-third > span:not(:last-child) {
+  padding-bottom: 2rem;
 }
 
 .heading-fourth__text-box {
