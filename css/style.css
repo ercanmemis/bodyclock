@@ -290,8 +290,7 @@ body {
     flex-basis: 50%; }
     @media only screen and (max-width: 56.25em) {
       .header__text-box {
-        display: inline-block;
-        padding: 2.5%; } }
+        display: inline-block; } }
   .header__header {
     display: flex;
     align-items: center;
@@ -481,8 +480,7 @@ body {
 .section-first {
   height: 100%;
   background-color: #fff;
-  padding-top: 5%;
-  margin-bottom: 5%; }
+  padding: 10vh 0; }
   @media only screen and (max-width: 37.5em) {
     .section-first {
       margin-bottom: 2.5rem; } }
@@ -507,6 +505,7 @@ body {
         display: none; } }
 
 .section-second {
+  padding: 10vh 0;
   background-color: #e8fdff; }
   .section-second__text-box {
     padding: 25% 0; }
@@ -515,18 +514,23 @@ body {
         padding: 0; } }
 
 .section-third {
-  padding: 5% 0; }
+  padding: 10vh 0; }
   @media only screen and (max-width: 37.5em) {
     .section-third__text-box {
       padding: 5%; } }
 
 .section-fourth {
-  padding-top: 10vh; }
+  padding: 10vh 0; }
+  .section-fourth__box {
+    display: flex; }
   .section-fourth__text--box--header {
     border: 0.1rem solid #0bcdfc; }
+  .section-fourth__heading {
+    display: flex;
+    max-width: 120rem; }
 
 .section-fifth {
-  padding-top: 10vh; }
+  padding: 10vh 0; }
 
 .heading-secondary--main {
   font-size: 5.6rem;
@@ -674,9 +678,8 @@ body {
     flex-basis: 85%; }
 
 .h1-section {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding-bottom: 3rem; }
+  display: inline-block;
+  font-size: 5.6rem; }
 
 .quotebox {
   max-width: 100%;

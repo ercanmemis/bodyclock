@@ -408,7 +408,6 @@ body {
 
     @include respond(tab-port) {
       display: inline-block;
-      padding: 2.5%;
     }
 
     @include respond(tab-land) {
@@ -696,8 +695,7 @@ body {
 .section-first {
   height: 100%;
   background-color: $color-white;
-  padding-top: 5%;
-  margin-bottom: 5%;
+  padding: 10vh 0;
 
   @include respond(phone) {
     margin-bottom: 2.5rem;
@@ -730,6 +728,7 @@ body {
 }
 
 .section-second {
+  padding: 10vh 0;
   background-color: $color-primary-light;
 
   &__text-box {
@@ -742,7 +741,7 @@ body {
 }
 
 .section-third {
-  padding: 5% 0;
+  padding: 10vh 0;
   &__text-box {
     @include respond(phone) {
       padding: 5%;
@@ -751,16 +750,25 @@ body {
 }
 
 .section-fourth {
-  padding-top: 10vh;
+  padding: 10vh 0;
+
+  &__box {
+    display: flex;
+  }
   &__text--box {
     &--header {
       border: 0.1rem solid $color-primary;
     }
   }
+
+  &__heading {
+    display: flex;
+    max-width: 120rem;
+  }
 }
 
 .section-fifth {
-  padding-top: 10vh;
+  padding: 10vh 0;
 }
 
 .heading-secondary {
@@ -960,9 +968,8 @@ body {
 }
 
 .h1-section {
-  max-width: 120rem;
-  margin: 0 auto;
-  padding-bottom: 3rem;
+  display: inline-block;
+  font-size: 5.6rem;
 }
 
 .quotebox {
