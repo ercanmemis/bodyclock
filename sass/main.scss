@@ -729,7 +729,6 @@ body {
 }
 
 .section-second {
-  padding: 20vh 0;
   background-color: $color-primary-light;
 
   &__text-box {
@@ -1092,7 +1091,6 @@ body {
   &__item {
   }
   &__text {
-    max-width: 30rem;
     display: inline-block;
     color: $color-black;
     padding: 1rem;
