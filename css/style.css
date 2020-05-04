@@ -542,7 +542,7 @@ body {
     margin-bottom: 10%; }
 
 .section-fifth {
-  padding: 10vh 0; }
+  padding: 10vh 1.3%; }
 
 .title {
   max-width: 50%; }
@@ -709,16 +709,25 @@ body {
   border-radius: 2rem; }
   .quotebox__img {
     position: relative;
-    max-width: 100%;
+    min-width: 100%;
     height: auto;
     border-radius: 2rem; }
+    @media only screen and (max-width: 64em) {
+      .quotebox__img {
+        max-width: 100%; } }
     .quotebox__img--title {
       font-size: 2rem;
-      font-weight: 700; }
+      font-weight: 700;
+      vertical-align: middle;
+      padding: 1.5rem 0 0 1.5rem;
+      display: inline-block; }
     .quotebox__img--title-box {
       position: absolute;
-      bottom: 4%;
-      left: 4%; }
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 6rem;
+      background-color: rgba(255, 255, 255, 0.4); }
     .quotebox__img--title-bottom {
       position: relative;
       width: 100%;
@@ -733,6 +742,10 @@ body {
     height: 18.6rem;
     padding-left: 3rem;
     font-weight: 700; }
+    @media only screen and (max-width: 56.25em) {
+      .quotebox__quote {
+        padding: 10% 0 0 15%;
+        font-size: 20rem; } }
   .quotebox__text {
     color: #fff;
     font-weight: 500;
@@ -746,6 +759,10 @@ body {
       padding: 35% 3rem 3rem 3rem;
       position: absolute;
       width: 100%; }
+      @media only screen and (max-width: 56.25em) {
+        .quotebox__text--text {
+          padding: 35% 15% 3rem 15%;
+          font-size: 6rem; } }
   .quotebox__bottom {
     position: absolute;
     bottom: 0;
@@ -754,8 +771,17 @@ body {
     width: 100%;
     display: block;
     padding: 3rem; }
+    @media only screen and (max-width: 56.25em) {
+      .quotebox__bottom {
+        font-weight: 300;
+        font-size: 3.5rem;
+        padding: 15%; } }
     .quotebox__bottom--institut {
       font-size: 1.2rem; }
+      @media only screen and (max-width: 56.25em) {
+        .quotebox__bottom--institut {
+          font-weight: 300;
+          font-size: 2rem; } }
     .quotebox__bottom > span {
       display: block; }
 
@@ -775,6 +801,9 @@ body {
 .heading-fifth {
   height: 100%;
   width: auto; }
+  @media only screen and (max-width: 64em) {
+    .heading-fifth {
+      padding: 2.5%; } }
   .heading-fifth--header {
     margin-top: 10%; }
 
