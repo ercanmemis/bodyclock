@@ -190,6 +190,12 @@ body {
       display: inline-block;
       padding-left: 0;
       margin: 0 auto; } }
+  @media only screen and (max-width: 56.25em) {
+    .iphone {
+      margin-top: 3rem;
+      padding-left: 0;
+      margin-right: auto;
+      margin-left: auto; } }
 
 .macbook {
   max-width: 100%;
@@ -517,7 +523,7 @@ body {
   padding: 0 2.5%;
   background-color: #e8fdff; }
   .section-second__text-box {
-    padding: 12.5vh 0 0 0; }
+    padding: 10vh 0 0 0; }
     @media only screen and (max-width: 37.5em) {
       .section-second__text-box {
         padding: 0; } }
@@ -554,6 +560,9 @@ body {
   @media only screen and (max-width: 37.5em) {
     .heading-secondary--main {
       margin-bottom: 0; } }
+  @media only screen and (max-width: 56.25em) {
+    .heading-secondary--main {
+      margin-bottom: 3rem; } }
   .heading-secondary--main:not(:last-child) {
     padding-bottom: 2rem; }
 

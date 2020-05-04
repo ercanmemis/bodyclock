@@ -258,6 +258,13 @@ body {
     padding-left: 0;
     margin: 0 auto;
   }
+
+  @include respond(tab-port) {
+    margin-top: 3rem;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .macbook {
@@ -752,7 +759,7 @@ body {
   background-color: $color-primary-light;
 
   &__text-box {
-    padding: 12.5vh 0 0 0;
+    padding: 10vh 0 0 0;
 
     @include respond(phone) {
       padding: 0;
@@ -799,6 +806,10 @@ body {
 
     @include respond(phone) {
       margin-bottom: 0;
+    }
+
+    @include respond(tab-port) {
+      margin-bottom: 3rem;
     }
 
     &:not(:last-child) {
