@@ -1119,6 +1119,7 @@ body {
 //INFOGRAPH CIRCLE IMAGE
 
 .group-image {
+  display: flex;
   @include respond(xphone) {
   }
 
