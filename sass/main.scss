@@ -1083,6 +1083,10 @@ body {
         padding: 35% 15% 3rem 15%;
         font-size: 6rem;
       }
+
+      @include respond(phone) {
+        font-size: 4rem;
+      }
     }
   }
   &__bottom {

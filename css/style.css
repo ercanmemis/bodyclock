@@ -765,6 +765,9 @@ body {
         .quotebox__text--text {
           padding: 35% 15% 3rem 15%;
           font-size: 6rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .quotebox__text--text {
+          font-size: 4rem; } }
   .quotebox__bottom {
     position: absolute;
     bottom: 0;
