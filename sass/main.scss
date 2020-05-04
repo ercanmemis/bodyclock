@@ -732,7 +732,7 @@ body {
 
 .section-first {
   height: 100%;
-  padding: 10vh 0 10vh 2.5%;
+  padding: 10vh 2.5%;
 
   @include respond(laptop) {
   }
@@ -838,7 +838,6 @@ body {
 
   @include respond(tab-port) {
     flex-wrap: wrap;
-    flex-direction: row;
   }
 }
 
@@ -869,7 +868,6 @@ body {
 
     @include respond(tab-port) {
       width: 8rem;
-      margin-bottom: 3rem;
     }
 
     & > img {
@@ -1047,7 +1045,7 @@ body {
       height: auto;
 
       @include respond(tab-port) {
-        min-weight: 100% !important;
+        min-width: 100%;
       }
     }
   }

@@ -25,7 +25,8 @@
           margin-right: 1.5rem; } }
       @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
-          margin-right: 3rem; } }
+          margin-right: 0;
+          margin-bottom: 3rem; } }
       @media only screen and (max-width: 64em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 3rem; } }
@@ -505,7 +506,7 @@ body {
 
 .section-first {
   height: 100%;
-  padding: 10vh 0 10vh 2.5%; }
+  padding: 10vh 2.5%; }
 
 .mobile-video__box {
   display: flex; }
@@ -583,8 +584,7 @@ body {
   line-height: 1.33; }
   @media only screen and (max-width: 56.25em) {
     .main__text-box2 {
-      flex-wrap: wrap;
-      flex-direction: row; } }
+      flex-wrap: wrap; } }
 
 .main__text-box {
   display: flex;
@@ -608,8 +608,7 @@ body {
     border-radius: 10rem; }
     @media only screen and (max-width: 56.25em) {
       .main__text-box--circle {
-        width: 8rem;
-        margin-bottom: 3rem; } }
+        width: 8rem; } }
     .main__text-box--circle > img {
       display: inline-block;
       height: auto; }
@@ -737,7 +736,7 @@ body {
       height: auto; }
       @media only screen and (max-width: 56.25em) {
         .quotebox__img--medium {
-          min-weight: 100% !important; } }
+          min-width: 100%; } }
   .quotebox__quote {
     position: absolute;
     color: #fff;

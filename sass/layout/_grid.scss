@@ -96,7 +96,8 @@ $gutter-none: 0;
       }
 
       @include respond(tab-port) {
-        margin-right: $gutter-vertical-small;
+        margin-right: $gutter-none;
+        margin-bottom: $gutter-vertical-small;
       }
 
       @include respond(laptop) {
