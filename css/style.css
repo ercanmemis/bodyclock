@@ -509,6 +509,7 @@ body {
         display: none; } }
 
 .section-second {
+  padding: 10% 2.5%;
   background-color: #e8fdff; }
   .section-second__text-box {
     padding: 12.5vh 0 0 0; }
@@ -523,7 +524,7 @@ body {
       padding: 5%; } }
 
 .section-fourth {
-  padding: 10vh 0; }
+  padding-top: 10vh; }
   .section-fourth__box {
     margin-bottom: 10%; }
 
@@ -685,27 +686,17 @@ body {
   font-size: 5.6rem; }
 
 .quotebox {
+  position: relative;
   min-width: 100%;
   height: auto;
-  border-radius: 2rem;
-  background-color: #0bcdfc; }
+  border-radius: 2rem; }
   .quotebox__img {
+    position: relative;
     min-width: 100%;
     height: auto;
     border-radius: 2rem; }
-    .quotebox__img--title-box {
-      position: relative; }
-    .quotebox__img--title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      display: inline-block;
-      font-weight: 700;
-      background-color: #e8fdff;
-      width: 100%;
-      height: auto; }
     .quotebox__img--medium {
-      min-width: 100%;
+      max-width: 100%;
       height: auto; }
   .quotebox__quote {
     position: absolute;
@@ -715,25 +706,23 @@ body {
     padding-left: 3rem;
     font-weight: 700; }
   .quotebox__text {
-    position: relative;
     color: #fff;
     display: flex;
     flex-direction: column;
     font-weight: 500;
     font-size: 2.4rem;
-    height: 43.5rem; }
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
     .quotebox__text--text {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding: 3rem; }
+      padding: 35% 3rem 3rem 3rem; }
   .quotebox__bottom {
+    position: absolute;
+    bottom: 0;
     font-size: 1.6rem;
     font-weight: 300;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    position: absolute;
     display: block;
     padding: 3rem; }
     .quotebox__bottom--institut {
@@ -832,7 +821,7 @@ body {
   align-items: center; }
 
 .section__impressum {
-  padding: 15% 2.5%;
+  padding-top: 15vh;
   margin-top: 2.5%; }
   .section__impressum--header {
     font-size: 3.2rem;
