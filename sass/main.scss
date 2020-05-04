@@ -733,7 +733,7 @@ body {
 }
 
 .section-second {
-  padding: 10% 2.5%;
+  padding: 10% 2.5% 0 2.5%;
   background-color: $color-primary-light;
 
   &__text-box {
@@ -746,7 +746,7 @@ body {
 }
 
 .section-third {
-  padding-top: 10vh;
+  padding: 10% 2.5% 0 2.5%;
   &__text-box {
     @include respond(phone) {
       padding: 5%;
@@ -756,7 +756,9 @@ body {
 
 .section-fourth {
   padding-top: 10vh;
-
+  &__heading {
+    padding-left: 2.5%;
+  }
   &__box {
     margin-bottom: 10%;
   }
@@ -1084,9 +1086,6 @@ body {
       width: auto;
       height: auto;
     }
-  }
-
-  &__item {
   }
 
   &__text {

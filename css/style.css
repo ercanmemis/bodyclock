@@ -509,7 +509,7 @@ body {
         display: none; } }
 
 .section-second {
-  padding: 10% 2.5%;
+  padding: 10% 2.5% 0 2.5%;
   background-color: #e8fdff; }
   .section-second__text-box {
     padding: 12.5vh 0 0 0; }
@@ -518,13 +518,15 @@ body {
         padding: 0; } }
 
 .section-third {
-  padding-top: 10vh; }
+  padding: 10% 2.5% 0 2.5%; }
   @media only screen and (max-width: 37.5em) {
     .section-third__text-box {
       padding: 5%; } }
 
 .section-fourth {
   padding-top: 10vh; }
+  .section-fourth__heading {
+    padding-left: 2.5%; }
   .section-fourth__box {
     margin-bottom: 10%; }
 

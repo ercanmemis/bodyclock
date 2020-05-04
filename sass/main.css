@@ -962,6 +962,7 @@ body {
 }
 
 .section-second {
+  padding: 10% 2.5%;
   background-color: #e8fdff;
 }
 
@@ -986,7 +987,7 @@ body {
 }
 
 .section-fourth {
-  padding: 10vh 0;
+  padding-top: 10vh;
 }
 
 .section-fourth__box {
@@ -1301,35 +1302,21 @@ body {
 }
 
 .quotebox {
+  position: relative;
   min-width: 100%;
   height: auto;
   border-radius: 2rem;
-  background-color: #0bcdfc;
 }
 
 .quotebox__img {
+  position: relative;
   min-width: 100%;
   height: auto;
   border-radius: 2rem;
 }
 
-.quotebox__img--title-box {
-  position: relative;
-}
-
-.quotebox__img--title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: inline-block;
-  font-weight: 700;
-  background-color: #e8fdff;
-  width: 100%;
-  height: auto;
-}
-
 .quotebox__img--medium {
-  min-width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -1343,7 +1330,6 @@ body {
 }
 
 .quotebox__text {
-  position: relative;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1354,24 +1340,22 @@ body {
           flex-direction: column;
   font-weight: 500;
   font-size: 2.4rem;
-  height: 43.5rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .quotebox__text--text {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  padding: 3rem;
+  padding: 35% 3rem 3rem 3rem;
 }
 
 .quotebox__bottom {
+  position: absolute;
+  bottom: 0;
   font-size: 1.6rem;
   font-weight: 300;
-  bottom: 0;
-  left: 0;
   width: 100%;
-  position: absolute;
   display: block;
   padding: 3rem;
 }
