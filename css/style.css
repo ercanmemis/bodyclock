@@ -685,13 +685,25 @@ body {
   font-size: 5.6rem; }
 
 .quotebox {
-  max-width: 100%;
-  height: 43.5rem;
-  border-radius: 0.7rem;
+  min-width: 100%;
+  height: auto;
+  border-radius: 2rem;
   background-color: #0bcdfc; }
   .quotebox__img {
-    width: 100%;
-    height: auto; }
+    min-width: 100%;
+    height: auto;
+    border-radius: 2rem; }
+    .quotebox__img--title-box {
+      position: relative; }
+    .quotebox__img--title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      font-weight: 700;
+      background-color: #e8fdff;
+      width: 100%;
+      height: auto; }
     .quotebox__img--medium {
       min-width: 100%;
       height: auto; }
@@ -820,7 +832,7 @@ body {
   align-items: center; }
 
 .section__impressum {
-  padding-top: 15vh;
+  padding: 15% 2.5%;
   margin-top: 2.5%; }
   .section__impressum--header {
     font-size: 3.2rem;

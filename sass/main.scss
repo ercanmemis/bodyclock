@@ -970,14 +970,30 @@ body {
 }
 
 .quotebox {
-  max-width: 100%;
-  height: 43.5rem;
-  border-radius: 0.7rem;
+  min-width: 100%;
+  height: auto;
+  border-radius: 2rem;
   background-color: #0bcdfc;
 
   &__img {
-    width: 100%;
+    min-width: 100%;
     height: auto;
+    border-radius: 2rem;
+
+    &--title-box {
+      position: relative;
+    }
+
+    &--title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: inline-block;
+      font-weight: 700;
+      background-color: $color-primary-light;
+      width: 100%;
+      height: auto;
+    }
 
     &--medium {
       min-width: 100%;
@@ -1161,7 +1177,7 @@ body {
 }
 
 .section__impressum {
-  padding-top: 15vh;
+  padding: 15% 2.5%;
   margin-top: 2.5%;
   &--header {
     font-size: 3.2rem;
