@@ -762,6 +762,10 @@ body {
 .heading-third > span:not(:last-child) {
   padding-bottom: 2rem; }
 
+@media only screen and (max-width: 56.25em) {
+  .heading-third > a {
+    margin-bottom: 10vh; } }
+
 .heading-fourth__text-box {
   font-size: 2rem;
   padding: 0.5rem 1rem; }
@@ -780,7 +784,8 @@ body {
     .group-image {
       display: flex;
       justify-items: center;
-      align-items: center; } }
+      align-items: center;
+      flex-direction: column; } }
   .group-image__box {
     display: flex;
     align-items: center;

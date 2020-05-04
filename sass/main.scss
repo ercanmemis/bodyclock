@@ -1086,6 +1086,12 @@ body {
   & > span:not(:last-child) {
     padding-bottom: 2rem;
   }
+
+  & > a {
+    @include respond(tab-port) {
+      margin-bottom: 10vh;
+    }
+  }
 }
 
 .heading-fourth {
@@ -1122,6 +1128,7 @@ body {
     display: flex;
     justify-items: center;
     align-items: center;
+    flex-direction: column;
   }
   &__box {
     display: flex;
