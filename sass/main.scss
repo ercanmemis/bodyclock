@@ -230,6 +230,10 @@ body {
   height: $hspace;
 }
 
+.p-top {
+  padding-top: 3rem !important;
+}
+
 .bold {
   font-weight: $text-bold;
 }
@@ -732,7 +736,7 @@ body {
   background-color: $color-primary-light;
 
   &__text-box {
-    padding: 25% 0;
+    padding: 12.5vh 0 0 0;
 
     @include respond(phone) {
       padding: 0;
@@ -741,7 +745,7 @@ body {
 }
 
 .section-third {
-  padding: 10vh 0;
+  padding-top: 10vh;
   &__text-box {
     @include respond(phone) {
       padding: 5%;
@@ -753,32 +757,24 @@ body {
   padding: 10vh 0;
 
   &__box {
-    display: flex;
-  }
-  &__text--box {
-    &--header {
-      border: 0.1rem solid $color-primary;
-    }
-  }
-
-  &__heading {
-    display: flex;
-    max-width: 120rem;
+    margin-bottom: 10%;
   }
 }
 
 .section-fifth {
   padding: 10vh 0;
 }
-
+.title {
+  max-width: 50%;
+}
 .heading-secondary {
   &--main {
+    display: inline-block;
     font-size: 5.6rem;
-    max-width: 435rem;
+    font-size: 5.6rem;
     display: block;
     font-weight: 700;
     line-height: 1.11;
-
     animation-name: moveInLeft;
     animation-duration: 0.8s;
     animation-timing-function: ease-out;
@@ -807,6 +803,7 @@ body {
 .main__text-box2 {
   display: flex;
   flex-direction: column;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.33;
 
@@ -983,7 +980,7 @@ body {
     height: auto;
 
     &--medium {
-      max-width: 100%;
+      min-width: 100%;
       height: auto;
     }
   }

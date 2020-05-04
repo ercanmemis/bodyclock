@@ -170,6 +170,9 @@ body {
 .hspace {
   height: 3.5rem; }
 
+.p-top {
+  padding-top: 3rem !important; }
+
 .bold {
   font-weight: 700; }
 
@@ -508,13 +511,13 @@ body {
 .section-second {
   background-color: #e8fdff; }
   .section-second__text-box {
-    padding: 25% 0; }
+    padding: 12.5vh 0 0 0; }
     @media only screen and (max-width: 37.5em) {
       .section-second__text-box {
         padding: 0; } }
 
 .section-third {
-  padding: 10vh 0; }
+  padding-top: 10vh; }
   @media only screen and (max-width: 37.5em) {
     .section-third__text-box {
       padding: 5%; } }
@@ -522,19 +525,18 @@ body {
 .section-fourth {
   padding: 10vh 0; }
   .section-fourth__box {
-    display: flex; }
-  .section-fourth__text--box--header {
-    border: 0.1rem solid #0bcdfc; }
-  .section-fourth__heading {
-    display: flex;
-    max-width: 120rem; }
+    margin-bottom: 10%; }
 
 .section-fifth {
   padding: 10vh 0; }
 
+.title {
+  max-width: 50%; }
+
 .heading-secondary--main {
+  display: inline-block;
   font-size: 5.6rem;
-  max-width: 435rem;
+  font-size: 5.6rem;
   display: block;
   font-weight: 700;
   line-height: 1.11;
@@ -559,6 +561,7 @@ body {
 .main__text-box2 {
   display: flex;
   flex-direction: column;
+  font-size: 2rem;
   font-weight: 700;
   line-height: 1.33; }
   @media only screen and (max-width: 56.25em) {
@@ -690,7 +693,7 @@ body {
     width: 100%;
     height: auto; }
     .quotebox__img--medium {
-      max-width: 100%;
+      min-width: 100%;
       height: auto; }
   .quotebox__quote {
     position: absolute;
