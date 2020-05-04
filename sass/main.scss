@@ -50,6 +50,12 @@ ORDER: Base + Typography > general layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == oldphone {
+    @media only screen and (max-width: 20em) {
+      @content; // 320px
+    }
+  }
+
   @if $breakpoint == xphone {
     @media only screen and (max-width: 23.5em) {
       @content; // 375px
@@ -79,15 +85,15 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     }
   }
 
-  @if $breakpoint == min-mobile {
-    @media only screen and (min-width: 64em) {
-      @content; //<1024px?
-    }
-  }
-
   @if $breakpoint == big-desktop {
     @media only screen and (min-width: 112.5em) {
       @content; //1800+ px
+    }
+  }
+
+  @if $breakpoint == min-mobile {
+    @media only screen and (min-width: 64em) {
+      @content; //<1024px?
     }
   }
 }
@@ -345,16 +351,20 @@ body {
     height: 8rem;
     margin: 0 auto;
 
-    @include respond(phone) {
-      max-width: 95%;
+    @include respond(tab-land) {
+      max-width: 100%;
+      padding: 0 2rem;
     }
 
     @include respond(laptop) {
     }
 
-    @include respond(tab-land) {
-      max-width: 100%;
-      padding: 0 2rem;
+    @include respond(phone) {
+      max-width: 95%;
+    }
+
+    @include respond(oldphone) {
+      padding: 0;
     }
   }
 
@@ -363,6 +373,13 @@ body {
       display: inline-block;
       width: auto;
       vertical-align: middle;
+    }
+  }
+
+  &--img {
+    @include respond(oldphone) {
+      width: 14rem;
+      height: auto;
     }
   }
 
@@ -377,6 +394,10 @@ body {
       margin-right: 2.5rem;
 
       @include respond(phone) {
+        display: none;
+      }
+
+      @include respond(xphone) {
         display: none;
       }
     }
@@ -492,6 +513,10 @@ body {
       }
 
       @include respond(phone) {
+      }
+
+      @include respond(oldphone) {
+        font-size: 5.2rem;
       }
     }
 
@@ -1071,6 +1096,10 @@ body {
       padding: 10% 0 0 15%;
       font-size: 20rem;
     }
+
+    @include respond(oldphone) {
+      font-size: 10rem;
+    }
   }
 
   &__text {
@@ -1096,6 +1125,10 @@ body {
       @include respond(phone) {
         font-size: 4rem;
       }
+
+      @include respond(oldphone) {
+        font-size: 3rem;
+      }
     }
   }
   &__bottom {
@@ -1111,6 +1144,10 @@ body {
       font-weight: 300;
       font-size: 3.5rem;
       padding: 15%;
+    }
+
+    @include respond(oldphone) {
+      font-size: 2rem;
     }
 
     &--institut {
@@ -1145,6 +1182,10 @@ body {
     //background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
     padding: 0.5rem 1rem;
     //border: 1px solid $color-primary;
+
+    @include respond(oldphone) {
+      margin-top: 3rem;
+    }
 
     &:not(:last-child) {
       margin-bottom: 1.9rem;
@@ -1218,6 +1259,9 @@ body {
     @include respond(phone) {
       height: 100%;
     }
+    @include respond(oldphone) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -1227,29 +1271,57 @@ body {
   @include respond(xphone) {
     transform: translate(20rem);
   }
+
+  @include respond(oldphone) {
+    display: none;
+  }
 } // = half the width of the wrapper
 .deg45 {
   transform: rotate(45deg) translate(22rem) rotate(-45deg);
+  @include respond(oldphone) {
+    display: none;
+  }
 }
 .deg90 {
   transform: rotate(90deg) translate(22rem) rotate(-90deg);
+  @include respond(oldphone) {
+    transform: rotate(90deg) translate(28rem) rotate(-90deg);
+  }
 }
 .deg135 {
   transform: rotate(135deg) translate(22rem) rotate(-135deg);
+
+  @include respond(oldphone) {
+    display: none;
+  }
 }
 .deg180 {
   width: 15rem !important;
 
   transform: rotate(180deg) translate(22rem) rotate(-180deg);
+
+  @include respond(oldphone) {
+    display: none;
+  }
 }
 .deg225 {
   transform: rotate(225deg) translate(22rem) rotate(-225deg);
+
+  @include respond(oldphone) {
+    display: none;
+  }
 }
 .deg270 {
   transform: rotate(270deg) translate(22rem) rotate(-270deg);
+  @include respond(oldphone) {
+    transform: rotate(270deg) translate(28rem) rotate(-270deg);
+  }
 }
 .deg315 {
   transform: rotate(315deg) translate(22rem) rotate(-315deg);
+  @include respond(oldphone) {
+    display: none;
+  }
 }
 
 .paragraph {

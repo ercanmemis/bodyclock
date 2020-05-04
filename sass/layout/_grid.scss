@@ -19,6 +19,12 @@ $gutter-none: 0;
 //MIXIN MQ
 
 @mixin respond($breakpoint) {
+  @if $breakpoint == oldphone {
+    @media only screen and (max-width: 20em) {
+      @content; // 320px
+    }
+  }
+
   @if $breakpoint == xphone {
     @media only screen and (max-width: 23.5em) {
       @content; // 375px
