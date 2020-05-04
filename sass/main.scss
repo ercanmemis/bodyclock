@@ -292,6 +292,16 @@ body {
   height: 100%;
   width: 100%;
 
+  &_heading--section {
+    @include respond(laptop) {
+      padding-left: 2.5%;
+    }
+
+    @include respond(tab-land) {
+      padding-left: 2.5%;
+    }
+  }
+
   &__heading-video {
     margin-top: 2rem;
 
@@ -301,6 +311,9 @@ body {
 
     &--inside {
       padding-bottom: 2.5rem;
+      @include respond(laptop) {
+        width: 80%;
+      }
     }
   }
 }
@@ -614,6 +627,14 @@ body {
       max-width: 100%;
       height: auto;
 
+      &:last-child {
+        &:last-child {
+          @include respond(tab-port) {
+            margin-bottom: 3rem;
+          }
+        }
+      }
+
       &:first-child {
         @include respond(tab-port) {
           margin-top: 4rem;
@@ -704,19 +725,9 @@ body {
 
 .section-first {
   height: 100%;
-  padding: 10vh 0;
+  padding: 10vh 0 10vh 2.5%;
 
-  @include respond(phone) {
-    margin-bottom: 2.5rem;
-  }
-
-  @include respond(tab-port) {
-    padding: 5% 2.5% 0 2.5%;
-  }
-
-  @include respond(tab-land) {
-    padding: 10% 2.5%;
-    margin-bottom: 8rem;
+  @include respond(laptop) {
   }
 }
 
@@ -846,7 +857,8 @@ body {
     border-radius: 10rem;
 
     @include respond(tab-port) {
-      flex: 1 0 10%;
+      width: 8rem;
+      margin-bottom: 3rem;
     }
 
     & > img {
@@ -923,8 +935,8 @@ body {
       }
 
       @include respond(tab-port) {
-        flex-direction: column;
         align-items: none;
+        display: inline-block;
       }
     }
 
@@ -1345,14 +1357,19 @@ body {
   width: 100%;
   padding: 2rem 0;
 
+  @include respond(tab-land) {
+    padding: 2rem 2rem;
+  }
+
   &__logo-box {
+    @include respond(phone) {
+      text-align: center;
+    }
+
     @include respond(tab-port) {
       text-align: center;
     }
 
-    @include respond(phone) {
-      text-align: center;
-    }
     &--link:link,
     &--link:visited {
       font-size: 3.2rem;

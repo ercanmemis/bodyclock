@@ -214,6 +214,12 @@ body {
 .main {
   height: 100%;
   width: 100%; }
+  @media only screen and (max-width: 64em) {
+    .main_heading--section {
+      padding-left: 2.5%; } }
+  @media only screen and (max-width: 75em) {
+    .main_heading--section {
+      padding-left: 2.5%; } }
   .main__heading-video {
     margin-top: 2rem; }
     @media only screen and (max-width: 56.25em) {
@@ -221,6 +227,9 @@ body {
         display: none; } }
     .main__heading-video--inside {
       padding-bottom: 2.5rem; }
+      @media only screen and (max-width: 64em) {
+        .main__heading-video--inside {
+          width: 80%; } }
 
 .nav {
   background-color: #fff;
@@ -427,6 +436,9 @@ body {
       max-width: 100%;
       height: auto; }
       @media only screen and (max-width: 56.25em) {
+        .header__reference-box--rectangle:last-child:last-child {
+          margin-bottom: 3rem; } }
+      @media only screen and (max-width: 56.25em) {
         .header__reference-box--rectangle:first-child {
           margin-top: 4rem; } }
       .header__reference-box--rectangle:not(:first-child) {
@@ -487,17 +499,7 @@ body {
 
 .section-first {
   height: 100%;
-  padding: 10vh 0; }
-  @media only screen and (max-width: 37.5em) {
-    .section-first {
-      margin-bottom: 2.5rem; } }
-  @media only screen and (max-width: 56.25em) {
-    .section-first {
-      padding: 5% 2.5% 0 2.5%; } }
-  @media only screen and (max-width: 75em) {
-    .section-first {
-      padding: 10% 2.5%;
-      margin-bottom: 8rem; } }
+  padding: 10vh 0 10vh 2.5%; }
 
 .mobile-video__box {
   display: flex; }
@@ -597,7 +599,8 @@ body {
     border-radius: 10rem; }
     @media only screen and (max-width: 56.25em) {
       .main__text-box--circle {
-        flex: 1 0 10%; } }
+        width: 8rem;
+        margin-bottom: 3rem; } }
     .main__text-box--circle > img {
       display: inline-block;
       height: auto; }
@@ -654,8 +657,8 @@ body {
       padding-top: 7.5%; }
       @media only screen and (max-width: 56.25em) {
         .main__text-box--heading--first {
-          flex-direction: column;
-          align-items: none; } }
+          align-items: none;
+          display: inline-block; } }
     @media only screen and (max-width: 37.5em) {
       .main__text-box--heading--sub {
         width: 100%;
@@ -957,10 +960,13 @@ body {
   background-color: #333333;
   width: 100%;
   padding: 2rem 0; }
-  @media only screen and (max-width: 56.25em) {
+  @media only screen and (max-width: 75em) {
+    .footer {
+      padding: 2rem 2rem; } }
+  @media only screen and (max-width: 37.5em) {
     .footer__logo-box {
       text-align: center; } }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 56.25em) {
     .footer__logo-box {
       text-align: center; } }
   .footer__logo-box--link:link, .footer__logo-box--link:visited {
