@@ -5,7 +5,7 @@
     margin-bottom: 3rem; }
     @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
-        margin-bottom: 3rem; } }
+        margin-bottom: 1.5rem; } }
   @media only screen and (max-width: 64em) {
     .row {
       max-width: 100%; } }
@@ -735,6 +735,9 @@ body {
     .quotebox__img--medium {
       max-width: 100%;
       height: auto; }
+      @media only screen and (max-width: 56.25em) {
+        .quotebox__img--medium {
+          min-weight: 100% !important; } }
   .quotebox__quote {
     position: absolute;
     color: #fff;

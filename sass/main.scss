@@ -1045,6 +1045,10 @@ body {
     &--medium {
       max-width: 100%;
       height: auto;
+
+      @include respond(tab-port) {
+        min-weight: 100% !important;
+      }
     }
   }
 
