@@ -581,12 +581,18 @@ body {
 
       animation: moveInBottom 2s ease-out 1s;
       animation-fill-mode: backwards;
+
       @include respond(tab-port) {
         min-width: 85%;
         margin-top: 5rem;
 
         animation: moveInBottom 3s ease-out 1s;
         animation-fill-mode: backwards;
+      }
+
+      @include respond(xphone) {
+        max-width: 100%;
+        height: auto;
       }
     }
   }
@@ -713,7 +719,6 @@ body {
 
     @include respond(xphone) {
       font-size: 2.5rem;
-      padding: 5%;
     }
   }
 
@@ -932,6 +937,10 @@ body {
     @include respond(phone) {
       justify-content: center;
       align-content: flex-start;
+    }
+
+    @include respond(xphone) {
+      flex-wrap: nowrap;
     }
 
     &--first {
@@ -1177,11 +1186,6 @@ body {
     //padding: 12.25rem;
     //2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))$color-primary-light; //see the line
 
-    @include respond(xphone) {
-      flex-basis: 100%;
-      height: auto;
-    }
-
     @include respond(tab-port) {
       width: auto;
       height: auto;
@@ -1210,6 +1214,10 @@ body {
   &__image {
     min-width: 100%;
     height: 60rem;
+
+    @include respond(phone) {
+      height: 100%;
+    }
   }
 }
 
