@@ -1119,8 +1119,6 @@ body {
 //INFOGRAPH CIRCLE IMAGE
 
 .group-image {
-  height: auto;
-
   @include respond(xphone) {
   }
 
@@ -1151,7 +1149,7 @@ body {
 
   &__text {
     max-width: 30rem;
-    display: inline-block;
+    display: inline-flex;
     color: $color-black;
     padding: 1rem;
     font-size: 1.5rem;
@@ -1170,7 +1168,7 @@ body {
 
   &__image {
     min-width: 100%;
-    height: auto;
+    height: 60rem;
   }
 }
 
