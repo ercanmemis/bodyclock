@@ -817,32 +817,32 @@ body {
     height: 60rem; }
 
 .deg0 {
-  transform: translate(24rem); }
+  transform: translate(22rem); }
   @media only screen and (max-width: 23.5em) {
     .deg0 {
       transform: translate(20rem); } }
 
 .deg45 {
-  transform: rotate(45deg) translate(24rem) rotate(-45deg); }
+  transform: rotate(45deg) translate(22rem) rotate(-45deg); }
 
 .deg90 {
-  transform: rotate(90deg) translate(24rem) rotate(-90deg); }
+  transform: rotate(90deg) translate(22rem) rotate(-90deg); }
 
 .deg135 {
-  transform: rotate(135deg) translate(24rem) rotate(-135deg); }
+  transform: rotate(135deg) translate(22rem) rotate(-135deg); }
 
 .deg180 {
   width: 15rem !important;
-  transform: rotate(180deg) translate(24rem) rotate(-180deg); }
+  transform: rotate(180deg) translate(22rem) rotate(-180deg); }
 
 .deg225 {
-  transform: rotate(225deg) translate(24rem) rotate(-225deg); }
+  transform: rotate(225deg) translate(22rem) rotate(-225deg); }
 
 .deg270 {
-  transform: rotate(270deg) translate(24rem) rotate(-270deg); }
+  transform: rotate(270deg) translate(22rem) rotate(-270deg); }
 
 .deg315 {
-  transform: rotate(315deg) translate(24rem) rotate(-315deg); }
+  transform: rotate(315deg) translate(22rem) rotate(-315deg); }
 
 .paragraph {
   font-size: 2rem;
