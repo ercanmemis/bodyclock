@@ -399,6 +399,9 @@ body {
     margin: 3.5rem 0; }
     @media only screen and (max-width: 56.25em) {
       .header__reference-box {
+        margin-bottom: 0; } }
+    @media only screen and (max-width: 56.25em) {
+      .header__reference-box {
         display: flex;
         flex-direction: column; } }
     .header__reference-box--text {
@@ -697,6 +700,9 @@ body {
     min-width: 100%;
     height: auto;
     border-radius: 2rem; }
+    .quotebox__img --title-box {
+      position: absolute;
+      bottom: 0; }
     .quotebox__img--medium {
       max-width: 100%;
       height: auto; }
@@ -709,16 +715,19 @@ body {
     font-weight: 700; }
   .quotebox__text {
     color: #fff;
-    display: flex;
-    flex-direction: column;
     font-weight: 500;
     font-size: 2.4rem;
     height: 100%;
     position: absolute;
     top: 0;
-    left: 0; }
+    width: 100%;
+    height: auto; }
     .quotebox__text--text {
-      padding: 35% 3rem 3rem 3rem; }
+      display: inline-block;
+      padding: 35% 3rem 3rem 3rem;
+      position: absolute;
+      top: 50%;
+      width: 100%; }
   .quotebox__bottom {
     position: absolute;
     bottom: 0;
