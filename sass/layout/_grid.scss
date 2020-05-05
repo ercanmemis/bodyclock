@@ -31,6 +31,12 @@ $gutter-none: 0;
     }
   }
 
+  @if $breakpoint == l-phone {
+    @media only screen and (max-width: 26.5625em) {
+      @content; // 425px
+    }
+  }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content; // 600px

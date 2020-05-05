@@ -62,6 +62,12 @@ ORDER: Base + Typography > general layout + grid > page layout > components
     }
   }
 
+  @if $breakpoint == l-phone {
+    @media only screen and (max-width: 26.5625em) {
+      @content; // 425px
+    }
+  }
+
   @if $breakpoint == phone {
     @media only screen and (max-width: 37.5em) {
       @content; // 600px
@@ -461,6 +467,10 @@ body {
       display: inline-block;
     }
 
+    @include respond(oldphone) {
+      padding-top: 7.5%;
+    }
+
     @include respond(tab-land) {
     }
   }
@@ -513,6 +523,10 @@ body {
       }
 
       @include respond(phone) {
+      }
+
+      @include respond(l-phone) {
+        font-size: 6.2rem;
       }
 
       @include respond(oldphone) {
@@ -651,20 +665,31 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      justify-items: safe center;
-      align-content: center;
       align-items: center;
 
       @include respond(tab-port) {
         flex-direction: column;
       }
+
+      @include respond(laptop) {
+        flex-wrap: nowrap;
+      }
     }
 
     &--rectangle {
-      display: inline-block;
-      max-width: 100%;
       height: auto;
 
+      & > img {
+        @include respond(laptop) {
+          width: 75%;
+          height: auto;
+        }
+
+        @include respond(tab-port) {
+          width: 100%;
+          height: auto;
+        }
+      }
       &:last-child {
         &:last-child {
           @include respond(tab-port) {
@@ -695,6 +720,10 @@ body {
           margin-right: 0;
           margin-left: 0;
           margin-bottom: 2.5rem;
+        }
+
+        @include respond(laptop) {
+          margin-right: 1rem;
         }
       }
     }
@@ -776,6 +805,8 @@ body {
 
     @include respond(tab-port) {
       display: unset;
+      max-height: 100%;
+      width: 100%;
     }
 
     @include respond(min-mobile) {
@@ -787,6 +818,7 @@ body {
 .section-second {
   padding: 0 2.5%;
   background-color: $color-primary-light;
+  margin-bottom: 7.5%;
 
   &__text-box {
     padding: 10vh 0 0 0;
@@ -798,7 +830,8 @@ body {
 }
 
 .section-third {
-  padding: 10% 2.5% 0 2.5%;
+  padding: 0 2.5%;
+  margin-bottom: 7.5%;
   &__text-box {
     @include respond(phone) {
       padding: 5%;
@@ -812,7 +845,7 @@ body {
     padding-left: 2.5%;
   }
   &__box {
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
 }
 
@@ -877,14 +910,14 @@ body {
   flex-direction: column;
   align-content: space-between;
 
-  &:not(:last-child) {
-    margin-bottom: 4rem;
-  }
-
   @include respond(xphone) {
     padding: 5%;
     margin-top: 10%;
     font-size: 2.5rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 4rem;
   }
 
   &--circle {
@@ -898,11 +931,7 @@ body {
 
     @include respond(tab-port) {
       width: 8rem;
-    }
-
-    & > img {
-      display: inline-block;
-      height: auto;
+      margin-bottom: 2.5%;
     }
 
     &-content {
@@ -910,6 +939,12 @@ body {
       height: 100%;
       justify-content: center;
       align-items: center;
+
+      & > img {
+        @include respond(tab-port) {
+          width: 70%;
+        }
+      }
     }
 
     &--img {
@@ -962,6 +997,10 @@ body {
     @include respond(phone) {
       justify-content: center;
       align-content: flex-start;
+    }
+
+    @include respond(l-phone) {
+      flex-wrap: nowrap;
     }
 
     @include respond(xphone) {
@@ -1052,6 +1091,7 @@ body {
     }
 
     &--title {
+      color: $color-black;
       font-size: 2rem;
       font-weight: 700;
       vertical-align: middle;
@@ -1065,7 +1105,7 @@ body {
       left: 0;
       width: 100%;
       height: 6rem;
-      background-color: rgba($color-white, 0.4);
+      background-color: rgba($color-white, 0.5);
     }
 
     &--title-bottom {
@@ -1075,7 +1115,7 @@ body {
     }
 
     &--medium {
-      max-width: 100%;
+      min-width: 100%;
       height: auto;
 
       @include respond(tab-port) {
@@ -1095,6 +1135,10 @@ body {
     @include respond(tab-port) {
       padding: 10% 0 0 15%;
       font-size: 20rem;
+    }
+
+    @include respond(l-phone) {
+      font-size: 10rem;
     }
 
     @include respond(oldphone) {
@@ -1126,6 +1170,10 @@ body {
         font-size: 4rem;
       }
 
+      @include respond(l-phone) {
+        font-size: 3rem;
+      }
+
       @include respond(oldphone) {
         font-size: 3rem;
       }
@@ -1144,6 +1192,10 @@ body {
       font-weight: 300;
       font-size: 3.5rem;
       padding: 15%;
+    }
+
+    @include respond(l-phone) {
+      font-size: 1.9rem;
     }
 
     @include respond(oldphone) {
@@ -1177,6 +1229,7 @@ body {
 }
 
 .heading-fourth {
+  margin-bottom: 7.5%;
   &__text-box {
     font-size: 2rem;
     //background-image: linear-gradient(to bottom, #e8fdff, rgba(232, 253, 255, 0.21));
@@ -1200,10 +1253,6 @@ body {
   @include respond(laptop) {
     padding: 2.5%;
   }
-
-  &--header {
-    margin-top: 10%;
-  }
 }
 
 //INFOGRAPH CIRCLE IMAGE
@@ -1213,8 +1262,10 @@ body {
   @include respond(xphone) {
   }
 
+  @include respond(l-phone) {
+  }
+
   @include respond(tab-port) {
-    display: flex;
     justify-items: center;
     align-items: center;
     flex-direction: column;
@@ -1268,7 +1319,11 @@ body {
 .deg0 {
   transform: translate(22rem);
 
-  @include respond(xphone) {
+  @include respond(l-phone) {
+    display: none;
+  }
+
+  @include respond(phone) {
     transform: translate(20rem);
   }
 
@@ -1278,6 +1333,10 @@ body {
 } // = half the width of the wrapper
 .deg45 {
   transform: rotate(45deg) translate(22rem) rotate(-45deg);
+
+  @include respond(l-phone) {
+    display: none;
+  }
   @include respond(oldphone) {
     display: none;
   }
@@ -1291,6 +1350,10 @@ body {
 .deg135 {
   transform: rotate(135deg) translate(22rem) rotate(-135deg);
 
+  @include respond(l-phone) {
+    display: none;
+  }
+
   @include respond(oldphone) {
     display: none;
   }
@@ -1300,12 +1363,20 @@ body {
 
   transform: rotate(180deg) translate(22rem) rotate(-180deg);
 
+  @include respond(l-phone) {
+    display: none;
+  }
+
   @include respond(oldphone) {
     display: none;
   }
 }
 .deg225 {
   transform: rotate(225deg) translate(22rem) rotate(-225deg);
+
+  @include respond(l-phone) {
+    display: none;
+  }
 
   @include respond(oldphone) {
     display: none;
@@ -1319,6 +1390,11 @@ body {
 }
 .deg315 {
   transform: rotate(315deg) translate(22rem) rotate(-315deg);
+
+  @include respond(l-phone) {
+    display: none;
+  }
+
   @include respond(oldphone) {
     display: none;
   }
