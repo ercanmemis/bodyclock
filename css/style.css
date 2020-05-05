@@ -780,7 +780,7 @@ body {
       height: auto; }
       @media only screen and (max-width: 56.25em) {
         .quotebox__img--medium {
-          min-width: 100%; } }
+          max-width: 100%; } }
   .quotebox__quote {
     position: absolute;
     color: #fff;
@@ -791,7 +791,7 @@ body {
     @media only screen and (max-width: 56.25em) {
       .quotebox__quote {
         padding: 10% 0 0 15%;
-        font-size: 20rem; } }
+        font-size: 10rem; } }
     @media only screen and (max-width: 26.5625em) {
       .quotebox__quote {
         font-size: 10rem; } }
@@ -801,7 +801,7 @@ body {
   .quotebox__text {
     color: #fff;
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: 2rem;
     height: 100%;
     position: absolute;
     top: 0;
@@ -813,17 +813,17 @@ body {
       width: 100%; }
       @media only screen and (max-width: 56.25em) {
         .quotebox__text--text {
-          padding: 35% 15% 3rem 15%;
-          font-size: 6rem; } }
+          padding: 30% 15% 3rem 15%;
+          font-size: 4rem; } }
       @media only screen and (max-width: 37.5em) {
         .quotebox__text--text {
-          font-size: 4rem; } }
+          font-size: 3.2rem; } }
       @media only screen and (max-width: 26.5625em) {
         .quotebox__text--text {
-          font-size: 3rem; } }
+          font-size: 2.2rem; } }
       @media only screen and (max-width: 20em) {
         .quotebox__text--text {
-          font-size: 3rem; } }
+          font-size: 2rem; } }
   .quotebox__bottom {
     position: absolute;
     bottom: 0;
@@ -835,14 +835,15 @@ body {
     @media only screen and (max-width: 56.25em) {
       .quotebox__bottom {
         font-weight: 300;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         padding: 15%; } }
     @media only screen and (max-width: 26.5625em) {
       .quotebox__bottom {
         font-size: 1.9rem; } }
     @media only screen and (max-width: 20em) {
       .quotebox__bottom {
-        font-size: 2rem; } }
+        font-size: 2rem;
+        padding-bottom: 10%; } }
     .quotebox__bottom--institut {
       font-size: 1.2rem; }
       @media only screen and (max-width: 56.25em) {

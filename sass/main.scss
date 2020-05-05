@@ -1119,7 +1119,7 @@ body {
       height: auto;
 
       @include respond(tab-port) {
-        min-width: 100%;
+        max-width: 100%;
       }
     }
   }
@@ -1134,7 +1134,7 @@ body {
 
     @include respond(tab-port) {
       padding: 10% 0 0 15%;
-      font-size: 20rem;
+      font-size: 10rem;
     }
 
     @include respond(l-phone) {
@@ -1149,7 +1149,7 @@ body {
   &__text {
     color: $color-white;
     font-weight: 500;
-    font-size: 2.4rem;
+    font-size: 2rem;
     height: 100%;
     position: absolute;
     top: 0;
@@ -1162,20 +1162,20 @@ body {
       width: 100%;
 
       @include respond(tab-port) {
-        padding: 35% 15% 3rem 15%;
-        font-size: 6rem;
-      }
-
-      @include respond(phone) {
+        padding: 30% 15% 3rem 15%;
         font-size: 4rem;
       }
 
+      @include respond(phone) {
+        font-size: 3.2rem;
+      }
+
       @include respond(l-phone) {
-        font-size: 3rem;
+        font-size: 2.2rem;
       }
 
       @include respond(oldphone) {
-        font-size: 3rem;
+        font-size: 2rem;
       }
     }
   }
@@ -1190,7 +1190,7 @@ body {
 
     @include respond(tab-port) {
       font-weight: 300;
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       padding: 15%;
     }
 
@@ -1200,6 +1200,7 @@ body {
 
     @include respond(oldphone) {
       font-size: 2rem;
+      padding-bottom: 10%;
     }
 
     &--institut {
