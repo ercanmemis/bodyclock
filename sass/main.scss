@@ -641,9 +641,6 @@ body {
 
     @include respond(tab-port) {
       margin-bottom: 0;
-    }
-
-    @include respond(tab-port) {
       display: flex;
       flex-direction: column;
     }
@@ -657,8 +654,13 @@ body {
       font-size: 1.2rem;
       font-weight: 700;
 
+      @include respond(laptop) {
+        width: 8rem;
+      }
+
       @include respond(tab-port) {
         font-size: 2rem;
+        width: 100%;
       }
     }
     &--img {
@@ -681,7 +683,7 @@ body {
 
       & > img {
         @include respond(laptop) {
-          width: 75%;
+          max-width: 100%;
           height: auto;
         }
 
@@ -707,6 +709,11 @@ body {
       &:not(:first-child) {
         margin-left: 3rem;
 
+        @include respond(tab-land) {
+          margin-right: 0;
+          margin-left: 1.4rem;
+        }
+
         @include respond(tab-port) {
           margin-right: 0;
           margin-left: 0;
@@ -715,6 +722,10 @@ body {
 
       &:not(:last-child) {
         margin-right: 2rem;
+
+        @include respond(tab-land) {
+          margin-right: 0.5rem;
+        }
 
         @include respond(tab-port) {
           margin-right: 0;
@@ -1085,7 +1096,7 @@ body {
     position: relative;
     min-width: 100%;
     height: auto;
-    border-radius: 2rem;
+    border-radius: 1rem;
     @include respond(laptop) {
       max-width: 100%;
     }

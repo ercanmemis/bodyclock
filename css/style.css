@@ -438,9 +438,7 @@ body {
     margin: 3.5rem 0; }
     @media only screen and (max-width: 56.25em) {
       .header__reference-box {
-        margin-bottom: 0; } }
-    @media only screen and (max-width: 56.25em) {
-      .header__reference-box {
+        margin-bottom: 0;
         display: flex;
         flex-direction: column; } }
     .header__reference-box--text {
@@ -448,9 +446,13 @@ body {
       color: #333333;
       font-size: 1.2rem;
       font-weight: 700; }
+      @media only screen and (max-width: 64em) {
+        .header__reference-box--text {
+          width: 8rem; } }
       @media only screen and (max-width: 56.25em) {
         .header__reference-box--text {
-          font-size: 2rem; } }
+          font-size: 2rem;
+          width: 100%; } }
     .header__reference-box--img {
       display: flex;
       flex-wrap: wrap;
@@ -466,7 +468,7 @@ body {
       height: auto; }
       @media only screen and (max-width: 64em) {
         .header__reference-box--rectangle > img {
-          width: 75%;
+          max-width: 100%;
           height: auto; } }
       @media only screen and (max-width: 56.25em) {
         .header__reference-box--rectangle > img {
@@ -480,12 +482,19 @@ body {
           margin-top: 4rem; } }
       .header__reference-box--rectangle:not(:first-child) {
         margin-left: 3rem; }
+        @media only screen and (max-width: 75em) {
+          .header__reference-box--rectangle:not(:first-child) {
+            margin-right: 0;
+            margin-left: 1.4rem; } }
         @media only screen and (max-width: 56.25em) {
           .header__reference-box--rectangle:not(:first-child) {
             margin-right: 0;
             margin-left: 0; } }
       .header__reference-box--rectangle:not(:last-child) {
         margin-right: 2rem; }
+        @media only screen and (max-width: 75em) {
+          .header__reference-box--rectangle:not(:last-child) {
+            margin-right: 0.5rem; } }
         @media only screen and (max-width: 56.25em) {
           .header__reference-box--rectangle:not(:last-child) {
             margin-right: 0;
@@ -753,7 +762,7 @@ body {
     position: relative;
     min-width: 100%;
     height: auto;
-    border-radius: 2rem; }
+    border-radius: 1rem; }
     @media only screen and (max-width: 64em) {
       .quotebox__img {
         max-width: 100%; } }
