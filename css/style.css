@@ -925,10 +925,7 @@ body {
         height: auto; } }
   .group-image__image {
     max-width: 100%;
-    height: 40rem; }
-    @media only screen and (max-width: 37.5em) {
-      .group-image__image {
-        height: 100%; } }
+    height: auto; }
     @media only screen and (max-width: 20em) {
       .group-image__image {
         max-width: 100%; } }
