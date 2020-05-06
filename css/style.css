@@ -20,16 +20,16 @@
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 3rem; }
-      @media only screen and (max-width: 37.5em) {
+      @media only screen and (max-width: 64em) {
         .row [class^="col-"]:not(:last-child) {
-          margin-right: 1.5rem; } }
+          margin-right: 3rem; } }
       @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 3rem; } }
-      @media only screen and (max-width: 64em) {
+      @media only screen and (max-width: 37.5em) {
         .row [class^="col-"]:not(:last-child) {
-          margin-right: 3rem; } }
+          margin-right: 1.5rem; } }
     @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
@@ -783,7 +783,7 @@ body {
       width: 100%;
       height: auto; }
     .quotebox__img--medium {
-      min-width: 100%;
+      max-width: 100%;
       height: auto; }
       @media only screen and (max-width: 64em) {
         .quotebox__img--medium {
@@ -895,7 +895,10 @@ body {
       padding: 2.5%; } }
 
 .group-image {
-  padding: 15% 0; }
+  padding: 20% 0; }
+  @media only screen and (max-width: 64em) {
+    .group-image {
+      padding: 12.5% 0; } }
   @media only screen and (max-width: 56.25em) {
     .group-image {
       justify-items: center;
@@ -953,6 +956,9 @@ body {
 
 .deg90 {
   transform: rotate(90deg) translate(22rem) rotate(-90deg); }
+  @media only screen and (max-width: 23.5em) {
+    .deg90 {
+      transform: rotate(90deg) translate(29rem) rotate(-90deg); } }
   @media only screen and (max-width: 20em) {
     .deg90 {
       transform: rotate(90deg) translate(28rem) rotate(-90deg); } }
@@ -987,6 +993,9 @@ body {
 
 .deg270 {
   transform: rotate(270deg) translate(22rem) rotate(-270deg); }
+  @media only screen and (max-width: 23.5em) {
+    .deg270 {
+      transform: rotate(270deg) translate(29rem) rotate(-270deg); } }
   @media only screen and (max-width: 20em) {
     .deg270 {
       transform: rotate(270deg) translate(28rem) rotate(-270deg); } }

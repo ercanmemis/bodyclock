@@ -103,8 +103,8 @@ $gutter-none: 0;
     &:not(:last-child) {
       margin-right: $gutter-horizontal;
 
-      @include respond(phone) {
-        margin-right: $gutter-vertical-x-small;
+      @include respond(laptop) {
+        margin-right: $gutter-vertical-small;
       }
 
       @include respond(tab-port) {
@@ -112,8 +112,8 @@ $gutter-none: 0;
         margin-bottom: $gutter-vertical-small;
       }
 
-      @include respond(laptop) {
-        margin-right: $gutter-vertical-small;
+      @include respond(phone) {
+        margin-right: $gutter-vertical-x-small;
       }
     }
 
