@@ -42,6 +42,13 @@ $gutter-none: 0;
       @content; // 600px
     }
   }
+
+  @if $breakpoint == tablet {
+    @media only screen and (max-width: 48em) {
+      @content; //768px
+    }
+  }
+
   @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {
       @content; //900px

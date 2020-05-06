@@ -826,6 +826,9 @@ body {
         .quotebox__text--text {
           padding: 30% 15% 3rem 15%;
           font-size: 4rem; } }
+      @media only screen and (max-width: 48em) {
+        .quotebox__text--text {
+          font-size: 3.4rem; } }
       @media only screen and (max-width: 37.5em) {
         .quotebox__text--text {
           font-size: 3.2rem; } }
