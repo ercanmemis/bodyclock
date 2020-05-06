@@ -911,7 +911,7 @@ body {
   align-content: space-between;
 
   @include respond(xphone) {
-    padding: 5%;
+    padding: 2.5%;
     margin-top: 10%;
     font-size: 2.5rem;
   }
@@ -1118,6 +1118,10 @@ body {
       min-width: 100%;
       height: auto;
 
+      @include respond(laptop) {
+        max-width: 100%;
+      }
+
       @include respond(tab-port) {
         max-width: 100%;
       }
@@ -1218,6 +1222,12 @@ body {
 }
 
 .heading-third {
+  & > span:first-child {
+    @include respond(phone) {
+      padding-top: 7.5%;
+    }
+  }
+
   & > span:not(:last-child) {
     padding-bottom: 2rem;
   }
@@ -1344,6 +1354,7 @@ body {
 }
 .deg90 {
   transform: rotate(90deg) translate(22rem) rotate(-90deg);
+
   @include respond(oldphone) {
     transform: rotate(90deg) translate(28rem) rotate(-90deg);
   }
@@ -1495,19 +1506,6 @@ body {
     transform: translateY(-0.1rem);
     box-shadow: 0 0 1rem rgba($color-black, 0.2);
     transition: 0.1s;
-  }
-
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 0.3rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all 0.3s;
   }
 
   &--default {

@@ -629,7 +629,7 @@ body {
   align-content: space-between; }
   @media only screen and (max-width: 23.5em) {
     .main__text-box {
-      padding: 5%;
+      padding: 2.5%;
       margin-top: 10%;
       font-size: 2.5rem; } }
   .main__text-box:not(:last-child) {
@@ -778,6 +778,9 @@ body {
     .quotebox__img--medium {
       min-width: 100%;
       height: auto; }
+      @media only screen and (max-width: 64em) {
+        .quotebox__img--medium {
+          max-width: 100%; } }
       @media only screen and (max-width: 56.25em) {
         .quotebox__img--medium {
           max-width: 100%; } }
@@ -852,6 +855,10 @@ body {
           font-size: 2rem; } }
     .quotebox__bottom > span {
       display: block; }
+
+@media only screen and (max-width: 37.5em) {
+  .heading-third > span:first-child {
+    padding-top: 7.5%; } }
 
 .heading-third > span:not(:last-child) {
   padding-bottom: 2rem; }
@@ -1057,18 +1064,6 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   transition: 0.1s; }
-
-.btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border-radius: 0.3rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  transition: all 0.3s; }
 
 .btn--default {
   background-color: #e8fdff;
